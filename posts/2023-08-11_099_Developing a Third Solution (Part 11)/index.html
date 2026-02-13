@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99. Developing a Third Solution (Part 11) - Healing Earth with Technology</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="site-title"><a href="../../index.html">Healing Earth with Technology</a></h1>
+            <nav>
+                <a href="../../index.html">All Posts</a>
+                <a href="../../about.html">About</a>
+            </nav>
+        </header>
+
+        <article>
+            <div class="post-header">
+                <h1 class="post-title">99. Developing a Third Solution (Part 11)</h1>
+                <p class="post-subtitle">The final (?) installment. Putting the pieces together</p>
+                <p class="post-meta">2023-08-11</p>
+            </div>
+
+            <div class="post-content">
+                <p>This solution now feels workable, but there are a lot of ragged ends. Among other things, I’ve mixed a lot of different units for energy, area, and water for expedience and clarity. These ought to be normalized, I suppose, but that’s a rote exercise for later. Plus, we’ve been talking about a single irrigated sugarcane farm in Western Australia, where irrigation enables agriculture. But any alleged “solution” needs to scale, and unlike the “first” solution,<a class="footnote-anchor" href="#footnote-1" id="footnote-anchor-1" target="_self">1</a> this one relies on relatively finite energy sources. Plus, the scale here is beyond what most engineers would consider “large scale”. It needs to scale globally.</p><p>In this installment, let’s map the available land for this solution. We can calculate how large a carbon sink is possible from that number. This will tell us whether this solution (by itself) could put a real dent in the already-emitted carbon in our atmosphere. I approach this with the caveat that nothing we’ve done in the past 50 years has moved the needle, so this is a reasonably high bar to set. As we move toward carbon-free energy, we need to remove the carbon we add every year if we hope to achieve engineering net zero.</p><p>Getting the accessible number was somewhat of a challenge. I began with this paper<a class="footnote-anchor" href="#footnote-2" id="footnote-anchor-2" target="_self">2</a>, which describes global climates according to temperature and precipitation. I then took a crash course on a graphical analysis package for geodata, GRASS GIS. I used this software to calculate the distance to the nearest ocean for each point on land, regardless of elevation. I then restricted the analysis to land classifications that would benefit from irrigation, specifically arid and temperate climates with at least one dry season. As a judgment, I eliminated tropical savannah ecosystems as being lashed to the seasons, but it could be beneficial to include them in the next iteration of the analysis.</p><figure><img alt="" src="./images/4f070ecc-2f35-4899-b2f6-8bef89f43348_2359x954.png"/></figure><p>It’s hard to tell from this map, but there’s a lot of arid land near the ocean:</p><figure><img alt="" src="./images/492ef700-c743-47e6-9424-486fde36748c_1368x994.png" width="100%"/><figcaption>GRASS GIS created a histogram dividing the irrigatable land area into 27 equal segments. Bars indicate total acres and slices bin the distance to the nearest ocean. </figcaption></figure><p>This shows that, at a global level, there are 2 to 2.5 billion acres of arid land within about 100 miles of the ocean. In a future analysis, it will be helpful to analyze elevation changes, but let’s take that as the addressable area using this approach. </p><p>Based on last time<a class="footnote-anchor" href="#footnote-3" id="footnote-anchor-3" target="_self">3</a>, we could expect to stabilize between 25 and 38 tonnes of atmospheric CO2 per hectare, so, roughly speaking, the system at full implementation would be able to remove between 20 and 30 gigatonnes of CO2 per year. </p><p>Is that a lot or a little? Here’s what we’ve been emitting to see if it’s worth pursuing.</p><figure><img alt="" src="./images/40528b51-213d-4941-9a0e-02caac103126_2000x1000.png" width="100%"/><figcaption>The amount of carbon dioxide in the atmosphere (blue line) has increased along with human emissions (gray line) since the start of the Industrial Revolution in 1750. Emissions rose slowly to about 5 billion tons per year in the mid-20<sup>th</sup> century before skyrocketing to more than 35 billion tons per year by the end of the century. NOAA Climate.gov graph, adapted from the original by Dr. Howard Diamond (NOAA ARL). Atmospheric CO<sub>2</sub> data from <a href="https://www.esrl.noaa.gov/gmd/ccgg/trends/data.html">NOAA</a> and <a href="https://iac.ethz.ch/">ETHZ</a>. CO<sub>2</sub> emissions data from <a href="https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions#how-have-global-co2-emissions-changed-over-time">Our World in Data</a> and the <a href="https://www.globalcarbonproject.org/">Global Carbon Project</a>. </figcaption></figure><p>Well, well, well. So, if fully implemented, this solution could put a massive dent in our carbon emissions while driving food and materials to an economic foundation in agricultural products. </p><p>If my crude financials are accurate, the cost to build a system would be about $15 trillion, nearly half of the U. S. national debt. A lot of money, but it would be an actual investment rather than a boondoggle expense.</p><p>I don’t expect these numbers to be correct, but they at least provide a starting point. They’re undoubtedly optimistic for the first run and probably pessimistic in the longer run as technology heads down the learning curve. But it’d do far more to address the climate control problem than anything we’ve done over the past few decades. </p><p>So, yes. Electrify everything. Avoid burning geologic carbon unless absolutely necessary. But, if we control the water that Earth already produces, we can put that carbon back underground while driving economic prosperity. </p><p>That’s a pretty good note to end this series on, isn’t it?</p><p>Until next time.</p><div data-attrs='{"url":"https://healingearth.substack.com/p/99-developing-a-third-solution-part?utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;action=share","text":"Share"}'><p class="cta-caption">Thank you for reading Healing the Earth with Technology. This post is public so feel free to share it.</p></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-1" id="footnote-1" target="_self">1</a></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-2" id="footnote-2" target="_self">2</a><p>Beck HE, Zimmermann NE, McVicar TR, Vergopolan N, Berg A, Wood EF. Present and future Köppen-Geiger climate classification maps at 1-km resolution. Sci Data. 2018 Oct 30;5:180214. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6207062/">doi: 10.1038/sdata.2018.214.</a> Erratum in: Sci Data. 2020 Aug 17;7(1):274. PMID: 30375988; PMCID: PMC6207062.</p></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-3" id="footnote-3" target="_self">3</a></div>
+            </div>
+
+            <nav class="post-nav"><a href="../2023-08-03_098_Developing a Third Solution (Part 10)/index.html">← 98. Developing a Third Solution (Part 10...</a><a href="../2023-08-18_100_Reflections/index.html">100. Reflections... →</a></nav>
+        </article>
+
+        <footer>
+            <p>Healing Earth with Technology Archive</p>
+        </footer>
+    </div>
+</body>
+</html>

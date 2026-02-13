@@ -1,0 +1,26 @@
+# Netlify configuration for Healing Earth with Technology
+[build]
+  publish = "."
+
+# Headers for caching and performance
+[[headers]]
+  for = "/style.css"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/search-index.json"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/posts/*/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Redirect www to apex domain
+[[redirects]]
+  from = "https://www.healingearthwithtech.com/*"
+  to = "https://healingearthwithtech.com/:splat"
+  status = 301
+  force = true

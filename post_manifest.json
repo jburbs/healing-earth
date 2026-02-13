@@ -1,0 +1,488 @@
+{
+  "created": "2026-01-25T01:15:10.531948",
+  "local_folders": {
+    "50. Solar power at the cost of coal (Part 1)": {
+      "issue_number": 50,
+      "title": "Solar power at the cost of coal (Part 1)",
+      "slug_candidate": "solar-power-at-the-cost-of-coal-part-1",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/50. Solar power at the cost of coal (Part 1)"
+    },
+    "1. Is Global Warming Real?": {
+      "issue_number": 1,
+      "title": "Is Global Warming Real?",
+      "slug_candidate": "is-global-warming-real",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/1. Is Global Warming Real?"
+    },
+    "25. Evaluating a \"carbon footprint\" (Part 3). Paper or plastic?": {
+      "issue_number": 25,
+      "title": "Evaluating a \"carbon footprint\" (Part 3). Paper or plastic?",
+      "slug_candidate": "evaluating-a-carbon-footprint-part-3-paper-or-plas",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/25. Evaluating a \"carbon footprint\" (Part 3). Paper or plastic?"
+    },
+    "AMF_US-Ha1_FLUXNET_SUBSET_1991-2020_3-5": {
+      "issue_number": null,
+      "title": "AMF_US-Ha1_FLUXNET_SUBSET_1991-2020_3-5",
+      "slug_candidate": "amfus-ha1fluxnetsubset1991-20203-5",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/AMF_US-Ha1_FLUXNET_SUBSET_1991-2020_3-5"
+    },
+    "51. Solar power at the cost of coal (Part 2)": {
+      "issue_number": 51,
+      "title": "Solar power at the cost of coal (Part 2)",
+      "slug_candidate": "solar-power-at-the-cost-of-coal-part-2",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/51. Solar power at the cost of coal (Part 2)"
+    },
+    "22. Healing (Part 12). Reducing the only solution to practice": {
+      "issue_number": 22,
+      "title": "Healing (Part 12). Reducing the only solution to practice",
+      "slug_candidate": "healing-part-12-reducing-the-only-solution-to-prac",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/22. Healing (Part 12). Reducing the only solution to practice"
+    },
+    "34. Holoeconomics & Energy (Part 3)": {
+      "issue_number": 34,
+      "title": "Holoeconomics & Energy (Part 3)",
+      "slug_candidate": "holoeconomics-energy-part-3",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/34. Holoeconomics & Energy (Part 3)"
+    },
+    "37. Holoeconomics & Energy (Part 4)": {
+      "issue_number": 37,
+      "title": "Holoeconomics & Energy (Part 4)",
+      "slug_candidate": "holoeconomics-energy-part-4",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/37. Holoeconomics & Energy (Part 4)"
+    },
+    "17. Healing (Part 7). So...what's it gonna cost me?": {
+      "issue_number": 17,
+      "title": "Healing (Part 7). So...what's it gonna cost me?",
+      "slug_candidate": "healing-part-7-sowhats-it-gonna-cost-me",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/17. Healing (Part 7). So...what's it gonna cost me?"
+    },
+    "6. Is Carbon exonerated by Henry's Law?": {
+      "issue_number": 6,
+      "title": "Is Carbon exonerated by Henry's Law?",
+      "slug_candidate": "is-carbon-exonerated-by-henrys-law",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/6. Is Carbon exonerated by Henry's Law?"
+    },
+    "43. IPCC WG III and reality (Part 2)": {
+      "issue_number": 43,
+      "title": "IPCC WG III and reality (Part 2)",
+      "slug_candidate": "ipcc-wg-iii-and-reality-part-2",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/43. IPCC WG III and reality (Part 2)"
+    },
+    "19. Healing (Part 9). Avoiding enthusiasm and superstition.": {
+      "issue_number": 19,
+      "title": "Healing (Part 9). Avoiding enthusiasm and superstition.",
+      "slug_candidate": "healing-part-9-avoiding-enthusiasm-and-superstitio",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/19. Healing (Part 9). Avoiding enthusiasm and superstition."
+    },
+    "24. Evaluating a 'carbon footprint\" (Part 2). Crypto vs Credit": {
+      "issue_number": 24,
+      "title": "Evaluating a 'carbon footprint\" (Part 2). Crypto vs Credit",
+      "slug_candidate": "evaluating-a-carbon-footprint-part-2-crypto-vs-cre",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/24. Evaluating a 'carbon footprint\" (Part 2). Crypto vs Credit"
+    },
+    "AMF_US-GLE_FLUXNET_SUBSET_2005-2020_3-5": {
+      "issue_number": null,
+      "title": "AMF_US-GLE_FLUXNET_SUBSET_2005-2020_3-5",
+      "slug_candidate": "amfus-glefluxnetsubset2005-20203-5",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/AMF_US-GLE_FLUXNET_SUBSET_2005-2020_3-5"
+    },
+    "57. Another solution? (Part 1)": {
+      "issue_number": 57,
+      "title": "Another solution? (Part 1)",
+      "slug_candidate": "another-solution-part-1",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/57. Another solution? (Part 1)"
+    },
+    "18. Healing (Part 8). Can water alone be the complete solution?": {
+      "issue_number": 18,
+      "title": "Healing (Part 8). Can water alone be the complete solution?",
+      "slug_candidate": "healing-part-8-can-water-alone-be-the-complete-sol",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/18. Healing (Part 8). Can water alone be the complete solution?"
+    },
+    "FLX_US-IB2_FLUXNET2015_SUBSET_2004-2011_1-4": {
+      "issue_number": null,
+      "title": "FLX_US-IB2_FLUXNET2015_SUBSET_2004-2011_1-4",
+      "slug_candidate": "flxus-ib2fluxnet2015subset2004-20111-4",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/FLX_US-IB2_FLUXNET2015_SUBSET_2004-2011_1-4"
+    },
+    "48. Expanding the case for irrigation": {
+      "issue_number": 48,
+      "title": "Expanding the case for irrigation",
+      "slug_candidate": "expanding-the-case-for-irrigation",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/48. Expanding the case for irrigation"
+    },
+    "32. Holoeconomics & Energy (Part 2)": {
+      "issue_number": 32,
+      "title": "Holoeconomics & Energy (Part 2)",
+      "slug_candidate": "holoeconomics-energy-part-2",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/32. Holoeconomics & Energy (Part 2)"
+    },
+    "9. Healing (Part 1). What can we do?": {
+      "issue_number": 9,
+      "title": "Healing (Part 1). What can we do?",
+      "slug_candidate": "healing-part-1-what-can-we-do",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/9. Healing (Part 1). What can we do?"
+    },
+    "Another pseudopolitical science piece": {
+      "issue_number": null,
+      "title": "Another pseudopolitical science piece",
+      "slug_candidate": "another-pseudopolitical-science-piece",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/Another pseudopolitical science piece"
+    },
+    "27. Healing revisited, or \"Don't we already have a solution?\"": {
+      "issue_number": 27,
+      "title": "Healing revisited, or \"Don't we already have a solution?\"",
+      "slug_candidate": "healing-revisited-or-dont-we-already-have-a-soluti",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/27. Healing revisited, or \"Don't we already have a solution?\""
+    },
+    "31. Holoeconomics and Energy (Part 1)": {
+      "issue_number": 31,
+      "title": "Holoeconomics and Energy (Part 1)",
+      "slug_candidate": "holoeconomics-and-energy-part-1",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/31. Holoeconomics and Energy (Part 1)"
+    },
+    "archive_tools": {
+      "issue_number": null,
+      "title": "archive_tools",
+      "slug_candidate": "archivetools",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/archive_tools"
+    },
+    "46. Low-cost Desalination and the ARPA-E Summit": {
+      "issue_number": 46,
+      "title": "Low-cost Desalination and the ARPA-E Summit",
+      "slug_candidate": "low-cost-desalination-and-the-arpa-e-summit",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/46. Low-cost Desalination and the ARPA-E Summit"
+    },
+    "AMF_US-NR1_FLUXNET_SUBSET_1998-2016_3-5": {
+      "issue_number": null,
+      "title": "AMF_US-NR1_FLUXNET_SUBSET_1998-2016_3-5",
+      "slug_candidate": "amfus-nr1fluxnetsubset1998-20163-5",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/AMF_US-NR1_FLUXNET_SUBSET_1998-2016_3-5"
+    },
+    "36. Words don't matter (and they do)": {
+      "issue_number": 36,
+      "title": "Words don't matter (and they do)",
+      "slug_candidate": "words-dont-matter-and-they-do",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/36. Words don't matter (and they do)"
+    },
+    "42. IPCC WG III and reality (Part 1)": {
+      "issue_number": 42,
+      "title": "IPCC WG III and reality (Part 1)",
+      "slug_candidate": "ipcc-wg-iii-and-reality-part-1",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/42. IPCC WG III and reality (Part 1)"
+    },
+    "15. Healing (Part 5). Hope Spring(s) eternal?": {
+      "issue_number": 15,
+      "title": "Healing (Part 5). Hope Spring(s) eternal?",
+      "slug_candidate": "healing-part-5-hope-springs-eternal",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/15. Healing (Part 5). Hope Spring(s) eternal?"
+    },
+    "8. What do we know now about Climate Change?": {
+      "issue_number": 8,
+      "title": "What do we know now about Climate Change?",
+      "slug_candidate": "what-do-we-know-now-about-climate-change",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/8. What do we know now about Climate Change?"
+    },
+    "16. Healing (Part 6) Oceans of hope?": {
+      "issue_number": 16,
+      "title": "Healing (Part 6) Oceans of hope?",
+      "slug_candidate": "healing-part-6-oceans-of-hope",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/16. Healing (Part 6) Oceans of hope?"
+    },
+    "website": {
+      "issue_number": null,
+      "title": "website",
+      "slug_candidate": "website",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/website"
+    },
+    "FLX_MY-PSO_FLUXNET2015_SUBSET_2003-2009_1-4": {
+      "issue_number": null,
+      "title": "FLX_MY-PSO_FLUXNET2015_SUBSET_2003-2009_1-4",
+      "slug_candidate": "flxmy-psofluxnet2015subset2003-20091-4",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/FLX_MY-PSO_FLUXNET2015_SUBSET_2003-2009_1-4"
+    },
+    "44. IPCC WG III and reality (Part 3)": {
+      "issue_number": 44,
+      "title": "IPCC WG III and reality (Part 3)",
+      "slug_candidate": "ipcc-wg-iii-and-reality-part-3",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/44. IPCC WG III and reality (Part 3)"
+    },
+    "5. Leading with Data": {
+      "issue_number": 5,
+      "title": "Leading with Data",
+      "slug_candidate": "leading-with-data",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/5. Leading with Data"
+    },
+    "Imminent_1_0_0": {
+      "issue_number": null,
+      "title": "Imminent_1_0_0",
+      "slug_candidate": "imminent100",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/Imminent_1_0_0"
+    },
+    "34a. A second pseudo-political diversion": {
+      "issue_number": 34,
+      "title": "A second pseudo-political diversion",
+      "slug_candidate": "a-second-pseudo-political-diversion",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/34a. A second pseudo-political diversion"
+    },
+    "55. Does it matter what we plant? (Part 2)": {
+      "issue_number": 55,
+      "title": "Does it matter what we plant? (Part 2)",
+      "slug_candidate": "does-it-matter-what-we-plant-part-2",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/55. Does it matter what we plant? (Part 2)"
+    },
+    "47. Putin & the Pump revisited": {
+      "issue_number": 47,
+      "title": "Putin & the Pump revisited",
+      "slug_candidate": "putin-the-pump-revisited",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/47. Putin & the Pump revisited"
+    },
+    "Conversation with Howard": {
+      "issue_number": null,
+      "title": "Conversation with Howard",
+      "slug_candidate": "conversation-with-howard",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/Conversation with Howard"
+    },
+    "2. Carbon. Hero or Villain?": {
+      "issue_number": 2,
+      "title": "Carbon. Hero or Villain?",
+      "slug_candidate": "carbon-hero-or-villain",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/2. Carbon. Hero or Villain?"
+    },
+    "54. Does it matter what we plant? (Part 1)": {
+      "issue_number": 54,
+      "title": "Does it matter what we plant? (Part 1)",
+      "slug_candidate": "does-it-matter-what-we-plant-part-1",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/54. Does it matter what we plant? (Part 1)"
+    },
+    "23. Evaluating a \"carbon footprint\" (Part 1). Boeing vs Tesla": {
+      "issue_number": 23,
+      "title": "Evaluating a \"carbon footprint\" (Part 1). Boeing vs Tesla",
+      "slug_candidate": "evaluating-a-carbon-footprint-part-1-boeing-vs-tes",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/23. Evaluating a \"carbon footprint\" (Part 1). Boeing vs Tesla"
+    },
+    "52. A Trillion trees?": {
+      "issue_number": 52,
+      "title": "A Trillion trees?",
+      "slug_candidate": "a-trillion-trees",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/52. A Trillion trees?"
+    },
+    "55. Does it matter what we plant? (Part 2) CORRECTION": {
+      "issue_number": 55,
+      "title": "Does it matter what we plant? (Part 2) CORRECTION",
+      "slug_candidate": "does-it-matter-what-we-plant-part-2-correction",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/55. Does it matter what we plant? (Part 2) CORRECTION"
+    },
+    "26. The science problem with \"net-zero\"": {
+      "issue_number": 26,
+      "title": "The science problem with \"net-zero\"",
+      "slug_candidate": "the-science-problem-with-net-zero",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/26. The science problem with \"net-zero\""
+    },
+    "3. Earth is getting warmer. So what? Part 1": {
+      "issue_number": 3,
+      "title": "Earth is getting warmer. So what? Part 1",
+      "slug_candidate": "earth-is-getting-warmer-so-what-part-1",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/3. Earth is getting warmer. So what? Part 1"
+    },
+    "4. Where did all that carbon come fro?_": {
+      "issue_number": 4,
+      "title": "Where did all that carbon come fro?_",
+      "slug_candidate": "where-did-all-that-carbon-come-fro",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/4. Where did all that carbon come fro?_"
+    },
+    "AMF_US-Ne1_FLUXNET_SUBSET_2001-2020_3-5": {
+      "issue_number": null,
+      "title": "AMF_US-Ne1_FLUXNET_SUBSET_2001-2020_3-5",
+      "slug_candidate": "amfus-ne1fluxnetsubset2001-20203-5",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/AMF_US-Ne1_FLUXNET_SUBSET_2001-2020_3-5"
+    },
+    "AMF_US-ORv_FLUXNET_SUBSET_2011-2016_3-5": {
+      "issue_number": null,
+      "title": "AMF_US-ORv_FLUXNET_SUBSET_2011-2016_3-5",
+      "slug_candidate": "amfus-orvfluxnetsubset2011-20163-5",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/AMF_US-ORv_FLUXNET_SUBSET_2011-2016_3-5"
+    },
+    "41. How to Heal Earth for the Visual Learner": {
+      "issue_number": 41,
+      "title": "How to Heal Earth for the Visual Learner",
+      "slug_candidate": "how-to-heal-earth-for-the-visual-learner",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/41. How to Heal Earth for the Visual Learner"
+    },
+    "FLX_BR-Sa1_FLUXNET2015_SUBSET_2002-2011_1-4": {
+      "issue_number": null,
+      "title": "FLX_BR-Sa1_FLUXNET2015_SUBSET_2002-2011_1-4",
+      "slug_candidate": "flxbr-sa1fluxnet2015subset2002-20111-4",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/FLX_BR-Sa1_FLUXNET2015_SUBSET_2002-2011_1-4"
+    },
+    "11. Healing (Part 3). What can the STEM crowd do about it?": {
+      "issue_number": 11,
+      "title": "Healing (Part 3). What can the STEM crowd do about it?",
+      "slug_candidate": "healing-part-3-what-can-the-stem-crowd-do-about-it",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/11. Healing (Part 3). What can the STEM crowd do about it?"
+    },
+    "30. Adapting Christmas to Climate Change": {
+      "issue_number": 30,
+      "title": "Adapting Christmas to Climate Change",
+      "slug_candidate": "adapting-christmas-to-climate-change",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/30. Adapting Christmas to Climate Change"
+    },
+    "Data supplement to the Global Carbon Budget 2022": {
+      "issue_number": null,
+      "title": "Data supplement to the Global Carbon Budget 2022",
+      "slug_candidate": "data-supplement-to-the-global-carbon-budget-2022",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/Data supplement to the Global Carbon Budget 2022"
+    },
+    "14. Tying up a few loose ends": {
+      "issue_number": 14,
+      "title": "Tying up a few loose ends",
+      "slug_candidate": "tying-up-a-few-loose-ends",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/14. Tying up a few loose ends"
+    },
+    "10. Healing (Part 2). Is decarbonization a solution?": {
+      "issue_number": 10,
+      "title": "Healing (Part 2). Is decarbonization a solution?",
+      "slug_candidate": "healing-part-2-is-decarbonization-a-solution",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/10. Healing (Part 2). Is decarbonization a solution?"
+    },
+    "56. Does it matter what we plant? (Part 3)": {
+      "issue_number": 56,
+      "title": "Does it matter what we plant? (Part 3)",
+      "slug_candidate": "does-it-matter-what-we-plant-part-3",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/56. Does it matter what we plant? (Part 3)"
+    },
+    "13. Earth is getting warmer. So what? (AR6 IPCC WGI Readout)": {
+      "issue_number": 13,
+      "title": "Earth is getting warmer. So what? (AR6 IPCC WGI Readout)",
+      "slug_candidate": "earth-is-getting-warmer-so-what-ar6-ipcc-wgi-reado",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/13. Earth is getting warmer. So what? (AR6 IPCC WGI Readout)"
+    },
+    "38. Holoeconomics & Energy (Part 4), continued": {
+      "issue_number": 38,
+      "title": "Holoeconomics & Energy (Part 4), continued",
+      "slug_candidate": "holoeconomics-energy-part-4-continued",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/38. Holoeconomics & Energy (Part 4), continued"
+    },
+    "30a. A pseudo-political diversion": {
+      "issue_number": 30,
+      "title": "A pseudo-political diversion",
+      "slug_candidate": "a-pseudo-political-diversion",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/30a. A pseudo-political diversion"
+    },
+    "Renewable electricity and the learning curve": {
+      "issue_number": null,
+      "title": "Renewable electricity and the learning curve",
+      "slug_candidate": "renewable-electricity-and-the-learning-curve",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/Renewable electricity and the learning curve"
+    },
+    "Healing Earth Promo Video": {
+      "issue_number": null,
+      "title": "Healing Earth Promo Video",
+      "slug_candidate": "healing-earth-promo-video",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/Healing Earth Promo Video"
+    },
+    "12. Healing (Part 4). A ray of hope.": {
+      "issue_number": 12,
+      "title": "Healing (Part 4). A ray of hope.",
+      "slug_candidate": "healing-part-4-a-ray-of-hope",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/12. Healing (Part 4). A ray of hope."
+    },
+    "53. Are trees the best use of land?": {
+      "issue_number": 53,
+      "title": "Are trees the best use of land?",
+      "slug_candidate": "are-trees-the-best-use-of-land",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/53. Are trees the best use of land?"
+    },
+    "49. Can carbon be stored as topsoil?": {
+      "issue_number": 49,
+      "title": "Can carbon be stored as topsoil?",
+      "slug_candidate": "can-carbon-be-stored-as-topsoil",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/49. Can carbon be stored as topsoil?"
+    },
+    "29. The existential threat ignored": {
+      "issue_number": 29,
+      "title": "The existential threat ignored",
+      "slug_candidate": "the-existential-threat-ignored",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/29. The existential threat ignored"
+    },
+    "40. Three simple questions for climate change solutions": {
+      "issue_number": 40,
+      "title": "Three simple questions for climate change solutions",
+      "slug_candidate": "three-simple-questions-for-climate-change-solution",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/40. Three simple questions for climate change solutions"
+    },
+    "Recommended reading: The politics of oil prices from a history professor.": {
+      "issue_number": null,
+      "title": "Recommended reading: The politics of oil prices from a history professor.",
+      "slug_candidate": "recommended-reading-the-politics-of-oil-prices-from-a-history-professor",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/Recommended reading: The politics of oil prices from a history professor."
+    },
+    "7. Earth is getting warmer. So what? (Part 2)": {
+      "issue_number": 7,
+      "title": "Earth is getting warmer. So what? (Part 2)",
+      "slug_candidate": "earth-is-getting-warmer-so-what-part-2",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/7. Earth is getting warmer. So what? (Part 2)"
+    },
+    "39. Transitions": {
+      "issue_number": 39,
+      "title": "Transitions",
+      "slug_candidate": "transitions",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/39. Transitions"
+    },
+    "Newsletter General": {
+      "issue_number": null,
+      "title": "Newsletter General",
+      "slug_candidate": "newsletter-general",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/Newsletter General"
+    },
+    "45. First Anniversary Edition": {
+      "issue_number": 45,
+      "title": "First Anniversary Edition",
+      "slug_candidate": "first-anniversary-edition",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/45. First Anniversary Edition"
+    },
+    "21. Healing (Part 11). The Only Solution.": {
+      "issue_number": 21,
+      "title": "Healing (Part 11). The Only Solution.",
+      "slug_candidate": "healing-part-11-the-only-solution",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/21. Healing (Part 11). The Only Solution."
+    },
+    "35. Is the California drought due to climate change?": {
+      "issue_number": 35,
+      "title": "Is the California drought due to climate change?",
+      "slug_candidate": "is-the-california-drought-due-to-climate-change",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/35. Is the California drought due to climate change?"
+    },
+    "28. Healing Earth for the Twitterverse": {
+      "issue_number": 28,
+      "title": "Healing Earth for the Twitterverse",
+      "slug_candidate": "healing-earth-for-the-twitterverse",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/28. Healing Earth for the Twitterverse"
+    },
+    "42. IPCC WG III and reality (Part 1); Addendum": {
+      "issue_number": 42,
+      "title": "IPCC WG III and reality (Part 1); Addendum",
+      "slug_candidate": "ipcc-wg-iii-and-reality-part-1-addendum",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/42. IPCC WG III and reality (Part 1); Addendum"
+    },
+    "33. The existential threat revisited": {
+      "issue_number": 33,
+      "title": "The existential threat revisited",
+      "slug_candidate": "the-existential-threat-revisited",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/33. The existential threat revisited"
+    },
+    "20. Healing (Part 10). The nuclear option": {
+      "issue_number": 20,
+      "title": "Healing (Part 10). The nuclear option",
+      "slug_candidate": "healing-part-10-the-nuclear-option",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/20. Healing (Part 10). The nuclear option"
+    },
+    "1x": {
+      "issue_number": null,
+      "title": "1x",
+      "slug_candidate": "1x",
+      "path": "/sessions/dazzling-blissful-wozniak/mnt/Healing Newsletter/1x"
+    }
+  },
+  "posts": [],
+  "unmatched_folders": [],
+  "unmatched_posts": []
+}

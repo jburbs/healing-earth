@@ -1,0 +1,23 @@
+# Database files (large, not needed for static site)
+*.db
+*.db-journal
+*.sql
+
+# Archive/analysis files (not part of the live site)
+_organized_archive/
+archive_tools/
+
+# Reports and project docs (not part of the live site)
+ACTIONABLE_TODO.txt
+ARCHIVE_PROJECT_SUMMARY.md
+DEEP_PROVENANCE_REPORT.txt
+GRAPHIC_ELEMENTS_GUIDE.md
+MISSING_ITEMS_REPORT.txt
+PROVENANCE_REPORT.txt
+
+# macOS
+.DS_Store
+Icon?
+
+# Netlify (will be auto-generated)
+.netlify/
