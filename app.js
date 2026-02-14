@@ -70,14 +70,27 @@ document.addEventListener('DOMContentLoaded', function() {
             isSearching = false;
         }
 
-        // Filter posts
+        // Filter posts and update links with category context
         if (category === 'all') {
-            allPosts.forEach(function(li) { li.style.display = ''; });
+            allPosts.forEach(function(li) {
+                li.style.display = '';
+                // Remove category param from links
+                var link = li.querySelector('.post-list-title a');
+                if (link) {
+                    link.href = link.href.split('?')[0];
+                }
+            });
         } else {
             allPosts.forEach(function(li) {
                 var folder = li.getAttribute('data-folder');
                 var cats = (typeof postCategories !== 'undefined' && postCategories[folder]) || [];
-                li.style.display = cats.indexOf(category) !== -1 ? '' : 'none';
+                var visible = cats.indexOf(category) !== -1;
+                li.style.display = visible ? '' : 'none';
+                // Add category context to visible post links
+                var link = li.querySelector('.post-list-title a');
+                if (link && visible) {
+                    link.href = link.href.split('?')[0] + '?cat=' + encodeURIComponent(category);
+                }
             });
         }
 
@@ -120,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (s.parts) {
                 s.parts.forEach(function(part) {
-                    var href = 'posts/' + part.folder + '/index.html';
+                    var href = 'posts/' + part.folder + '/index.html?cat=series';
                     html += '<a href="' + href + '" class="series-part-link">';
                     html += '<span class="part-num">Part ' + part.partNum + '</span> ';
                     html += '<span class="part-title">' + part.title + '</span>';
