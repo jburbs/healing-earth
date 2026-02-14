@@ -3,1124 +3,1699 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healing Earth with Technology - Archive</title>
+    <title>Healing Earth with Technology</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1 class="site-title"><a href="index.html">Healing Earth with Technology</a></h1>
-            <p>A Science-based serial exploring climate change and solutions</p>
-            <nav>
-                <a href="index.html">All Posts</a>
-                <a href="about.html">About</a>
-            </nav>
-        </header>
+    <div class="site-hero">
+        <div class="hero-content">
+            <h1 class="site-hero-title">Healing Earth with Technology</h1>
+            <p class="site-hero-tagline">A Science-Based Serial on Climate Change and Solutions</p>
 
+            <div class="site-hero-bio">
+                <div class="hero-bio-text-wrapper">
+                    <p class="hero-author-name">By Jonathan Burbaum</p>
+                    <p class="hero-bio-text">A pragmatic molecular scientist trained in organic chemistry and molecular biology, with a long career devoted to developing solutions to existential human problems&mdash;from human health to alternative energy. Former Program Director at the Advanced Research Projects Agency&mdash;Energy (ARPA-E).</p>
+                </div>
+            </div>
+
+            <blockquote class="site-hero-mission">
+                Science is a sport that wrestles truth from conjecture.
+            </blockquote>
+
+            <p class="site-hero-guide">This archive contains over 180 issues exploring climate science, engineering solutions, policy analysis, and the role of technology in addressing global warming. Use the categories below to explore by topic, or search across all posts.</p>
+            <p class="site-hero-stats">182 posts &middot; May 2021 &ndash; July 2025</p>
+        </div>
+    </div>
+
+    <div class="tab-bar" id="tabBar">
+        <ul class="tab-bar-inner">
+            <li class="tab-item active" data-category="all"><a href="#" onclick="return false;">All</a></li>
+            <li class="tab-item" data-category="series"><a href="#" onclick="return false;">Series</a></li>
+            <li class="tab-item" data-category="climate"><a href="#" onclick="return false;">Climate Science</a></li>
+            <li class="tab-item" data-category="solutions"><a href="#" onclick="return false;">Solutions &amp; Technology</a></li>
+            <li class="tab-item" data-category="policy"><a href="#" onclick="return false;">Policy &amp; Economics</a></li>
+            <li class="tab-item" data-category="ai"><a href="#" onclick="return false;">AI &amp; Technology</a></li>
+            <li class="tab-item" data-category="science"><a href="#" onclick="return false;">Science &amp; Methods</a></li>
+            <li class="tab-item" data-category="notes"><a href="#" onclick="return false;">Notes &amp; Asides</a></li>
+        </ul>
+    </div>
+
+    <div class="homepage-container">
         <main>
-            <input type="text" class="search-box" placeholder="Search posts...">
+            <input type="text" class="search-box" id="searchBox" placeholder="Search all posts...">
 
-            <ul class="post-list">
-                
-        <li>
+            <div id="seriesView" class="series-view" style="display:none;">
+            </div>
+
+            <ul class="post-list" id="postList">
+
+        <li data-folder="2025-07-26_000_Going on hiatus">
             <h3 class="post-list-title"><a href="posts/2025-07-26_000_Going on hiatus/index.html">Going on hiatus</a></h3>
-            <p class="post-list-meta">2025-07-26</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-07-26</span>
+                <span class="category-badges" id="badges-2025-07-26_000_Going on hiatus"></span>
+            </div>
             <p class="post-list-excerpt">It’s hard to believe that I started this newsletter over four years ago! I began writing during early COVID-19 to provide accessible climate analysis to a broader audience. I intended to base my argum...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2025-06-28_000_AI is turning the corner">
             <h3 class="post-list-title"><a href="posts/2025-06-28_000_AI is turning the corner/index.html">AI is turning the corner</a></h3>
-            <p class="post-list-meta">2025-06-28</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-06-28</span>
+                <span class="category-badges" id="badges-2025-06-28_000_AI is turning the corner"></span>
+            </div>
             <p class="post-list-excerpt">A quick post this week, entirely human-generated. ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2025-06-21_000_Academic Fan-Fic of a Painless Net Zero Future">
             <h3 class="post-list-title"><a href="posts/2025-06-21_000_Academic Fan-Fic of a Painless Net Zero Future/index.html">Academic Fan-Fic of a Painless Net Zero Future</a></h3>
-            <p class="post-list-meta">2025-06-21</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-06-21</span>
+                <span class="category-badges" id="badges-2025-06-21_000_Academic Fan-Fic of a Painless Net Zero Future"></span>
+            </div>
             <p class="post-list-excerpt">Most of my posts have been focused on the United States for obvious reasons. But now that my news feed is broader than the New York Times, an open letter published in the UK caught my attention1. Five...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2025-06-07_000_Environmental Analysis Is Off the Rails">
             <h3 class="post-list-title"><a href="posts/2025-06-07_000_Environmental Analysis Is Off the Rails/index.html">Environmental Analysis Is Off the Rails</a></h3>
-            <p class="post-list-meta">2025-06-07</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-06-07</span>
+                <span class="category-badges" id="badges-2025-06-07_000_Environmental Analysis Is Off the Rails"></span>
+            </div>
             <p class="post-list-excerpt">The Supreme Court delivered a unanimous decision this week reinstating the Uinta Basin Railway project, and frankly, it’s about time someone applied analytical rigor to environmental impact assessment...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2025-05-31_000_Did our Digital Overlord Meet His Match">
             <h3 class="post-list-title"><a href="posts/2025-05-31_000_Did our Digital Overlord Meet His Match/index.html">Did our Digital Overlord Meet His Match?</a></h3>
-            <p class="post-list-meta">2025-05-31</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-05-31</span>
+                <span class="category-badges" id="badges-2025-05-31_000_Did our Digital Overlord Meet His Match"></span>
+            </div>
             <p class="post-list-excerpt">A revealing update on my three-part series1 that tracked Elon Musk’s power consolidation from Tesla shareholder to information broker via X and DOGE, now turbocharged by xAI....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2025-05-24_000_The Information Paradox">
             <h3 class="post-list-title"><a href="posts/2025-05-24_000_The Information Paradox/index.html">The Information Paradox</a></h3>
-            <p class="post-list-meta">2025-05-24</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-05-24</span>
+                <span class="category-badges" id="badges-2025-05-24_000_The Information Paradox"></span>
+            </div>
             <p class="post-list-excerpt">I feel slightly guilty for a month-long silence, but I think you’ll find I’ve spent my time well. I’ve been up to my eyeballs in data analysis for some projects related to topics I’ve covered here, an...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2025-04-25_000_Making Agrivoltaics Work">
             <h3 class="post-list-title"><a href="posts/2025-04-25_000_Making Agrivoltaics Work/index.html">Making Agrivoltaics Work</a></h3>
-            <p class="post-list-meta">2025-04-25</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-04-25</span>
+                <span class="category-badges" id="badges-2025-04-25_000_Making Agrivoltaics Work"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: Agrivoltaic technologies face implementation challenges that robotics and AI can help address effectively. With appropriate design considerations, practical implementation is feasible even in M...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2025-04-12_000_Rethinking the Energy-Agriculture Nexus">
             <h3 class="post-list-title"><a href="posts/2025-04-12_000_Rethinking the Energy-Agriculture Nexus/index.html">Rethinking the Energy-Agriculture Nexus</a></h3>
-            <p class="post-list-meta">2025-04-12</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-04-12</span>
+                <span class="category-badges" id="badges-2025-04-12_000_Rethinking the Energy-Agriculture Nexus"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR Plants waste energy when overexposed to light. Agrivoltaics captures this wasted energy while reducing water needs, increasing crop yields, and diversifying farm income. Implementation challenge...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2025-03-29_000_The Evolution of Elon Musk, Part 3">
             <h3 class="post-list-title"><a href="posts/2025-03-29_000_The Evolution of Elon Musk, Part 3/index.html">The Evolution of Elon Musk, Part 3</a></h3>
-            <p class="post-list-meta">2025-03-29</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-03-29</span>
+                <span class="category-badges" id="badges-2025-03-29_000_The Evolution of Elon Musk, Part 3"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR In parts 1 and 2, I traced Musk’s evolution from Product Builder to Information Controller, documenting his $39 billion conversion of Tesla stock into unprecedented governmental power through DO...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2025-03-23_000_The Evolution of Elon Musk, Part 2">
             <h3 class="post-list-title"><a href="posts/2025-03-23_000_The Evolution of Elon Musk, Part 2/index.html">The Evolution of Elon Musk, Part 2</a></h3>
-            <p class="post-list-meta">2025-03-23</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-03-23</span>
+                <span class="category-badges" id="badges-2025-03-23_000_The Evolution of Elon Musk, Part 2"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: Last week, I documented Musk's conversion of Tesla wealth into governmental power through DOGE. This week, I examine how his AI investments amplify this asymmetry, recommend self-defense measur...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2025-03-15_000_The Evolution of Elon Musk, Part 1.">
             <h3 class="post-list-title"><a href="posts/2025-03-15_000_The Evolution of Elon Musk, Part 1./index.html">The Evolution of Elon Musk, Part 1.</a></h3>
-            <p class="post-list-meta">2025-03-15</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-03-15</span>
+                <span class="category-badges" id="badges-2025-03-15_000_The Evolution of Elon Musk, Part 1."></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: Musk converted $39B in Tesla stock to control Twitter/X and then leveraged this platform to gain unprecedented government authority through DOGE. The data suggests this calculated trade of tran...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2025-03-08_000_Beyond DeSci Part 3 From Concept to Code">
             <h3 class="post-list-title"><a href="posts/2025-03-08_000_Beyond DeSci Part 3 From Concept to Code/index.html">Beyond DeSci Part 3: From Concept to Code</a></h3>
-            <p class="post-list-meta">2025-03-08</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-03-08</span>
+                <span class="category-badges" id="badges-2025-03-08_000_Beyond DeSci Part 3 From Concept to Code"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: The SciValidate concept has evolved from theoretical discussion to working code with a functional prototype available at scivalidate.org/example. Many technical and social challenges remain. Jo...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2025-02-22_000_Beyond DeSci Part 2 Starting Small">
             <h3 class="post-list-title"><a href="posts/2025-02-22_000_Beyond DeSci Part 2 Starting Small/index.html">Beyond DeSci Part 2: Starting Small</a></h3>
-            <p class="post-list-meta">2025-02-22</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-02-22</span>
+                <span class="category-badges" id="badges-2025-02-22_000_Beyond DeSci Part 2 Starting Small"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: SciValidate seeks to be a trust verification system that helps readers evaluate scientific claims and strengthens the integrity of online scientific discourse. Please sign up here to help with ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2025-02-08_000_Beyond DeSci A Modern Architecture for Scientific Trust">
             <h3 class="post-list-title"><a href="posts/2025-02-08_000_Beyond DeSci A Modern Architecture for Scientific Trust/index.html">Beyond DeSci: A Modern Architecture for Scientific Trust</a></h3>
-            <p class="post-list-meta">2025-02-08</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-02-08</span>
+                <span class="category-badges" id="badges-2025-02-08_000_Beyond DeSci A Modern Architecture for Scientific Trust"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: Scientific literature needs a modern validation architecture that enables verified scientific expertise to flow through social media while maintaining rigor and accessibility....</p>
         </li>
-        
-        <li>
-            <h3 class="post-list-title"><a href="posts/2025-01-25_000_The Leash is Broken/index.html">The Leash is Broken </a></h3>
-            <p class="post-list-meta">2025-01-25</p>
+
+        <li data-folder="2025-01-25_000_The Leash is Broken">
+            <h3 class="post-list-title"><a href="posts/2025-01-25_000_The Leash is Broken/index.html">The Leash is Broken</a></h3>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-01-25</span>
+                <span class="category-badges" id="badges-2025-01-25_000_The Leash is Broken"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: Trump’s EO expands federal oil/gas leasing, adding $2B in revenue by undercutting the free market, while consumers see no price benefit. Winners: Oil majors. Losers: private landowners and our ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2025-01-18_000_The Scientific Literature is Dead. Now What">
             <h3 class="post-list-title"><a href="posts/2025-01-18_000_The Scientific Literature is Dead. Now What/index.html">The Scientific Literature is Dead. Now What?</a></h3>
-            <p class="post-list-meta">2025-01-18</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-01-18</span>
+                <span class="category-badges" id="badges-2025-01-18_000_The Scientific Literature is Dead. Now What"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: The death of traditional gatekeepers in journalism and science doesn’t mean the death of truth-seeking. The scientific method matters more than ever in a world where authority must be earned ra...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2025-01-11_000_Beyond Good vs. Evil Tradeoffs in Modern Agriculture">
             <h3 class="post-list-title"><a href="posts/2025-01-11_000_Beyond Good vs. Evil Tradeoffs in Modern Agriculture/index.html">Beyond Good vs. Evil: Tradeoffs in Modern Agriculture</a></h3>
-            <p class="post-list-meta">2025-01-11</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-01-11</span>
+                <span class="category-badges" id="badges-2025-01-11_000_Beyond Good vs. Evil Tradeoffs in Modern Agriculture"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: We need 50% more food by 2050, but we already use 65% of Earth’s farmable land. The solution isn’t choosing between industrial or traditional farming - we should measure and optimize their trad...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2025-01-04_000_Holiday Break(ing)">
             <h3 class="post-list-title"><a href="posts/2025-01-04_000_Holiday Break(ing)/index.html">Holiday Break(ing)</a></h3>
-            <p class="post-list-meta">2025-01-04</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2025-01-04</span>
+                <span class="category-badges" id="badges-2025-01-04_000_Holiday Break(ing)"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: Among many policy proposals, Project 2025 proposes eliminating both ARPA-E & EERE and criticizes international ‘climate reparations’ but inexplicably maintains the gargantuan budget for the Nat...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-12-07_000_The Information Paradox">
             <h3 class="post-list-title"><a href="posts/2024-12-07_000_The Information Paradox/index.html">The Information Paradox</a></h3>
-            <p class="post-list-meta">2024-12-07</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-12-07</span>
+                <span class="category-badges" id="badges-2024-12-07_000_The Information Paradox"></span>
+            </div>
             <p class="post-list-excerpt">I feel slightly guilty for a month-long silence, but I think you’ll find I’ve spent my time well. I’ve been up to my eyeballs in data analysis for some projects related to topics I’ve covered here, an...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-11-24_000_November 17, 2024">
             <h3 class="post-list-title"><a href="posts/2024-11-24_000_November 17, 2024/index.html">November 17, 2024</a></h3>
-            <p class="post-list-meta">2024-11-24</p>
-            <p class="post-list-excerpt"></p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-11-24</span>
+                <span class="category-badges" id="badges-2024-11-24_000_November 17, 2024"></span>
+            </div>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-11-16_000_Another year. Another COP. Same ol' same ol'">
             <h3 class="post-list-title"><a href="posts/2024-11-16_000_Another year. Another COP. Same ol' same ol'/index.html">Another year. Another COP. Same ol' same ol'</a></h3>
-            <p class="post-list-meta">2024-11-16</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-11-16</span>
+                <span class="category-badges" id="badges-2024-11-16_000_Another year. Another COP. Same ol' same ol'"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: COP29 in Baku brings the usual mix of unmet goals, protests, and demands for more money, with affluent nations pressured to fund global climate efforts while accountability remains elusive. Are...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-11-09_000_Recovering from a Tuesday hangover">
             <h3 class="post-list-title"><a href="posts/2024-11-09_000_Recovering from a Tuesday hangover/index.html">Recovering from a Tuesday hangover</a></h3>
-            <p class="post-list-meta">2024-11-09</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-11-09</span>
+                <span class="category-badges" id="badges-2024-11-09_000_Recovering from a Tuesday hangover"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: The election boosts MAGA, threatening checks and balances. Staying vigilant is essential. But the manuscript is progressing. ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-10-26_000_Taking a short break (again)">
             <h3 class="post-list-title"><a href="posts/2024-10-26_000_Taking a short break (again)/index.html">Taking a short break (again)</a></h3>
-            <p class="post-list-meta">2024-10-26</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-10-26</span>
+                <span class="category-badges" id="badges-2024-10-26_000_Taking a short break (again)"></span>
+            </div>
             <p class="post-list-excerpt">To my loyal readers: I’ve been up to my eyeballs in data analysis, aiming to have a decent manuscript draft before the holidays. This has meant revisiting and in many cases refining my previous quanti...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-10-19_000_Water. There is no substitute.">
             <h3 class="post-list-title"><a href="posts/2024-10-19_000_Water. There is no substitute./index.html">Water. There is no substitute.</a></h3>
-            <p class="post-list-meta">2024-10-19</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-10-19</span>
+                <span class="category-badges" id="badges-2024-10-19_000_Water. There is no substitute."></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: The world's food supply is at risk because many countries that produce our food are facing water shortages, a problem expected to worsen due to climate change. However, policymakers are still n...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-10-12_000_The Tragedy of San Onofre">
             <h3 class="post-list-title"><a href="posts/2024-10-12_000_The Tragedy of San Onofre/index.html">The Tragedy of San Onofre</a></h3>
-            <p class="post-list-meta">2024-10-12</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-10-12</span>
+                <span class="category-badges" id="badges-2024-10-12_000_The Tragedy of San Onofre"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: The closure of the San Onofre removed a source of reliable carbon-free energy capacity from the West Coast. The decision failed to  balance safety with enlightened environmental science, leadin...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-10-05_000_Bellwethers">
             <h3 class="post-list-title"><a href="posts/2024-10-05_000_Bellwethers/index.html">Bellwethers</a></h3>
-            <p class="post-list-meta">2024-10-05</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-10-05</span>
+                <span class="category-badges" id="badges-2024-10-05_000_Bellwethers"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR; The Bellwethers, a group of prominent women former leaders (and others), published an open letter urging American politicians to make the transition to clean energy their top priority. Unfortun...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-09-28_000_Beyond the Limits A Critical Look at Cultured Meat">
             <h3 class="post-list-title"><a href="posts/2024-09-28_000_Beyond the Limits A Critical Look at Cultured Meat/index.html">Beyond the Limits: A Critical Look at Cultured Meat</a></h3>
-            <p class="post-list-meta">2024-09-28</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-09-28</span>
+                <span class="category-badges" id="badges-2024-09-28_000_Beyond the Limits A Critical Look at Cultured Meat"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: Cultured meat is often promoted as a sustainable alternative to traditional livestock farming. But is it better for the environment? Direct comparisons are complex, but cultured cells require a...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-09-21_000_Climate Week - Are solutions coming into focus">
             <h3 class="post-list-title"><a href="posts/2024-09-21_000_Climate Week - Are solutions coming into focus/index.html">Climate Week - Are solutions coming into focus?</a></h3>
-            <p class="post-list-meta">2024-09-21</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-09-21</span>
+                <span class="category-badges" id="badges-2024-09-21_000_Climate Week - Are solutions coming into focus"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: “Climate Week NYC” focuses more on public policy than engineering solutions. The only effective path to address climate change is to combine the two, but the “week” doesn’t chart one. Neither d...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-09-14_000_Engineering, Journalism, and the Circular Firing Squad (Part 3)">
             <h3 class="post-list-title"><a href="posts/2024-09-14_000_Engineering, Journalism, and the Circular Firing Squad (Part 3)/index.html">Engineering, Journalism, and the Circular Firing Squad (Part 3)</a></h3>
-            <p class="post-list-meta">2024-09-14</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-09-14</span>
+                <span class="category-badges" id="badges-2024-09-14_000_Engineering, Journalism, and the Circular Firing Squad (Part 3)"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: Volcanic eruptions produce airborne dust clouds that reflect sunlight and cool the Earth. Can we use this knowledge to lessen the effect of rising carbon dioxide? Maybe. But if we do, we’re fly...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-09-07_000_Doing Something">
             <h3 class="post-list-title"><a href="posts/2024-09-07_000_Doing Something/index.html">Doing Something</a></h3>
-            <p class="post-list-meta">2024-09-07</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-09-07</span>
+                <span class="category-badges" id="badges-2024-09-07_000_Doing Something"></span>
+            </div>
             <p class="post-list-excerpt">After regularly expressing my frustration about the condition of modern science in many past issues, I think it’s time to do something positive about it. [Yes, the title of this installment was inspir...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-09-01_000_Science has devolved">
             <h3 class="post-list-title"><a href="posts/2024-09-01_000_Science has devolved/index.html">Science has devolved</a></h3>
-            <p class="post-list-meta">2024-09-01</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-09-01</span>
+                <span class="category-badges" id="badges-2024-09-01_000_Science has devolved"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: Modern science has taken authority for what is “truth” from the Church. In assuming this authority, scientific institutions have lost their ability to think broadly. We rely on increasingly nar...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-08-25_000_Engineering and iLUC (Part 3)">
             <h3 class="post-list-title"><a href="posts/2024-08-25_000_Engineering and iLUC (Part 3)/index.html">Engineering and iLUC (Part 3)</a></h3>
-            <p class="post-list-meta">2024-08-25</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-08-25</span>
+                <span class="category-badges" id="badges-2024-08-25_000_Engineering and iLUC (Part 3)"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: Biofuel life cycle assessments rely on flawed assumptions and inaccurate data. Current methodologies for iLUC assign fixed values to different crops without considering specific land conversion...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-08-10_000_Engineering and iLUC (Part 2)">
             <h3 class="post-list-title"><a href="posts/2024-08-10_000_Engineering and iLUC (Part 2)/index.html">Engineering and iLUC (Part 2)</a></h3>
-            <p class="post-list-meta">2024-08-10</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-08-10</span>
+                <span class="category-badges" id="badges-2024-08-10_000_Engineering and iLUC (Part 2)"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR:  iLUC unfairly singles out biofuels for their impact on land use while ignoring the broader implications of human activities and the fundamentally cyclical nature of carbon in the environment....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-08-03_000_Engineering and iLUC (Part 1)">
             <h3 class="post-list-title"><a href="posts/2024-08-03_000_Engineering and iLUC (Part 1)/index.html">Engineering and iLUC (Part 1)</a></h3>
-            <p class="post-list-meta">2024-08-03</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-08-03</span>
+                <span class="category-badges" id="badges-2024-08-03_000_Engineering and iLUC (Part 1)"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR: Indirect Land Use Change (iLUC) is a complex and controversial concept used to estimate the carbon emissions associated with biofuel production. By expanding the calculation beyond direct emiss...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-07-27_000_Engineering vs. Economic Net Zero (Part 3)">
             <h3 class="post-list-title"><a href="posts/2024-07-27_000_Engineering vs. Economic Net Zero (Part 3)/index.html">Engineering vs. Economic Net Zero (Part 3)</a></h3>
-            <p class="post-list-meta">2024-07-27</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-07-27</span>
+                <span class="category-badges" id="badges-2024-07-27_000_Engineering vs. Economic Net Zero (Part 3)"></span>
+            </div>
             <p class="post-list-excerpt">TLDR: SBTi and VCMI are ineffective in combating climate change due to conflicts of interest, flawed metrics, and reliance on voluntary measures. Instead, companies should consider a simplified system...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-07-20_000_Engineering vs. Economic Net Zero (Part 2)">
             <h3 class="post-list-title"><a href="posts/2024-07-20_000_Engineering vs. Economic Net Zero (Part 2)/index.html">Engineering vs. Economic Net Zero (Part 2)</a></h3>
-            <p class="post-list-meta">2024-07-20</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-07-20</span>
+                <span class="category-badges" id="badges-2024-07-20_000_Engineering vs. Economic Net Zero (Part 2)"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR:We should eliminate carbon offsets entirely and focus accountability for net zero on Scope 1 emissions for publicly traded companies. Current methods lead to double counting of emissions and bla...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-07-14_000_Engineering vs. Economic Net Zero (Part 1)">
             <h3 class="post-list-title"><a href="posts/2024-07-14_000_Engineering vs. Economic Net Zero (Part 1)/index.html">Engineering vs. Economic Net Zero (Part 1)</a></h3>
-            <p class="post-list-meta">2024-07-14</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-07-14</span>
+                <span class="category-badges" id="badges-2024-07-14_000_Engineering vs. Economic Net Zero (Part 1)"></span>
+            </div>
             <p class="post-list-excerpt">TL;DR:We should eliminate carbon offsets entirely and focus accountability for net zero on Scope 1 emissions for publicly traded companies. Current methods lead to double counting of emissions and bla...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-06-29_000_The Hidden Danger of Computer Models">
             <h3 class="post-list-title"><a href="posts/2024-06-29_000_The Hidden Danger of Computer Models/index.html">The Hidden Danger of Computer Models</a></h3>
-            <p class="post-list-meta">2024-06-29</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-06-29</span>
+                <span class="category-badges" id="badges-2024-06-29_000_The Hidden Danger of Computer Models"></span>
+            </div>
             <p class="post-list-excerpt">Simple models that provide actionable insights are more valuable than complex ones with inherent inaccuracies. Particularly in climate science, scientists need to avoid relying on other people’s model...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-06-22_000_Corporate Energy is not the Enemy">
             <h3 class="post-list-title"><a href="posts/2024-06-22_000_Corporate Energy is not the Enemy/index.html">Corporate Energy is not the Enemy</a></h3>
-            <p class="post-list-meta">2024-06-22</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-06-22</span>
+                <span class="category-badges" id="badges-2024-06-22_000_Corporate Energy is not the Enemy"></span>
+            </div>
             <p class="post-list-excerpt">We should work with the existing energy industry to achieve a smooth transition instead of demonizing it....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-06-15_000_Science in the headlines">
             <h3 class="post-list-title"><a href="posts/2024-06-15_000_Science in the headlines/index.html">Science in the headlines</a></h3>
-            <p class="post-list-meta">2024-06-15</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-06-15</span>
+                <span class="category-badges" id="badges-2024-06-15_000_Science in the headlines"></span>
+            </div>
             <p class="post-list-excerpt">Journalists fail in their public duty to inform by focusing on controversy over facts.  ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-06-08_000_How Environmentalism is Ruining Earth">
             <h3 class="post-list-title"><a href="posts/2024-06-08_000_How Environmentalism is Ruining Earth/index.html">How Environmentalism is Ruining Earth</a></h3>
-            <p class="post-list-meta">2024-06-08</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-06-08</span>
+                <span class="category-badges" id="badges-2024-06-08_000_How Environmentalism is Ruining Earth"></span>
+            </div>
             <p class="post-list-excerpt">Religious dogma among environmentalists calls for preserving an idyllic concept of the natural world. This set of beliefs actually distorts the truth and threatens the global economy. It’s time to cal...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-06-01_000_Engineering, Journalism, and the Circular Firing Squad (Part 2)">
             <h3 class="post-list-title"><a href="posts/2024-06-01_000_Engineering, Journalism, and the Circular Firing Squad (Part 2)/index.html">Engineering, Journalism, and the Circular Firing Squad (Part 2)</a></h3>
-            <p class="post-list-meta">2024-06-01</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-06-01</span>
+                <span class="category-badges" id="badges-2024-06-01_000_Engineering, Journalism, and the Circular Firing Squad (Part 2)"></span>
+            </div>
             <p class="post-list-excerpt">In light of the week’s news, let me highlight that the word “verdict” comes from the Latin “verus dictum,” which translates to “saying the truth.” A trial that reaches a verdict thus produces a statem...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-05-25_000_Engineering, Journalism, and the Circular Firing Squad (Part 1)">
             <h3 class="post-list-title"><a href="posts/2024-05-25_000_Engineering, Journalism, and the Circular Firing Squad (Part 1)/index.html">Engineering, Journalism, and the Circular Firing Squad (Part 1)</a></h3>
-            <p class="post-list-meta">2024-05-25</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-05-25</span>
+                <span class="category-badges" id="badges-2024-05-25_000_Engineering, Journalism, and the Circular Firing Squad (Part 1)"></span>
+            </div>
             <p class="post-list-excerpt">On March 31, The New York Times launched a series titled “Buying Time” in a front-page, above-the-fold article entitled “Can We Engineer Our Way Out of the Climate Crisis?” The first article discusses...</p>
         </li>
-        
-        <li>
-            <h3 class="post-list-title"><a href="posts/2024-05-17_000_The Trouble with Science./index.html">The Trouble with Science. </a></h3>
-            <p class="post-list-meta">2024-05-17</p>
+
+        <li data-folder="2024-05-17_000_The Trouble with Science.">
+            <h3 class="post-list-title"><a href="posts/2024-05-17_000_The Trouble with Science./index.html">The Trouble with Science.</a></h3>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-05-17</span>
+                <span class="category-badges" id="badges-2024-05-17_000_The Trouble with Science."></span>
+            </div>
             <p class="post-list-excerpt">After the long break, I have accumulated a number of leads for new installments, many from the pages of The Old Gray Lady, the New York Times. The inspiration for this one came recently from the May 1...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-04-23_000_Earth Day + 54 years">
             <h3 class="post-list-title"><a href="posts/2024-04-23_000_Earth Day + 54 years/index.html">Earth Day + 54 years</a></h3>
-            <p class="post-list-meta">2024-04-23</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-04-23</span>
+                <span class="category-badges" id="badges-2024-04-23_000_Earth Day + 54 years"></span>
+            </div>
             <p class="post-list-excerpt">I will continue with reruns starting tomorrow, but I wanted to get a fresh installment out today because it’s officially “Earth Day”. I think of it as the primary holiday (from “holy day”) in the litu...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-02-20_000_The meaning of net zero">
             <h3 class="post-list-title"><a href="posts/2024-02-20_000_The meaning of net zero/index.html">The meaning of "net zero"</a></h3>
-            <p class="post-list-meta">2024-02-20</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-02-20</span>
+                <span class="category-badges" id="badges-2024-02-20_000_The meaning of net zero"></span>
+            </div>
             <p class="post-list-excerpt">I’ve spent the past few issues (re)exploring the connection between human behavior and “climate action”. This theme reappears, so it’s essential to appreciate the difference between action and reactio...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-02-03_000_There is a path to healing">
             <h3 class="post-list-title"><a href="posts/2024-02-03_000_There is a path to healing/index.html">There is a path to healing</a></h3>
-            <p class="post-list-meta">2024-02-03</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-02-03</span>
+                <span class="category-badges" id="badges-2024-02-03_000_There is a path to healing"></span>
+            </div>
             <p class="post-list-excerpt">As I catch up with social media posts and their need for soundbite-sized summaries, I thought I’d distill the past 17 issues in a way that can be written as a single article. ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-02-02_000_A pause to catch up">
             <h3 class="post-list-title"><a href="posts/2024-02-02_000_A pause to catch up/index.html">A pause to catch up</a></h3>
-            <p class="post-list-meta">2024-02-02</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-02-02</span>
+                <span class="category-badges" id="badges-2024-02-02_000_A pause to catch up"></span>
+            </div>
             <p class="post-list-excerpt">Part of the purpose of these recent re-runs is to consolidate the logical thread that leads to practical solutions to the difficult climate control problem in a more compressed form. Another motivatio...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2024-01-05_000_A New Year">
             <h3 class="post-list-title"><a href="posts/2024-01-05_000_A New Year/index.html">A New Year</a></h3>
-            <p class="post-list-meta">2024-01-05</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2024-01-05</span>
+                <span class="category-badges" id="badges-2024-01-05_000_A New Year"></span>
+            </div>
             <p class="post-list-excerpt">To my readers:...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-12-21_117_Ending 2023 on an optimistic note">
             <h3 class="post-list-title"><a href="posts/2023-12-21_117_Ending 2023 on an optimistic note/index.html">117. Ending 2023 on an optimistic note</a></h3>
-            <p class="post-list-meta">2023-12-21</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-12-21</span>
+                <span class="category-badges" id="badges-2023-12-21_117_Ending 2023 on an optimistic note"></span>
+            </div>
             <p class="post-list-excerpt">After last week’s installment, the one where I extended my two-year-long COP tirade, I had second thoughts. For my final installment of 2023, I’d like to revise my views somewhat. Specifically, I thin...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-12-15_116_The Engineering Specifications of COP28">
             <h3 class="post-list-title"><a href="posts/2023-12-15_116_The Engineering Specifications of COP28/index.html">116. The Engineering Specifications of COP28</a></h3>
-            <p class="post-list-meta">2023-12-15</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-12-15</span>
+                <span class="category-badges" id="badges-2023-12-15_116_The Engineering Specifications of COP28"></span>
+            </div>
             <p class="post-list-excerpt">Yep. Your “delegates” put 198 Parties on the global expense account. In addition, there were 285 press conferences, 518 related ‘events’,  and 195 exhibits. Plus, venues for COP29 and COP30 were final...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-12-08_115_A different flavor of climate denial">
             <h3 class="post-list-title"><a href="posts/2023-12-08_115_A different flavor of climate denial/index.html">115. A different flavor of climate denial</a></h3>
-            <p class="post-list-meta">2023-12-08</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-12-08</span>
+                <span class="category-badges" id="badges-2023-12-08_115_A different flavor of climate denial"></span>
+            </div>
             <p class="post-list-excerpt">“Climate denial” is a pejorative characterizing those who willfully ignore the well-established connection between human activities and global warming. That flavor of denial involves the ignorance of ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-12-01_114_The solution space">
             <h3 class="post-list-title"><a href="posts/2023-12-01_114_The solution space/index.html">114. The solution space</a></h3>
-            <p class="post-list-meta">2023-12-01</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-12-01</span>
+                <span class="category-badges" id="badges-2023-12-01_114_The solution space"></span>
+            </div>
             <p class="post-list-excerpt">Yes, the crispness of winter is in the air (at least here in the US), so it’s COP season again. This is what passes for global governance on “climate”. Despite many efforts over the centuries, Earth i...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-11-22_113_A Thanksgiving Wish">
             <h3 class="post-list-title"><a href="posts/2023-11-22_113_A Thanksgiving Wish/index.html">113. A Thanksgiving Wish</a></h3>
-            <p class="post-list-meta">2023-11-22</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-11-22</span>
+                <span class="category-badges" id="badges-2023-11-22_113_A Thanksgiving Wish"></span>
+            </div>
             <p class="post-list-excerpt">Happy Thanksgiving to all! I figured I’d send this out on Wednesday with the expectation that many of you will enjoy (or at least spend) time with family tomorrow. May you all have a safe and pleasant...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-11-17_112_A Holy War">
             <h3 class="post-list-title"><a href="posts/2023-11-17_112_A Holy War/index.html">112. A Holy War</a></h3>
-            <p class="post-list-meta">2023-11-17</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-11-17</span>
+                <span class="category-badges" id="badges-2023-11-17_112_A Holy War"></span>
+            </div>
             <p class="post-list-excerpt">I thought I’d do a short piece on something lighter but based on a news item. Naturally, the fodder comes from the New York Times, where the opening sentence says a lot:...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-11-10_111_Are Solar Stills a Solution Yet (Part 1)">
             <h3 class="post-list-title"><a href="posts/2023-11-10_111_Are Solar Stills a Solution Yet (Part 1)/index.html">111. Are Solar Stills a Solution Yet? (Part 1)</a></h3>
-            <p class="post-list-meta">2023-11-10</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-11-10</span>
+                <span class="category-badges" id="badges-2023-11-10_111_Are Solar Stills a Solution Yet (Part 1)"></span>
+            </div>
             <p class="post-list-excerpt">Recently, MIT publicists announced a ‘breakthrough’ in desalination in an MIT News article entitled “Desalination system could produce freshwater that is cheaper than tap water.” This article was pick...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-11-03_110_Polls vs. Ballots">
             <h3 class="post-list-title"><a href="posts/2023-11-03_110_Polls vs. Ballots/index.html">110. Polls vs. Ballots</a></h3>
-            <p class="post-list-meta">2023-11-03</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-11-03</span>
+                <span class="category-badges" id="badges-2023-11-03_110_Polls vs. Ballots"></span>
+            </div>
             <p class="post-list-excerpt">I said I’d return to my more technical themes, and I will. However, during my vacation, I read Heather Cox Richardson’s Substack post here, which caused me to pause again for a data-linked and social ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-10-20_109_A Nobel for data analysis">
             <h3 class="post-list-title"><a href="posts/2023-10-20_109_A Nobel for data analysis/index.html">109. A Nobel for data analysis</a></h3>
-            <p class="post-list-meta">2023-10-20</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-10-20</span>
+                <span class="category-badges" id="badges-2023-10-20_109_A Nobel for data analysis"></span>
+            </div>
             <p class="post-list-excerpt">I’m on vacation next week and plan to steer back to energy/water/climate when I return, but I thought I’d cover one more anecdote pointing to “value signaling” as a social problem. I believe that it’s...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-10-12_108_Choosing a frame">
             <h3 class="post-list-title"><a href="posts/2023-10-12_108_Choosing a frame/index.html">108. Choosing a frame</a></h3>
-            <p class="post-list-meta">2023-10-12</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-10-12</span>
+                <span class="category-badges" id="badges-2023-10-12_108_Choosing a frame"></span>
+            </div>
             <p class="post-list-excerpt">As you’ve undoubtedly heard, last Saturday, the State of Israel was invaded by Hamas, which controls the government of the Palestinian territory of Gaza. To put this in an American context, it’s as if...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-10-06_107_Academic Integrity Under the Microscope">
             <h3 class="post-list-title"><a href="posts/2023-10-06_107_Academic Integrity Under the Microscope/index.html">107. Academic Integrity Under the Microscope</a></h3>
-            <p class="post-list-meta">2023-10-06</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-10-06</span>
+                <span class="category-badges" id="badges-2023-10-06_107_Academic Integrity Under the Microscope"></span>
+            </div>
             <p class="post-list-excerpt">Academic science is in crisis. I mean that in the medical sense, “the turning point of a disease when an important change takes place, indicating either recovery or death.” The mechanisms by which res...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-09-29_106_The social cost of privacy">
             <h3 class="post-list-title"><a href="posts/2023-09-29_106_The social cost of privacy/index.html">106. The social cost of privacy</a></h3>
-            <p class="post-list-meta">2023-09-29</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-09-29</span>
+                <span class="category-badges" id="badges-2023-09-29_106_The social cost of privacy"></span>
+            </div>
             <p class="post-list-excerpt">I thought I’d take a slight detour. In the last installment, I highlighted an enormous opportunity for improvement in science-based messaging, particularly when discussing global warming. Current mess...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-09-21_105_Eco-Anxiety">
             <h3 class="post-list-title"><a href="posts/2023-09-21_105_Eco-Anxiety/index.html">105. Eco-Anxiety</a></h3>
-            <p class="post-list-meta">2023-09-21</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-09-21</span>
+                <span class="category-badges" id="badges-2023-09-21_105_Eco-Anxiety"></span>
+            </div>
             <p class="post-list-excerpt">This week, I’m covering another New York Times article, “How Do We Feel About Global Warming? It’s Called Eco-Anxiety” by Rome bureau chief Jason Horowitz. As the title suggests, this article connects...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-09-14_104_STEM, DEI, and Academic Freedom">
             <h3 class="post-list-title"><a href="posts/2023-09-14_104_STEM, DEI, and Academic Freedom/index.html">104. STEM, DEI, and Academic Freedom</a></h3>
-            <p class="post-list-meta">2023-09-14</p>
-            <p class="post-list-excerpt"></p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-09-14</span>
+                <span class="category-badges" id="badges-2023-09-14_104_STEM, DEI, and Academic Freedom"></span>
+            </div>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-09-08_103_COPout...again">
             <h3 class="post-list-title"><a href="posts/2023-09-08_103_COPout...again/index.html">103. COPout...again</a></h3>
-            <p class="post-list-meta">2023-09-08</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-09-08</span>
+                <span class="category-badges" id="badges-2023-09-08_103_COPout...again"></span>
+            </div>
             <p class="post-list-excerpt">In the last issue, I reiterated my conclusion that humans are making no progress in climate control. Unfortunately, the IPCC (comprised of ‘thousands of scientists’) begs to differ, and whenever there...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-08-31_102_Decarbonization and history">
             <h3 class="post-list-title"><a href="posts/2023-08-31_102_Decarbonization and history/index.html">102. Decarbonization and history</a></h3>
-            <p class="post-list-meta">2023-08-31</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-08-31</span>
+                <span class="category-badges" id="badges-2023-08-31_102_Decarbonization and history"></span>
+            </div>
             <p class="post-list-excerpt">In this installment, I’d like to consider humanity’s so-called “addiction” to geologic carbon from the perspective of human history. Note that there was a long period during which humanity got along j...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-08-25_101_Water in the news">
             <h3 class="post-list-title"><a href="posts/2023-08-25_101_Water in the news/index.html">101. Water in the news</a></h3>
-            <p class="post-list-meta">2023-08-25</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-08-25</span>
+                <span class="category-badges" id="badges-2023-08-25_101_Water in the news"></span>
+            </div>
             <p class="post-list-excerpt">My newsfeed presented me with a new article from the Washington Post, entitled “Here’s where water is running out in the world — and why”. This is precisely the sort of shock headline that makes scien...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-08-18_100_Reflections">
             <h3 class="post-list-title"><a href="posts/2023-08-18_100_Reflections/index.html">100. Reflections</a></h3>
-            <p class="post-list-meta">2023-08-18</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-08-18</span>
+                <span class="category-badges" id="badges-2023-08-18_100_Reflections"></span>
+            </div>
             <p class="post-list-excerpt">Amazingly, this is the 100th installment of my newsletter. I originally intended it to be educational, but it has become more of a self-fulfilling outlet for my views. The purpose is identical, to pre...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-08-11_099_Developing a Third Solution (Part 11)">
             <h3 class="post-list-title"><a href="posts/2023-08-11_099_Developing a Third Solution (Part 11)/index.html">99. Developing a Third Solution (Part 11)</a></h3>
-            <p class="post-list-meta">2023-08-11</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-08-11</span>
+                <span class="category-badges" id="badges-2023-08-11_099_Developing a Third Solution (Part 11)"></span>
+            </div>
             <p class="post-list-excerpt">This solution now feels workable, but there are a lot of ragged ends. Among other things, I’ve mixed a lot of different units for energy, area, and water for expedience and clarity. These ought to be ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-08-03_098_Developing a Third Solution (Part 10)">
             <h3 class="post-list-title"><a href="posts/2023-08-03_098_Developing a Third Solution (Part 10)/index.html">98. Developing a Third Solution (Part 10)</a></h3>
-            <p class="post-list-meta">2023-08-03</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-08-03</span>
+                <span class="category-badges" id="badges-2023-08-03_098_Developing a Third Solution (Part 10)"></span>
+            </div>
             <p class="post-list-excerpt">I skipped last week because of an accumulation of personal issues and unanticipated technical problems. I didn’t want to rush something out to meet a self-imposed deadline because this installment req...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-07-21_097_Developing a Third Solution (Part 9)">
             <h3 class="post-list-title"><a href="posts/2023-07-21_097_Developing a Third Solution (Part 9)/index.html">97. Developing a Third Solution (Part 9)</a></h3>
-            <p class="post-list-meta">2023-07-21</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-07-21</span>
+                <span class="category-badges" id="badges-2023-07-21_097_Developing a Third Solution (Part 9)"></span>
+            </div>
             <p class="post-list-excerpt">I apologize to at least some of my readers for the recent surge of math in this series. It’s a process of refining ideas by eliminating the mathematically implausible. Ultimately, engaging both creati...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-07-14_096_Developing a Third Solution (Part 8)">
             <h3 class="post-list-title"><a href="posts/2023-07-14_096_Developing a Third Solution (Part 8)/index.html">96. Developing a Third Solution (Part 8)</a></h3>
-            <p class="post-list-meta">2023-07-14</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-07-14</span>
+                <span class="category-badges" id="badges-2023-07-14_096_Developing a Third Solution (Part 8)"></span>
+            </div>
             <p class="post-list-excerpt">I apologize for being slightly late with this installment, but I found the results this week incredible—as in, “I am not sure I believe this result”. I’m still not 100% sure, frankly. I subscribe to t...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-07-07_000_Something a little different">
             <h3 class="post-list-title"><a href="posts/2023-07-07_000_Something a little different/index.html">Something a little different</a></h3>
-            <p class="post-list-meta">2023-07-07</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-07-07</span>
+                <span class="category-badges" id="badges-2023-07-07_000_Something a little different"></span>
+            </div>
             <p class="post-list-excerpt">On this July 4th week, I thought I’d take a break from solving the “climate control” problem with something perhaps a bit more achievable: Food labeling....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-06-30_095_Developing a third solution (Part 7)">
             <h3 class="post-list-title"><a href="posts/2023-06-30_095_Developing a third solution (Part 7)/index.html">95. Developing a third solution (Part 7)</a></h3>
-            <p class="post-list-meta">2023-06-30</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-06-30</span>
+                <span class="category-badges" id="badges-2023-06-30_095_Developing a third solution (Part 7)"></span>
+            </div>
             <p class="post-list-excerpt">One frequent “issue” raised whenever I’ve brought up either off-shore desalination or industrial-scale cisterns to a theoretically knowledgeable audience is the cost of transporting water to the site ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-06-23_094_ChatGPT and Science">
             <h3 class="post-list-title"><a href="posts/2023-06-23_094_ChatGPT and Science/index.html">94. ChatGPT and Science</a></h3>
-            <p class="post-list-meta">2023-06-23</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-06-23</span>
+                <span class="category-badges" id="badges-2023-06-23_094_ChatGPT and Science"></span>
+            </div>
             <p class="post-list-excerpt">I wanted to return to this particular side-track because of all the hype and teeth-gnashing that AI is attracting these days and to connect earlier installments with the central theme. Nowadays, it fe...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-06-16_093_Seriously, how much money are we talking about">
             <h3 class="post-list-title"><a href="posts/2023-06-16_093_Seriously, how much money are we talking about/index.html">93. Seriously, how much money are we talking about?</a></h3>
-            <p class="post-list-meta">2023-06-16</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-06-16</span>
+                <span class="category-badges" id="badges-2023-06-16_093_Seriously, how much money are we talking about"></span>
+            </div>
             <p class="post-list-excerpt">Last time1, I discussed why I believe that Venture Capital is the wrong economic model to address climate control, and it got me thinking, “If not VC, then how will the transition be financed?” Previo...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-06-09_092_John Doerr and me">
             <h3 class="post-list-title"><a href="posts/2023-06-09_092_John Doerr and me/index.html">92. John Doerr and me</a></h3>
-            <p class="post-list-meta">2023-06-09</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-06-09</span>
+                <span class="category-badges" id="badges-2023-06-09_092_John Doerr and me"></span>
+            </div>
             <p class="post-list-excerpt">I thought I’d take a slight detour and share my insights into VC and my observations of John Doerr’s prolific career as a premier venture capitalist. ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-06-02_091_Developing a third solution (Part 6)">
             <h3 class="post-list-title"><a href="posts/2023-06-02_091_Developing a third solution (Part 6)/index.html">91. Developing a third solution (Part 6)</a></h3>
-            <p class="post-list-meta">2023-06-02</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-06-02</span>
+                <span class="category-badges" id="badges-2023-06-02_091_Developing a third solution (Part 6)"></span>
+            </div>
             <p class="post-list-excerpt">I’ve officially been at this for over two years. I missed the second anniversary last time around! Such is the consequence of lacking an editorial staff or organizational constraints. Nevertheless, li...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-05-25_090_ChatGPT is a fake. A really talented one!">
             <h3 class="post-list-title"><a href="posts/2023-05-25_090_ChatGPT is a fake. A really talented one!/index.html">90. ChatGPT is a fake. A really talented one!</a></h3>
-            <p class="post-list-meta">2023-05-25</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-05-25</span>
+                <span class="category-badges" id="badges-2023-05-25_090_ChatGPT is a fake. A really talented one!"></span>
+            </div>
             <p class="post-list-excerpt">After releasing the last installment, I have become increasingly worried about all the hype ChatGPT is getting. (That’s short for Chat Generative Pre-trained Transformer, in case you were wondering.) ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-05-19_089_ChatGPT is a fraud">
             <h3 class="post-list-title"><a href="posts/2023-05-19_089_ChatGPT is a fraud/index.html">89. ChatGPT is a fraud</a></h3>
-            <p class="post-list-meta">2023-05-19</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-05-19</span>
+                <span class="category-badges" id="badges-2023-05-19_089_ChatGPT is a fraud"></span>
+            </div>
             <p class="post-list-excerpt">Yes, that’s a clickbait headline! But not without reason. Read on....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-05-11_088_Why deforestation has no climate effect">
             <h3 class="post-list-title"><a href="posts/2023-05-11_088_Why deforestation has no climate effect/index.html">88. Why deforestation has no climate effect</a></h3>
-            <p class="post-list-meta">2023-05-11</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-05-11</span>
+                <span class="category-badges" id="badges-2023-05-11_088_Why deforestation has no climate effect"></span>
+            </div>
             <p class="post-list-excerpt">This is a topic I’ve covered a few times before, but frankly, I’ve chosen my words carefully to avoid appearing too judgmental. But the deeper I’ve gone into the interaction between the biosphere and ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-05-04_087_Heilmeier and Climate Control">
             <h3 class="post-list-title"><a href="posts/2023-05-04_087_Heilmeier and Climate Control/index.html">87. Heilmeier and Climate Control</a></h3>
-            <p class="post-list-meta">2023-05-04</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-05-04</span>
+                <span class="category-badges" id="badges-2023-05-04_087_Heilmeier and Climate Control"></span>
+            </div>
             <p class="post-list-excerpt">First of all, to all those who celebrate, Happy Star Wars Day!...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-04-30_086_Developing a third solution (part 5)">
             <h3 class="post-list-title"><a href="posts/2023-04-30_086_Developing a third solution (part 5)/index.html">86. Developing a third solution (part 5)</a></h3>
-            <p class="post-list-meta">2023-04-30</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-04-30</span>
+                <span class="category-badges" id="badges-2023-04-30_086_Developing a third solution (part 5)"></span>
+            </div>
             <p class="post-list-excerpt">We’re taking a really “old school” approach to climate, considering primarily technologies that existed before the Industrial Revolution. Here’s where we are....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-04-23_085_Developing a third solution (Part 4)">
             <h3 class="post-list-title"><a href="posts/2023-04-23_085_Developing a third solution (Part 4)/index.html">85. Developing a third solution (Part 4)</a></h3>
-            <p class="post-list-meta">2023-04-23</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-04-23</span>
+                <span class="category-badges" id="badges-2023-04-23_085_Developing a third solution (Part 4)"></span>
+            </div>
             <p class="post-list-excerpt">One purpose of brainstorming is to kill an unworkable idea early before it sucks up too many resources. I view it as a backward sales process—rather than enumerating the key selling points to close a ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-04-16_084_Developing a third solution (Part 3)">
             <h3 class="post-list-title"><a href="posts/2023-04-16_084_Developing a third solution (Part 3)/index.html">84. Developing a third solution (Part 3)</a></h3>
-            <p class="post-list-meta">2023-04-16</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-04-16</span>
+                <span class="category-badges" id="badges-2023-04-16_084_Developing a third solution (Part 3)"></span>
+            </div>
             <p class="post-list-excerpt">The last installment1 established that simply by combining well-established technologies, we can collect meaningful quantities of fresh water as rainfall over the ocean and deliver it in bulk to a pip...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-04-13_000_Join me on Notes">
             <h3 class="post-list-title"><a href="posts/2023-04-13_000_Join me on Notes/index.html">Join me on Notes</a></h3>
-            <p class="post-list-meta">2023-04-13</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-04-13</span>
+                <span class="category-badges" id="badges-2023-04-13_000_Join me on Notes"></span>
+            </div>
             <p class="post-list-excerpt">I just started Substack Notes and would love it if you joined me there! Here’s the first thread to prime you:...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-04-09_083_Developing a third solution (Part 2)">
             <h3 class="post-list-title"><a href="posts/2023-04-09_083_Developing a third solution (Part 2)/index.html">83. Developing a third solution (Part 2)</a></h3>
-            <p class="post-list-meta">2023-04-09</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-04-09</span>
+                <span class="category-badges" id="badges-2023-04-09_083_Developing a third solution (Part 2)"></span>
+            </div>
             <p class="post-list-excerpt">Caveat: This installment contains a lot of math. If that causes you to be anxious, you may want to skip it!...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-04-02_082_Developing a third solution (Part 1)">
             <h3 class="post-list-title"><a href="posts/2023-04-02_082_Developing a third solution (Part 1)/index.html">82. Developing a third solution (Part 1)</a></h3>
-            <p class="post-list-meta">2023-04-02</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-04-02</span>
+                <span class="category-badges" id="badges-2023-04-02_082_Developing a third solution (Part 1)"></span>
+            </div>
             <p class="post-list-excerpt">With a refreshed mission statement of this serial:...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-03-26_081_A decarbonization fetish">
             <h3 class="post-list-title"><a href="posts/2023-03-26_081_A decarbonization fetish/index.html">81. A decarbonization fetish</a></h3>
-            <p class="post-list-meta">2023-03-26</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-03-26</span>
+                <span class="category-badges" id="badges-2023-03-26_081_A decarbonization fetish"></span>
+            </div>
             <p class="post-list-excerpt">First of all, a big thank you to my coterie of energy nerds, many of whom I spoke with last week at the ARPA-E Summit. I sincerely appreciate the encouragement you’ve given me to continue this particu...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-03-19_080_Hydrogen. Atomic No1">
             <h3 class="post-list-title"><a href="posts/2023-03-19_080_Hydrogen. Atomic No1/index.html">80. Hydrogen. Atomic #1</a></h3>
-            <p class="post-list-meta">2023-03-19</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-03-19</span>
+                <span class="category-badges" id="badges-2023-03-19_080_Hydrogen. Atomic No1"></span>
+            </div>
             <p class="post-list-excerpt">Before I dig in, I was told by a number of readers that my last installment, covering the incredibly daunting task for humanity, climate control, was depressing. That was, in fact, the exact opposite ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-03-12_079_Climate Control">
             <h3 class="post-list-title"><a href="posts/2023-03-12_079_Climate Control/index.html">79. Climate Control</a></h3>
-            <p class="post-list-meta">2023-03-12</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-03-12</span>
+                <span class="category-badges" id="badges-2023-03-12_079_Climate Control"></span>
+            </div>
             <p class="post-list-excerpt">Before I start, let me suggest a pre-read for next week’s installment. Today’s New York Times published an article about the production of Green Hydrogen in Western Australia, an effort to reduce the ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-03-05_078_Recap">
             <h3 class="post-list-title"><a href="posts/2023-03-05_078_Recap/index.html">78. Recap</a></h3>
-            <p class="post-list-meta">2023-03-05</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-03-05</span>
+                <span class="category-badges" id="badges-2023-03-05_078_Recap"></span>
+            </div>
             <p class="post-list-excerpt">I’m taking the week off from new content to contemplate life and the direction of this particular effort. Nevertheless, I thought I’d plant a few seeds....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-02-26_077_Experimental Economics">
             <h3 class="post-list-title"><a href="posts/2023-02-26_077_Experimental Economics/index.html">77. Experimental Economics?</a></h3>
-            <p class="post-list-meta">2023-02-26</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-02-26</span>
+                <span class="category-badges" id="badges-2023-02-26_077_Experimental Economics"></span>
+            </div>
             <p class="post-list-excerpt">As if on cue, an opinion article in last week’s Sunday New York Times caught my eye. The title “A Huge, Uncharted Experiment on the U.S. Economy Is About to Begin” was all it took. I’m intrigued! ‘Exp...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-02-19_076_Returning to the prime directive">
             <h3 class="post-list-title"><a href="posts/2023-02-19_076_Returning to the prime directive/index.html">76. Returning to the prime directive</a></h3>
-            <p class="post-list-meta">2023-02-19</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-02-19</span>
+                <span class="category-badges" id="badges-2023-02-19_076_Returning to the prime directive"></span>
+            </div>
             <p class="post-list-excerpt">After spending a few installments establishing that ‘bias’ is a fundamental flaw in both humans and our computer models, I feel comfortable moving beyond the pedantic premise of this serial into a mor...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-02-12_075_Recognizing the bias of models">
             <h3 class="post-list-title"><a href="posts/2023-02-12_075_Recognizing the bias of models/index.html">75. Recognizing the bias of models</a></h3>
-            <p class="post-list-meta">2023-02-12</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-02-12</span>
+                <span class="category-badges" id="badges-2023-02-12_075_Recognizing the bias of models"></span>
+            </div>
             <p class="post-list-excerpt">I’ve been discussing “bias” for the past couple of installments, and I intend to return to technology—just not quite yet. So there is one more chapter here, I think. ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-02-05_074_Recognizing Personal Bias">
             <h3 class="post-list-title"><a href="posts/2023-02-05_074_Recognizing Personal Bias/index.html">74. Reflections</a></h3>
-            <p class="post-list-meta">2023-02-05</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-02-05</span>
+                <span class="category-badges" id="badges-2023-02-05_074_Recognizing Personal Bias"></span>
+            </div>
             <p class="post-list-excerpt">First, let me apologize for missing last week’s installment. I ran into some unanticipated travel and computer problems that kept me from finishing on time. Plus, I’ve wandered into some deep topics t...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-01-22_073_Recognizing the limits of recognition">
             <h3 class="post-list-title"><a href="posts/2023-01-22_073_Recognizing the limits of recognition/index.html">73. Recognizing the limits of recognition</a></h3>
-            <p class="post-list-meta">2023-01-22</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-01-22</span>
+                <span class="category-badges" id="badges-2023-01-22_073_Recognizing the limits of recognition"></span>
+            </div>
             <p class="post-list-excerpt">I dedicate this installment to my partner and muse, Marjorie Green, on her birthday and our third mensiversary. I credit her for the most impactful word in this series’s title, “healing”. It’s a power...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-01-15_072_Where is the sink (Part 2)">
             <h3 class="post-list-title"><a href="posts/2023-01-15_072_Where is the sink (Part 2)/index.html">72. Where is the sink? (Part 2)</a></h3>
-            <p class="post-list-meta">2023-01-15</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-01-15</span>
+                <span class="category-badges" id="badges-2023-01-15_072_Where is the sink (Part 2)"></span>
+            </div>
             <p class="post-list-excerpt">Picking up from where we left off last time: “Today’s models of the biosphere suck.” After all the opportunities for refinement, the question is, “Why?” Let’s look at how such models have changed sinc...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-01-09_071_Where is the sink (Part 1)">
             <h3 class="post-list-title"><a href="posts/2023-01-09_071_Where is the sink (Part 1)/index.html">71. Brainstorming a third solution (Part 9)</a></h3>
-            <p class="post-list-meta">2023-01-09</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-01-09</span>
+                <span class="category-badges" id="badges-2023-01-09_071_Where is the sink (Part 1)"></span>
+            </div>
             <p class="post-list-excerpt">This installment will be long and incomplete, but I think it’s worth trying harder to refine the story, so I will tell it in at least two segments....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2023-01-01_000_A New Hope">
             <h3 class="post-list-title"><a href="posts/2023-01-01_000_A New Hope/index.html">A New Hope</a></h3>
-            <p class="post-list-meta">2023-01-01</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2023-01-01</span>
+                <span class="category-badges" id="badges-2023-01-01_000_A New Hope"></span>
+            </div>
             <p class="post-list-excerpt">Rather than quickly wishing you all a “Happy New Year” and returning to overeating and watching the NFL, I thought I’d use this opportunity to review the standard year-end ritual itself. This is the t...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-12-25_000_Merry Christmas!">
             <h3 class="post-list-title"><a href="posts/2022-12-25_000_Merry Christmas!/index.html">Merry Christmas!</a></h3>
-            <p class="post-list-meta">2022-12-25</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-12-25</span>
+                <span class="category-badges" id="badges-2022-12-25_000_Merry Christmas!"></span>
+            </div>
             <p class="post-list-excerpt">I’ve taken the week off and plan to take off next week unless some news item prods me to write. Plus, it is the time of year to reflect on what has been and will come, so I encourage you to take this ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-12-18_070_Why the news about fusion is bad">
             <h3 class="post-list-title"><a href="posts/2022-12-18_070_Why the news about fusion is bad/index.html">70. Brainstorming a third solution (Part 8)</a></h3>
-            <p class="post-list-meta">2022-12-18</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-12-18</span>
+                <span class="category-badges" id="badges-2022-12-18_070_Why the news about fusion is bad"></span>
+            </div>
             <p class="post-list-excerpt">During this past week, many news outlets (including the New York Times, The Late Show with Stephen Colbert, and even PitchBook News) trumpeted a breakthrough in fusion research. The ineptly-named Nati...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-12-11_069_Why climate innovation is off track">
             <h3 class="post-list-title"><a href="posts/2022-12-11_069_Why climate innovation is off track/index.html">69. Why climate innovation is off track</a></h3>
-            <p class="post-list-meta">2022-12-11</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-12-11</span>
+                <span class="category-badges" id="badges-2022-12-11_069_Why climate innovation is off track"></span>
+            </div>
             <p class="post-list-excerpt">Multinational corporations, mega-billionaires, and wealthy governments have begun to throw more money at the “climate crisis”, apparently following the herd. This approach is fundamentally flawed: It ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-12-05_068_COP26-to-COP27 Readout">
             <h3 class="post-list-title"><a href="posts/2022-12-05_068_COP26-to-COP27 Readout/index.html">68. COP26-to-COP27 Readout</a></h3>
-            <p class="post-list-meta">2022-12-05</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-12-05</span>
+                <span class="category-badges" id="badges-2022-12-05_068_COP26-to-COP27 Readout"></span>
+            </div>
             <p class="post-list-excerpt">The 27th annual Conference of the Parties to the United Nations Framework Convention on Climate Change, aka COP27, closed a little over a week ago. I spell out the complete name because it mirrors the...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-11-20_067_Blindspotting (Part 6)">
             <h3 class="post-list-title"><a href="posts/2022-11-20_067_Blindspotting (Part 6)/index.html">67. Brainstorming a third way (Part 5)</a></h3>
-            <p class="post-list-meta">2022-11-20</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-11-20</span>
+                <span class="category-badges" id="badges-2022-11-20_067_Blindspotting (Part 6)"></span>
+            </div>
             <p class="post-list-excerpt">Let me begin this installment by saying how thankful I am to you, the readers of this series, not only my long-time supporters but also those who have recently discovered it. I hope you have a wonderf...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-11-14_066_Blindspotting (Part 5)">
             <h3 class="post-list-title"><a href="posts/2022-11-14_066_Blindspotting (Part 5)/index.html">66. Brainstorming a third way (Part 4)</a></h3>
-            <p class="post-list-meta">2022-11-14</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-11-14</span>
+                <span class="category-badges" id="badges-2022-11-14_066_Blindspotting (Part 5)"></span>
+            </div>
             <p class="post-list-excerpt">When I started this series, I got flak from some who aggressively challenged me to get a reaction, i.e., trolls. However, I have a thick skin and patience, so I repeatedly directed them to the opening...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-11-06_065_Blindspotting (Part 4)">
             <h3 class="post-list-title"><a href="posts/2022-11-06_065_Blindspotting (Part 4)/index.html">65. Brainstorming a third way (Part 3)</a></h3>
-            <p class="post-list-meta">2022-11-06</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-11-06</span>
+                <span class="category-badges" id="badges-2022-11-06_065_Blindspotting (Part 4)"></span>
+            </div>
             <p class="post-list-excerpt">One of my blind spots became apparent early on when I was looking for a way to demonstrate the quality of predictions by climate models to a non-scientific audience. I chose to draw an analogy with th...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-10-30_064_Blindspotting (Part 3)">
             <h3 class="post-list-title"><a href="posts/2022-10-30_064_Blindspotting (Part 3)/index.html">64. Blindspotting (Part 3)</a></h3>
-            <p class="post-list-meta">2022-10-30</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-10-30</span>
+                <span class="category-badges" id="badges-2022-10-30_064_Blindspotting (Part 3)"></span>
+            </div>
             <p class="post-list-excerpt">This installment reveals a different sort of blind spot. Continuing with the visual analogy, I think I’ve discovered more of a fuzzy area, not just for me but perhaps for the scientific community. ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-10-23_063_Blindspotting (Part 2)">
             <h3 class="post-list-title"><a href="posts/2022-10-23_063_Blindspotting (Part 2)/index.html">63. Brainstorming a third way (Part 1)</a></h3>
-            <p class="post-list-meta">2022-10-23</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-10-23</span>
+                <span class="category-badges" id="badges-2022-10-23_063_Blindspotting (Part 2)"></span>
+            </div>
             <p class="post-list-excerpt">I thought I’d start with a simpleminded, in retrospect, understanding of The Greenhouse Effect and what I learned about it while writing. The Greenhouse Effect is, in essence, the physical explanation...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-10-16_062_Blindspotting (Part 1)">
             <h3 class="post-list-title"><a href="posts/2022-10-16_062_Blindspotting (Part 1)/index.html">62. Blindspotting (Part 1)</a></h3>
-            <p class="post-list-meta">2022-10-16</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-10-16</span>
+                <span class="category-badges" id="badges-2022-10-16_062_Blindspotting (Part 1)"></span>
+            </div>
             <p class="post-list-excerpt">It ain’t what you don’t know that gets you into trouble. It’s what you know for sure that just ain’t so....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-10-10_061_What's the point of 'fighting' climate change">
             <h3 class="post-list-title"><a href="posts/2022-10-10_061_What's the point of 'fighting' climate change/index.html">61. What's the point of 'fighting' climate change?</a></h3>
-            <p class="post-list-meta">2022-10-10</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-10-10</span>
+                <span class="category-badges" id="badges-2022-10-10_061_What's the point of 'fighting' climate change"></span>
+            </div>
             <p class="post-list-excerpt">At this point, I’m slightly frustrated by the scientific community, so I thought I’d start with a provocative question to poke the beast with a stick. It’s intentionally rhetorical. If you’re reading ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-10-03_060_How much tax does 'Nature' owe California">
             <h3 class="post-list-title"><a href="posts/2022-10-03_060_How much tax does 'Nature' owe California/index.html">60. How much tax does 'Nature' owe California?</a></h3>
-            <p class="post-list-meta">2022-10-03</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-10-03</span>
+                <span class="category-badges" id="badges-2022-10-03_060_How much tax does 'Nature' owe California"></span>
+            </div>
             <p class="post-list-excerpt">This week, I thought I’d ask a hypothetical question with a possibly insightful answer. The State of California has an established carbon market, such that “emitters” pay for the privilege of releasin...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-09-25_059_Another solution (Part 3)">
             <h3 class="post-list-title"><a href="posts/2022-09-25_059_Another solution (Part 3)/index.html">59. Another solution? (Part 3)</a></h3>
-            <p class="post-list-meta">2022-09-25</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-09-25</span>
+                <span class="category-badges" id="badges-2022-09-25_059_Another solution (Part 3)"></span>
+            </div>
             <p class="post-list-excerpt">I’ve gotten a mini-surge of new subscribers lately, so I thought I should recap to put this installment in context. ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-09-19_058_Another solution (Part 2)">
             <h3 class="post-list-title"><a href="posts/2022-09-19_058_Another solution (Part 2)/index.html">58. Another solution? (Part 2)</a></h3>
-            <p class="post-list-meta">2022-09-19</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-09-19</span>
+                <span class="category-badges" id="badges-2022-09-19_058_Another solution (Part 2)"></span>
+            </div>
             <p class="post-list-excerpt">In preparing this installment, I realized I mischaracterized a semantic pivot in a previous issue, the one where I criticized the new wave of carbon capture technoacronym, BiCRS1. Specifically, I aske...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-09-11_057_Another solution (Part 1)">
             <h3 class="post-list-title"><a href="posts/2022-09-11_057_Another solution (Part 1)/index.html">57. Another solution? (Part 1)</a></h3>
-            <p class="post-list-meta">2022-09-11</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-09-11</span>
+                <span class="category-badges" id="badges-2022-09-11_057_Another solution (Part 1)"></span>
+            </div>
             <p class="post-list-excerpt">Today is an interesting date. It marks the 21st anniversary of the 9/11 terrorist attacks, so there are now adults who have known only the post-9/11 world. And yesterday, the United Kingdom elevated a...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-09-04_056_Does it matter what we plant (Part 3)">
             <h3 class="post-list-title"><a href="posts/2022-09-04_056_Does it matter what we plant (Part 3)/index.html">56. Does it matter what we plant? (Part 3)</a></h3>
-            <p class="post-list-meta">2022-09-04</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-09-04</span>
+                <span class="category-badges" id="badges-2022-09-04_056_Does it matter what we plant (Part 3)"></span>
+            </div>
             <p class="post-list-excerpt">The title this time is a misappropriation, but it follows from the earlier ones, so we are where we are. In the last installment, I established that it does matter what’s planted. The previous install...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-08-28_055_Does it matter what we plant (Part 2)">
             <h3 class="post-list-title"><a href="posts/2022-08-28_055_Does it matter what we plant (Part 2)/index.html">55. Does it matter what we plant? (Part 2)</a></h3>
-            <p class="post-list-meta">2022-08-28</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-08-28</span>
+                <span class="category-badges" id="badges-2022-08-28_055_Does it matter what we plant (Part 2)"></span>
+            </div>
             <p class="post-list-excerpt">Apropos of this series,1 a recent episode of John Oliver’s HBO Series, “Last Week Tonight,” did a number on Carbon Offsets and the concept of “economic” as opposed to “engineering” net zero. His show,...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-08-21_054_Does it matter what we plant (Part 1)">
             <h3 class="post-list-title"><a href="posts/2022-08-21_054_Does it matter what we plant (Part 1)/index.html">54. Agriculture and Climate (Part 5)</a></h3>
-            <p class="post-list-meta">2022-08-21</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-08-21</span>
+                <span class="category-badges" id="badges-2022-08-21_054_Does it matter what we plant (Part 1)"></span>
+            </div>
             <p class="post-list-excerpt">For the past couple of issues, I’ve focused on two questions:...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-08-14_053_Are trees the best use of land">
             <h3 class="post-list-title"><a href="posts/2022-08-14_053_Are trees the best use of land/index.html">53. Are trees the best use of land?</a></h3>
-            <p class="post-list-meta">2022-08-14</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-08-14</span>
+                <span class="category-badges" id="badges-2022-08-14_053_Are trees the best use of land"></span>
+            </div>
             <p class="post-list-excerpt">For the past couple of issues, I’ve focused on two questions:...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-08-08_000_Questions to be answered. With data.">
             <h3 class="post-list-title"><a href="posts/2022-08-08_000_Questions to be answered. With data./index.html">Questions to be answered. With data.</a></h3>
-            <p class="post-list-meta">2022-08-08</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-08-08</span>
+                <span class="category-badges" id="badges-2022-08-08_000_Questions to be answered. With data."></span>
+            </div>
             <p class="post-list-excerpt">It’s summer, with all sorts of associated distractions, and I slacked this past week. Nevertheless, I want to ensure that the next installments are supported with solid facts rooted in direct measurem...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-08-01_052_A Trillion trees">
             <h3 class="post-list-title"><a href="posts/2022-08-01_052_A Trillion trees/index.html">52. Agriculture and Climate (Part 3)</a></h3>
-            <p class="post-list-meta">2022-08-01</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-08-01</span>
+                <span class="category-badges" id="badges-2022-08-01_052_A Trillion trees"></span>
+            </div>
             <p class="post-list-excerpt">The cover of the July 17, 2022 issue of the New York Times asked, “Can planting a trillion new trees save the world?” referring to an article by Zach St. George entitled “The Trouble with Trees”. To s...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-07-24_051_Solar power at the cost of coal (Part 2)">
             <h3 class="post-list-title"><a href="posts/2022-07-24_051_Solar power at the cost of coal (Part 2)/index.html">51. Agriculture and Climate (Part 2)</a></h3>
-            <p class="post-list-meta">2022-07-24</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-07-24</span>
+                <span class="category-badges" id="badges-2022-07-24_051_Solar power at the cost of coal (Part 2)"></span>
+            </div>
             <p class="post-list-excerpt">In the previous two installments1 2, we saw how the DOE’s SunShot program set an ambitious goal of reducing the cost of solar power (primarily from photovoltaic cells) to the cost of coal power at a “...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-07-17_050_Solar power at the cost of coal (Part 1)">
             <h3 class="post-list-title"><a href="posts/2022-07-17_050_Solar power at the cost of coal (Part 1)/index.html">50. Agriculture and Climate (Part 1)</a></h3>
-            <p class="post-list-meta">2022-07-17</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-07-17</span>
+                <span class="category-badges" id="badges-2022-07-17_050_Solar power at the cost of coal (Part 1)"></span>
+            </div>
             <p class="post-list-excerpt">Thank you for reading Healing the Earth with Technology. This post is public so feel free to share it....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-07-10_000_Renewable electricity and the learning curve">
             <h3 class="post-list-title"><a href="posts/2022-07-10_000_Renewable electricity and the learning curve/index.html">Renewable electricity and the learning curve</a></h3>
-            <p class="post-list-meta">2022-07-10</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-07-10</span>
+                <span class="category-badges" id="badges-2022-07-10_000_Renewable electricity and the learning curve"></span>
+            </div>
             <p class="post-list-excerpt">I’m going to spend an extra week of the so-called “free” time I devote to this rag examining technology advances that lead to the following remarkable statement:...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-07-03_049_Can carbon be stored as topsoil">
             <h3 class="post-list-title"><a href="posts/2022-07-03_049_Can carbon be stored as topsoil/index.html">49. Expanding the case for irrigation</a></h3>
-            <p class="post-list-meta">2022-07-03</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-07-03</span>
+                <span class="category-badges" id="badges-2022-07-03_049_Can carbon be stored as topsoil"></span>
+            </div>
             <p class="post-list-excerpt">This past week, I had the privilege of attending an ARPA-E workshop on “Carbon Farming”. Workshops are an essential part of how the Agency identifies new opportunities and quantitative ways to measure...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-06-26_048_Expanding the case for irrigation">
             <h3 class="post-list-title"><a href="posts/2022-06-26_048_Expanding the case for irrigation/index.html">48. Expanding the case for irrigation</a></h3>
-            <p class="post-list-meta">2022-06-26</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-06-26</span>
+                <span class="category-badges" id="badges-2022-06-26_048_Expanding the case for irrigation"></span>
+            </div>
             <p class="post-list-excerpt">As we emerge from our COVID-induced isolation, we are all beginning to re-establish our social ties. This past week, I had the pleasure of reconnecting over dinner with Dr. Howard Branz. Howard and I ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-06-20_000_Another pseudopolitical science piece">
             <h3 class="post-list-title"><a href="posts/2022-06-20_000_Another pseudopolitical science piece/index.html">Another pseudopolitical science piece</a></h3>
-            <p class="post-list-meta">2022-06-20</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-06-20</span>
+                <span class="category-badges" id="badges-2022-06-20_000_Another pseudopolitical science piece"></span>
+            </div>
             <p class="post-list-excerpt">While watching the coverage of the January 6th Committee this past week, I flipped the channel to see what FOX News might be covering instead. The programming executives there had seized on two counte...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-06-12_047_Putin & the Pump revisited">
             <h3 class="post-list-title"><a href="posts/2022-06-12_047_Putin & the Pump revisited/index.html">47. Misattributions to Climate Change (Part 7)</a></h3>
-            <p class="post-list-meta">2022-06-12</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-06-12</span>
+                <span class="category-badges" id="badges-2022-06-12_047_Putin & the Pump revisited"></span>
+            </div>
             <p class="post-list-excerpt">This installment revisits a “pseudo-political” science piece1 I put out earlier this year. ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-06-05_046_Low-cost Desalination and the ARPA-E Summit">
             <h3 class="post-list-title"><a href="posts/2022-06-05_046_Low-cost Desalination and the ARPA-E Summit/index.html">46. Misattributions to Climate Change (Part 6)</a></h3>
-            <p class="post-list-meta">2022-06-05</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-06-05</span>
+                <span class="category-badges" id="badges-2022-06-05_046_Low-cost Desalination and the ARPA-E Summit"></span>
+            </div>
             <p class="post-list-excerpt">I apologize for skipping a week, but I hope many of you were on a well-deserved holiday/spring break over Memorial Day. My lame excuse is the ARPA-E Summit, the first in-person conference I’ve attende...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-05-22_045_First Anniversary Edition">
             <h3 class="post-list-title"><a href="posts/2022-05-22_045_First Anniversary Edition/index.html">45. First Anniversary Edition</a></h3>
-            <p class="post-list-meta">2022-05-22</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-05-22</span>
+                <span class="category-badges" id="badges-2022-05-22_045_First Anniversary Edition"></span>
+            </div>
             <p class="post-list-excerpt">It’s hard to believe that I began writing Healing Earth a year ago! It started innocently enough. I had the simple aspiration to inform others, in simple terms, about the science underlying “climate c...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-05-15_044_IPCC WG III and reality (Part 3)">
             <h3 class="post-list-title"><a href="posts/2022-05-15_044_IPCC WG III and reality (Part 3)/index.html">44. IPCC WG III and reality (Part 3)</a></h3>
-            <p class="post-list-meta">2022-05-15</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-05-15</span>
+                <span class="category-badges" id="badges-2022-05-15_044_IPCC WG III and reality (Part 3)"></span>
+            </div>
             <p class="post-list-excerpt">I thought I’d summarize the different sections of the rest of the report in the next couple of installments as a “Cliff’s Notes” version. I covered some of the Summary for Policymakers, Part C. “Syste...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-05-08_000_Recommended reading The politics of oil prices from a history professor.">
             <h3 class="post-list-title"><a href="posts/2022-05-08_000_Recommended reading The politics of oil prices from a history professor./index.html">Recommended reading: The politics of oil prices from a history professor.</a></h3>
-            <p class="post-list-meta">2022-05-08</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-05-08</span>
+                <span class="category-badges" id="badges-2022-05-08_000_Recommended reading The politics of oil prices from a history professor."></span>
+            </div>
             <p class="post-list-excerpt">This week, I was well into composing the next installment when an issue of “Letters from an American” by Heather Cox Richardson (Professor of History, Boston College) came across my (virtual) desk. No...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-05-01_043_IPCC WG III and reality (Part 2)">
             <h3 class="post-list-title"><a href="posts/2022-05-01_043_IPCC WG III and reality (Part 2)/index.html">43. Misattributions to Climate Change (Part 3)</a></h3>
-            <p class="post-list-meta">2022-05-01</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-05-01</span>
+                <span class="category-badges" id="badges-2022-05-01_043_IPCC WG III and reality (Part 2)"></span>
+            </div>
             <p class="post-list-excerpt">You can read Healing for free, and you can reach me directly by replying to this email. If someone forwarded you this email, they’re asking you to sign up. You can do that below....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-04-25_042_IPCC WG III and reality (Part 1); Addendum">
             <h3 class="post-list-title"><a href="posts/2022-04-25_042_IPCC WG III and reality (Part 1); Addendum/index.html">42. IPCC WG III and reality (Part 1); Addendum</a></h3>
-            <p class="post-list-meta">2022-04-25</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-04-25</span>
+                <span class="category-badges" id="badges-2022-04-25_042_IPCC WG III and reality (Part 1); Addendum"></span>
+            </div>
             <p class="post-list-excerpt">After hitting “publish” on the last installment, it occurred to me that I was publicly contradicting a significant conclusion of an international group of prominent scientists and opinion leaders, man...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-04-24_042_IPCC WG III and reality (Part 1)">
             <h3 class="post-list-title"><a href="posts/2022-04-24_042_IPCC WG III and reality (Part 1)/index.html">42. Misattributions to Climate Change (Part 2)</a></h3>
-            <p class="post-list-meta">2022-04-24</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-04-24</span>
+                <span class="category-badges" id="badges-2022-04-24_042_IPCC WG III and reality (Part 1)"></span>
+            </div>
             <p class="post-list-excerpt">You can read Healing for free, and you can reach me directly by replying to this email. If someone forwarded you this email, they’re asking you to sign up. You can do that below....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-04-17_000_Another pseudopolitical piece Putin and the Pump">
             <h3 class="post-list-title"><a href="posts/2022-04-17_000_Another pseudopolitical piece Putin and the Pump/index.html">Another pseudopolitical piece: Putin and the Pump</a></h3>
-            <p class="post-list-meta">2022-04-17</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-04-17</span>
+                <span class="category-badges" id="badges-2022-04-17_000_Another pseudopolitical piece Putin and the Pump"></span>
+            </div>
             <p class="post-list-excerpt">You can read Healing for free, and you can reach me directly by replying to this email. If someone forwarded you this email, they’re asking you to sign up. You can do that below....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-04-03_041_How to Heal Earth for the Visual Learner">
             <h3 class="post-list-title"><a href="posts/2022-04-03_041_How to Heal Earth for the Visual Learner/index.html">41. How to Heal Earth for the Visual Learner</a></h3>
-            <p class="post-list-meta">2022-04-03</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-04-03</span>
+                <span class="category-badges" id="badges-2022-04-03_041_How to Heal Earth for the Visual Learner"></span>
+            </div>
             <p class="post-list-excerpt">Getting to the essential truth about solutions to the problem currently known as “climate change” is a challenge. I’ve tried to address this challenge with primary data in previous installments, but I...</p>
         </li>
-        
-        <li>
-            <h3 class="post-list-title"><a href="posts/2022-03-27_040_Three simple questions for climate change solutions/index.html">40. Three simple questions for climate change solutions </a></h3>
-            <p class="post-list-meta">2022-03-27</p>
+
+        <li data-folder="2022-03-27_040_Three simple questions for climate change solutions">
+            <h3 class="post-list-title"><a href="posts/2022-03-27_040_Three simple questions for climate change solutions/index.html">40. Three simple questions for climate change solutions</a></h3>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-03-27</span>
+                <span class="category-badges" id="badges-2022-03-27_040_Three simple questions for climate change solutions"></span>
+            </div>
             <p class="post-list-excerpt">You can read Healing for free, and you can reach me directly by replying to this email. If someone forwarded you this email, they’re asking you to sign up. You can do that below....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-03-20_039_Transitions">
             <h3 class="post-list-title"><a href="posts/2022-03-20_039_Transitions/index.html">39. Holoeconomics & Energy (Part 3)</a></h3>
-            <p class="post-list-meta">2022-03-20</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-03-20</span>
+                <span class="category-badges" id="badges-2022-03-20_039_Transitions"></span>
+            </div>
             <p class="post-list-excerpt">You can read Healing for free, and you can reach me directly by replying to this email. If someone forwarded you this email, they’re asking you to sign up. You can do that below....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-03-13_038_Holoeconomics & Energy (Part 4), continued">
             <h3 class="post-list-title"><a href="posts/2022-03-13_038_Holoeconomics & Energy (Part 4), continued/index.html">38. Holoeconomics & Energy (Part 4), continued</a></h3>
-            <p class="post-list-meta">2022-03-13</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-03-13</span>
+                <span class="category-badges" id="badges-2022-03-13_038_Holoeconomics & Energy (Part 4), continued"></span>
+            </div>
             <p class="post-list-excerpt">You can read Healing for free, and you can reach me directly by replying to this email. If someone forwarded you this email, they’re asking you to sign up. You can do that below....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-03-06_037_Holoeconomics & Energy (Part 4)">
             <h3 class="post-list-title"><a href="posts/2022-03-06_037_Holoeconomics & Energy (Part 4)/index.html">37. Holoeconomics and Energy (Part 1)</a></h3>
-            <p class="post-list-meta">2022-03-06</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-03-06</span>
+                <span class="category-badges" id="badges-2022-03-06_037_Holoeconomics & Energy (Part 4)"></span>
+            </div>
             <p class="post-list-excerpt">You can read Healing for free, and you can reach me directly by replying to this email. If someone forwarded you this email, they’re asking you to sign up. You can do that below....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-02-27_036_Words don't matter (and they do)">
             <h3 class="post-list-title"><a href="posts/2022-02-27_036_Words don't matter (and they do)/index.html">36. Words don't matter (and they do)</a></h3>
-            <p class="post-list-meta">2022-02-27</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-02-27</span>
+                <span class="category-badges" id="badges-2022-02-27_036_Words don't matter (and they do)"></span>
+            </div>
             <p class="post-list-excerpt">You can read Healing for free, and you can reach me directly by replying to this email. If someone forwarded you this email, they’re asking you to sign up. You can do that below....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-02-20_035_Is the California drought due to climate change">
             <h3 class="post-list-title"><a href="posts/2022-02-20_035_Is the California drought due to climate change/index.html">35. Is the California drought due to climate change?</a></h3>
-            <p class="post-list-meta">2022-02-20</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-02-20</span>
+                <span class="category-badges" id="badges-2022-02-20_035_Is the California drought due to climate change"></span>
+            </div>
             <p class="post-list-excerpt">You can read Healing for free, and you can reach me directly by replying to this email. If someone forwarded you this email, they’re asking you to sign up. You can do that below....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-02-15_000_Oops--the missing issue">
             <h3 class="post-list-title"><a href="posts/2022-02-15_000_Oops--the missing issue/index.html">Oops--the missing issue</a></h3>
-            <p class="post-list-meta">2022-02-15</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-02-15</span>
+                <span class="category-badges" id="badges-2022-02-15_000_Oops--the missing issue"></span>
+            </div>
             <p class="post-list-excerpt">Sorry for the off-schedule post! Thanks to my regular readers for pointing out an error of mine. The attached post went out only to paying subscribers. That’s Substack’s default, but it’s entirely my ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-02-13_000_A second pseudo-political diversion">
             <h3 class="post-list-title"><a href="posts/2022-02-13_000_A second pseudo-political diversion/index.html">A second pseudo-political diversion</a></h3>
-            <p class="post-list-meta">2022-02-13</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-02-13</span>
+                <span class="category-badges" id="badges-2022-02-13_000_A second pseudo-political diversion"></span>
+            </div>
             <p class="post-list-excerpt">You can read Healing for free, and you can reach me directly by replying to this email. If someone forwarded you this email, they’re asking you to sign up. You can do that below....</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-02-06_034_Holoeconomics & Energy (Part 3)">
             <h3 class="post-list-title"><a href="posts/2022-02-06_034_Holoeconomics & Energy (Part 3)/index.html">34. Holoeconomics & Energy (Part 3)</a></h3>
-            <p class="post-list-meta">2022-02-06</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-02-06</span>
+                <span class="category-badges" id="badges-2022-02-06_034_Holoeconomics & Energy (Part 3)"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In previous installments of this serial, I have offered a peek behind science hea...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-01-30_033_The existential threat revisited">
             <h3 class="post-list-title"><a href="posts/2022-01-30_033_The existential threat revisited/index.html">33. IPCC in Action [IPCC Inaction] Part 7</a></h3>
-            <p class="post-list-meta">2022-01-30</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-01-30</span>
+                <span class="category-badges" id="badges-2022-01-30_033_The existential threat revisited"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In previous installments of this serial, I have offered a peek behind science hea...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-01-23_032_Holoeconomics & Energy (Part 2)">
             <h3 class="post-list-title"><a href="posts/2022-01-23_032_Holoeconomics & Energy (Part 2)/index.html">32. Holoeconomics & Energy (Part 2)</a></h3>
-            <p class="post-list-meta">2022-01-23</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-01-23</span>
+                <span class="category-badges" id="badges-2022-01-23_032_Holoeconomics & Energy (Part 2)"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In previous installments of this serial, I have offered a peek behind the headlin...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-01-16_031_Holoeconomics and Energy (Part 1)">
             <h3 class="post-list-title"><a href="posts/2022-01-16_031_Holoeconomics and Energy (Part 1)/index.html">31. Holoeconomics and Energy (Part 1)</a></h3>
-            <p class="post-list-meta">2022-01-16</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-01-16</span>
+                <span class="category-badges" id="badges-2022-01-16_031_Holoeconomics and Energy (Part 1)"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In previous installments of this serial, I have offered a peek behind the headlin...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2022-01-09_000_A pseudo-political diversion">
             <h3 class="post-list-title"><a href="posts/2022-01-09_000_A pseudo-political diversion/index.html">A pseudo-political diversion</a></h3>
-            <p class="post-list-meta">2022-01-09</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2022-01-09</span>
+                <span class="category-badges" id="badges-2022-01-09_000_A pseudo-political diversion"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In previous installments of this serial, I have offered a peek behind the headlin...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-12-20_030_Adapting Christmas to Climate Change">
             <h3 class="post-list-title"><a href="posts/2021-12-20_030_Adapting Christmas to Climate Change/index.html">30. IPCC in Action [IPCC Inaction?] (Part 4)</a></h3>
-            <p class="post-list-meta">2021-12-20</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-12-20</span>
+                <span class="category-badges" id="badges-2021-12-20_030_Adapting Christmas to Climate Change"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In previous installments of this serial, I have offered a peek behind the headlin...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-12-12_029_The existential threat ignored">
             <h3 class="post-list-title"><a href="posts/2021-12-12_029_The existential threat ignored/index.html">29. IPCC in Action [IPCC Inaction?] (Part 3)</a></h3>
-            <p class="post-list-meta">2021-12-12</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-12-12</span>
+                <span class="category-badges" id="badges-2021-12-12_029_The existential threat ignored"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In previous installments of this serial, I have offered a peek behind the headlin...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-12-05_028_Healing Earth for the Twitterverse">
             <h3 class="post-list-title"><a href="posts/2021-12-05_028_Healing Earth for the Twitterverse/index.html">28. IPCC in Action [IPCC Inaction?] (Part 2)</a></h3>
-            <p class="post-list-meta">2021-12-05</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-12-05</span>
+                <span class="category-badges" id="badges-2021-12-05_028_Healing Earth for the Twitterverse"></span>
+            </div>
             <p class="post-list-excerpt">The existential threat posed by the continued combustion of geologic carbon can be reversed using human ingenuity. But how?...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-11-28_000_Thanksgiving break">
             <h3 class="post-list-title"><a href="posts/2021-11-28_000_Thanksgiving break/index.html">Thanksgiving break</a></h3>
-            <p class="post-list-meta">2021-11-28</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-11-28</span>
+                <span class="category-badges" id="badges-2021-11-28_000_Thanksgiving break"></span>
+            </div>
             <p class="post-list-excerpt">The installment isn’t coming together this week. I’m on Thanksgiving break with family and haven’t really had time to put together a story. ...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-11-21_027_Healing revisited, or Don't we already have a solution">
             <h3 class="post-list-title"><a href="posts/2021-11-21_027_Healing revisited, or Don't we already have a solution/index.html">27. Healing revisited, or "Don't we already have a solution?"</a></h3>
-            <p class="post-list-meta">2021-11-21</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-11-21</span>
+                <span class="category-badges" id="badges-2021-11-21_027_Healing revisited, or Don't we already have a solution"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In previous installments of this serial, I have offered a peek behind the headlin...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-11-14_026_The science problem with net-zero">
             <h3 class="post-list-title"><a href="posts/2021-11-14_026_The science problem with net-zero/index.html">26. A fork in the road</a></h3>
-            <p class="post-list-meta">2021-11-14</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-11-14</span>
+                <span class="category-badges" id="badges-2021-11-14_026_The science problem with net-zero"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In previous installments of this serial, I have offered a peek behind the headlin...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-11-07_025_Evaluating a carbon footprint (Part 3) Paper or plastic">
             <h3 class="post-list-title"><a href="posts/2021-11-07_025_Evaluating a carbon footprint (Part 3) Paper or plastic/index.html">25. IPCC and Net Zero</a></h3>
-            <p class="post-list-meta">2021-11-07</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-11-07</span>
+                <span class="category-badges" id="badges-2021-11-07_025_Evaluating a carbon footprint (Part 3) Paper or plastic"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-11-01_024_Evaluating a carbon footprint (Part 2) Crypto vs Credit">
             <h3 class="post-list-title"><a href="posts/2021-11-01_024_Evaluating a carbon footprint (Part 2) Crypto vs Credit/index.html">24. Evaluating a "carbon footprint" (Part 2): Crypto vs Credit</a></h3>
-            <p class="post-list-meta">2021-11-01</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-11-01</span>
+                <span class="category-badges" id="badges-2021-11-01_024_Evaluating a carbon footprint (Part 2) Crypto vs Credit"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-10-24_023_Evaluating a carbon footprint (Part 1) Boeing vs Tesla">
             <h3 class="post-list-title"><a href="posts/2021-10-24_023_Evaluating a carbon footprint (Part 1) Boeing vs Tesla/index.html">23. Earth is getting warmer. So what? [Continuing Installment 6; Part 1]</a></h3>
-            <p class="post-list-meta">2021-10-24</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-10-24</span>
+                <span class="category-badges" id="badges-2021-10-24_023_Evaluating a carbon footprint (Part 1) Boeing vs Tesla"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-10-17_022_Healing (Part 12). Reducing the only solution to practice">
             <h3 class="post-list-title"><a href="posts/2021-10-17_022_Healing (Part 12). Reducing the only solution to practice/index.html">22. Healing (Part 12). Reducing the only solution to practice</a></h3>
-            <p class="post-list-meta">2021-10-17</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-10-17</span>
+                <span class="category-badges" id="badges-2021-10-17_022_Healing (Part 12). Reducing the only solution to practice"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-10-10_021_Healing (Part 11). The Only Solution.">
             <h3 class="post-list-title"><a href="posts/2021-10-10_021_Healing (Part 11). The Only Solution./index.html">21. Evaluating a "carbon footprint" (Part 3): Paper or plastic?</a></h3>
-            <p class="post-list-meta">2021-10-10</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-10-10</span>
+                <span class="category-badges" id="badges-2021-10-10_021_Healing (Part 11). The Only Solution."></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-10-03_020_Healing (Part 10). The nuclear option">
             <h3 class="post-list-title"><a href="posts/2021-10-03_020_Healing (Part 10). The nuclear option/index.html">20. Evaluating a "carbon footprint" (Part 2): Crypto vs Credit</a></h3>
-            <p class="post-list-meta">2021-10-03</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-10-03</span>
+                <span class="category-badges" id="badges-2021-10-03_020_Healing (Part 10). The nuclear option"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-09-26_019_Healing (Part 9). Avoiding enthusiasm and superstition.">
             <h3 class="post-list-title"><a href="posts/2021-09-26_019_Healing (Part 9). Avoiding enthusiasm and superstition./index.html">19. Healing (Part 9). Avoiding enthusiasm and superstition.</a></h3>
-            <p class="post-list-meta">2021-09-26</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-09-26</span>
+                <span class="category-badges" id="badges-2021-09-26_019_Healing (Part 9). Avoiding enthusiasm and superstition."></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-09-19_018_Healing (Part 8). Can water alone be the complete solution">
             <h3 class="post-list-title"><a href="posts/2021-09-19_018_Healing (Part 8). Can water alone be the complete solution/index.html">18. Healing (Part 12). Reducing the only solution to practice</a></h3>
-            <p class="post-list-meta">2021-09-19</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-09-19</span>
+                <span class="category-badges" id="badges-2021-09-19_018_Healing (Part 8). Can water alone be the complete solution"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-09-12_017_Healing (Part 7). So...what's it gonna cost me">
             <h3 class="post-list-title"><a href="posts/2021-09-12_017_Healing (Part 7). So...what's it gonna cost me/index.html">17. Healing (Part 7). So...what's it gonna cost me?</a></h3>
-            <p class="post-list-meta">2021-09-12</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-09-12</span>
+                <span class="category-badges" id="badges-2021-09-12_017_Healing (Part 7). So...what's it gonna cost me"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-09-05_016_Healing (Part 6) Oceans of hope">
             <h3 class="post-list-title"><a href="posts/2021-09-05_016_Healing (Part 6) Oceans of hope/index.html">16. Healing (Part 6) Oceans of hope?</a></h3>
-            <p class="post-list-meta">2021-09-05</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-09-05</span>
+                <span class="category-badges" id="badges-2021-09-05_016_Healing (Part 6) Oceans of hope"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-08-29_015_Healing (Part 5). Hope Spring(s) eternal">
             <h3 class="post-list-title"><a href="posts/2021-08-29_015_Healing (Part 5). Hope Spring(s) eternal/index.html">15. Healing (Part 9). Avoiding enthusiasm and superstition.</a></h3>
-            <p class="post-list-meta">2021-08-29</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-08-29</span>
+                <span class="category-badges" id="badges-2021-08-29_015_Healing (Part 5). Hope Spring(s) eternal"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-08-22_014_Tying up a few loose ends">
             <h3 class="post-list-title"><a href="posts/2021-08-22_014_Tying up a few loose ends/index.html">14. Healing (Part 8). Can water alone be the complete solution?</a></h3>
-            <p class="post-list-meta">2021-08-22</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-08-22</span>
+                <span class="category-badges" id="badges-2021-08-22_014_Tying up a few loose ends"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-08-16_013_Earth is getting warmer. So what (AR6 IPCC WGI Readout)">
             <h3 class="post-list-title"><a href="posts/2021-08-16_013_Earth is getting warmer. So what (AR6 IPCC WGI Readout)/index.html">13. Healing (Part 7). So...what's it gonna cost me?</a></h3>
-            <p class="post-list-meta">2021-08-16</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-08-16</span>
+                <span class="category-badges" id="badges-2021-08-16_013_Earth is getting warmer. So what (AR6 IPCC WGI Readout)"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-08-08_012_Healing (Part 4). A ray of hope.">
             <h3 class="post-list-title"><a href="posts/2021-08-08_012_Healing (Part 4). A ray of hope./index.html">12. Healing (Part 4). A ray of hope.</a></h3>
-            <p class="post-list-meta">2021-08-08</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-08-08</span>
+                <span class="category-badges" id="badges-2021-08-08_012_Healing (Part 4). A ray of hope."></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-08-01_011_Healing (Part 3). What can the STEM crowd do about it">
             <h3 class="post-list-title"><a href="posts/2021-08-01_011_Healing (Part 3). What can the STEM crowd do about it/index.html">11. Healing (Part 3). What can the STEM crowd do about it?</a></h3>
-            <p class="post-list-meta">2021-08-01</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-08-01</span>
+                <span class="category-badges" id="badges-2021-08-01_011_Healing (Part 3). What can the STEM crowd do about it"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-07-25_010_Healing (Part 2). Is decarbonization a solution">
             <h3 class="post-list-title"><a href="posts/2021-07-25_010_Healing (Part 2). Is decarbonization a solution/index.html">10. Healing (Part 4). A ray of hope.</a></h3>
-            <p class="post-list-meta">2021-07-25</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-07-25</span>
+                <span class="category-badges" id="badges-2021-07-25_010_Healing (Part 2). Is decarbonization a solution"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-07-18_009_Healing (Part 1). What can we do">
             <h3 class="post-list-title"><a href="posts/2021-07-18_009_Healing (Part 1). What can we do/index.html">9. Healing (Part 1). What can we do?</a></h3>
-            <p class="post-list-meta">2021-07-18</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-07-18</span>
+                <span class="category-badges" id="badges-2021-07-18_009_Healing (Part 1). What can we do"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-07-11_008_What do we know now about Climate Change">
             <h3 class="post-list-title"><a href="posts/2021-07-11_008_What do we know now about Climate Change/index.html">8. What do we know now about Climate Change?</a></h3>
-            <p class="post-list-meta">2021-07-11</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-07-11</span>
+                <span class="category-badges" id="badges-2021-07-11_008_What do we know now about Climate Change"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-07-04_007_Earth is getting warmer. So what (Part 2)">
             <h3 class="post-list-title"><a href="posts/2021-07-04_007_Earth is getting warmer. So what (Part 2)/index.html">7. Healing (Part 1). What can we do?</a></h3>
-            <p class="post-list-meta">2021-07-04</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-07-04</span>
+                <span class="category-badges" id="badges-2021-07-04_007_Earth is getting warmer. So what (Part 2)"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-06-27_006_Is Carbon exonerated by Henry's Law">
             <h3 class="post-list-title"><a href="posts/2021-06-27_006_Is Carbon exonerated by Henry's Law/index.html">6. Is Carbon exonerated by Henry's Law?</a></h3>
-            <p class="post-list-meta">2021-06-27</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-06-27</span>
+                <span class="category-badges" id="badges-2021-06-27_006_Is Carbon exonerated by Henry's Law"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-06-20_005_Leading with Data">
             <h3 class="post-list-title"><a href="posts/2021-06-20_005_Leading with Data/index.html">5. Leading with Data</a></h3>
-            <p class="post-list-meta">2021-06-20</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-06-20</span>
+                <span class="category-badges" id="badges-2021-06-20_005_Leading with Data"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-06-13_004_Where did all that carbon come from">
             <h3 class="post-list-title"><a href="posts/2021-06-13_004_Where did all that carbon come from/index.html">4. Where did all that carbon come from?</a></h3>
-            <p class="post-list-meta">2021-06-13</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-06-13</span>
+                <span class="category-badges" id="badges-2021-06-13_004_Where did all that carbon come from"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-06-06_003_Earth is getting warmer. So what (Part 1)">
             <h3 class="post-list-title"><a href="posts/2021-06-06_003_Earth is getting warmer. So what (Part 1)/index.html">3. Earth is getting warmer. So what? (Part 1)</a></h3>
-            <p class="post-list-meta">2021-06-06</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-06-06</span>
+                <span class="category-badges" id="badges-2021-06-06_003_Earth is getting warmer. So what (Part 1)"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-05-30_002_Carbon. Hero or villain">
             <h3 class="post-list-title"><a href="posts/2021-05-30_002_Carbon. Hero or villain/index.html">2. Carbon. Hero or villain?</a></h3>
-            <p class="post-list-meta">2021-05-30</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-05-30</span>
+                <span class="category-badges" id="badges-2021-05-30_002_Carbon. Hero or villain"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-05-23_001_Is Global Warming Real">
             <h3 class="post-list-title"><a href="posts/2021-05-23_001_Is Global Warming Real/index.html">1. Is Global Warming Real?</a></h3>
-            <p class="post-list-meta">2021-05-23</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-05-23</span>
+                <span class="category-badges" id="badges-2021-05-23_001_Is Global Warming Real"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at leas...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-05-17_000_0. About this Newsletter">
             <h3 class="post-list-title"><a href="posts/2021-05-17_000_0. About this Newsletter/index.html">0. About this Newsletter</a></h3>
-            <p class="post-list-meta">2021-05-17</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-05-17</span>
+                <span class="category-badges" id="badges-2021-05-17_000_0. About this Newsletter"></span>
+            </div>
             <p class="post-list-excerpt">What to expect: In this “newsletter”, I’ll offer a peek behind the headlines of science, focusing (at least in the beginning) on climate change/global warming/decarbonization. I plan to release new co...</p>
         </li>
-        
-        <li>
+
+        <li data-folder="2021-05-16_000_Healing the Earth">
             <h3 class="post-list-title"><a href="posts/2021-05-16_000_Healing the Earth/index.html">Healing the Earth</a></h3>
-            <p class="post-list-meta">2021-05-16</p>
+            <div class="post-list-info">
+                <span class="post-list-meta">2021-05-16</span>
+                <span class="category-badges" id="badges-2021-05-16_000_Healing the Earth"></span>
+            </div>
             <p class="post-list-excerpt">I’m Jonathan Burbaum. Welcome to Healing the Earth, my inaugural newsletter. ...</p>
         </li>
-        
+
             </ul>
         </main>
 
         <footer>
-            <p>Archive of 182 posts from Healing Earth with Technology</p>
+            <p>Archive of Healing Earth with Technology &middot; 182 posts &middot; May 2021 &ndash; July 2025</p>
+            <p>Originally published on <a href="https://healingearth.substack.com">Substack</a></p>
         </footer>
     </div>
+    <script src="categories.js"></script>
     <script src="search.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
