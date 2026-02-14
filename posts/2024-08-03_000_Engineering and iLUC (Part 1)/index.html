@@ -1,64 +1,56 @@
 <!DOCTYPE html>
+
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="light only" name="color-scheme"/>
-  <title>
-   Engineering and iLUC (Part 1) - Healing Earth with Technology
-  </title>
-  <link href="../../style.css?v=2" rel="stylesheet"/>
- </head>
- <body>
-  <div class="container">
-   <header>
-    <h1 class="site-title">
-     <a href="../../index.html">
-      Healing Earth with Technology
-     </a>
-    </h1>
-    <nav>
-     <a href="../../index.html">
-      All Posts
-     </a>
-     <a href="../../about.html">
-      About
-     </a>
-    </nav>
-   </header>
-   <article>
-    <div class="post-header">
-     <h1 class="post-title">
-      Engineering and iLUC (Part 1)
-     </h1>
-     <p class="post-meta">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="light only" name="color-scheme"/>
+<title>Engineering and iLUC (Part 1) - Healing Earth with Technology</title>
+<link href="../../style.css?v=3" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<nav class="site-nav">
+<div class="site-nav-inner">
+<a class="site-nav-title" href="../../index.html">Healing Earth with Technology</a>
+<div class="site-nav-links">
+<a class="site-nav-link" href="../../index.html#searchBox">Search</a>
+<a class="site-nav-link" href="../../index.html">Archive</a>
+<a class="site-nav-link" href="../../about.html">About</a>
+</div>
+</div>
+</nav>
+<article>
+<div class="post-header">
+<h1 class="post-title">Engineering and iLUC (Part 1)</h1>
+<p class="post-meta">
       2024-08-03
      </p>
-    </div>
-    <div class="post-content">
-     <p>
+</div>
+<div class="post-content">
+<p>
       TL;DR:
       <strong>
        Indirect Land Use Change (iLUC) is a complex and controversial concept used to estimate the carbon emissions associated with biofuel production.
       </strong>
       By expanding the calculation beyond direct emissions to include hypothetical land-use changes, iLUC introduces significant uncertainty and questionable conclusions. Despite its widespread use, the scientific basis for iLUC is weak, relying on complex models with questionable assumptions and a history of overestimating the carbon impact of land-use changes. The resulting calculations often produce nonsensical results, such as different emissions values for the same crop based solely on geographic location. Ultimately, the iLUC framework appears to be more of a political tool than a scientifically sound method for assessing the environmental impact of biofuels.
      </p>
-     <p>
+<p>
       Branching from the previous thread, I’d like to turn the discussion towards Eye Luck (iLUC), an abbreviation for Indirect (or Induced) Land Use Change. This conceptual formulation has successfully complexified the impact on emissions attributed to biofuels, so it no longer makes sense to anyone.
      </p>
-     <p>
+<p>
       The iLUC story follows the carbon accounting story of the past three issues in many ways. It expands a conceptually simple calculation beyond the well-understood unit operations inside a given process and extends it through noisy, complex models that cannot be easily tested. This complexification leads to all kinds of senseless activity and questionable conclusions.
      </p>
-     <p>
+<p>
       When considering “land use”, the key industry is agriculture. The direct (Scope 1) emissions for agriculture are pretty easy to measure: Fuel used by farm equipment, emissions from fertilizer, etc. The portion of these emissions from land use
       <em>
-       <strong>
+<strong>
         change
        </strong>
-      </em>
+</em>
       naturally depends on what the land was used for before. If it was already farmland, then a change in tilling practice is probably the primary factor, followed by the specifics of the crop. But the operative word is “change”. If what the land is used for or how it is used doesn’t change from year to year, then land use change must equal zero, along with any emissions attributed to it.
      </p>
-     <p>
+<p>
       iLUC tries to account for
       <em>
        indirect
@@ -69,26 +61,26 @@
       </em>
       to the atmosphere.
      </p>
-     <p>
+<p>
       How is this measured? I think the correct answer is “politically.” As one acute example, modern aviation is difficult to decarbonize, so the International Civil Aviation Organization (ICAO) has developed a table of emissions values as part of the Carbon Offsetting and Reduction Scheme for International Aviation (CORSIA).
      </p>
-     <figure>
-      <img alt="" src="./images/c01e1eff-4240-4630-b270-3f3332a07aad_1091x712.png" width="100%"/>
-      <figcaption>
-       <a href="https://www.icao.int/environmental-protection/CORSIA/Documents/CORSIA_Eligible_Fuels/ICAO%20document%2006%20-%20Default%20Life%20Cycle%20Emissions%20-%20June%202022.pdf">
+<figure>
+<img alt="" src="./images/c01e1eff-4240-4630-b270-3f3332a07aad_1091x712.png" width="100%"/>
+<figcaption>
+<a href="https://www.icao.int/environmental-protection/CORSIA/Documents/CORSIA_Eligible_Fuels/ICAO%20document%2006%20-%20Default%20Life%20Cycle%20Emissions%20-%20June%202022.pdf">
         From this site
        </a>
-      </figcaption>
-     </figure>
-     <p>
+</figcaption>
+</figure>
+<p>
       This document includes many tables of iLUC values for sustainable aviation fuels (SAF) produced by different conversion technologies. Amazingly, many crops have different iLUC scores depending on geography. For example, switchgrass, as a biological carbon source for jet fuel based on a Fischer-Tropsch conversion process, has an iLUC value of -3.8 gCO2e/MJ if the crop is grown in the US, while outside the US, the value is +5.3 gCO2e/MJ. This difference creates a nearly two-fold difference in carbon emissions depending on where the crop is grown! This makes zero sense scientifically. Since the land use change is
       <em>
        indirect
       </em>
       , regardless of where the feedstock is grown, some other land source, regardless of jurisdiction, is fair game. The values should be equal or measured individually on a case-by-case basis (if it were possible).
      </p>
-     <p>
-      <a href="https://en.wikipedia.org/wiki/Indirect_land_use_change_impacts_of_biofuels">
+<p>
+<a href="https://en.wikipedia.org/wiki/Indirect_land_use_change_impacts_of_biofuels">
        Wikipedia traces modern iLUC
       </a>
       to a 2008 paper published in
@@ -97,23 +89,23 @@
        <a class="footnote-anchor" href="#footnote-1" id="footnote-anchor-1" target="_self">
         1
        </a>
-      </em>
+</em>
       . The lead author of this publication, Timothy Searchinger, is not a scientist. He is an environmental lawyer and policy wonk. Unsurprisingly, the paper reads more like a legal brief and less like a logic- and data-driven report of facts. It has been broadly criticized by career modelers like Dr. Michael Wang of Argonne National Labs and well-known venture capitalists like Vinod Khosla
       <a class="footnote-anchor" href="#footnote-2" id="footnote-anchor-2" target="_self">
        2
       </a>
       . The scientific gravitas for this paper is provided by Prof. Richard A. Houghton, a well-regarded ecologist who spent his career calculating the consequences of land use change. However, most of the references are to his own publications, which is the perfect situation for a data-light echo chamber.
      </p>
-     <p>
+<p>
       Prof. Houghton was also responsible for the 1984 “missing sink” review I covered a while ago
       <a class="footnote-anchor" href="#footnote-3" id="footnote-anchor-3" target="_self">
        3
       </a>
       . The key figure:
      </p>
-     <figure>
-      <img alt="" src="./images/2c199e14-8655-4f2c-91d1-44cd2fbeb97e_1443x1732.png" title="" width="100%"/>
-      <figcaption>
+<figure>
+<img alt="" src="./images/2c199e14-8655-4f2c-91d1-44cd2fbeb97e_1443x1732.png" title="" width="100%"/>
+<figcaption>
        From Hobbie et al.,
        <em>
         BioScience
@@ -124,15 +116,15 @@
        </a>
        , pp. 492-498.
       </figcaption>
-     </figure>
-     <p>
+</figure>
+<p>
       In 1984, Prof. Houghton claimed that changes in the biosphere account for
       <strong>
        a third of all carbon emissions
       </strong>
       , in sharp contrast with geochemists, who asserted that the biosphere is actually a small sink for carbon. To make the numbers jive, Houghton invoked a fudge factor, a “missing sink” for the emitted carbon. As I’ve covered previously, the “controversy” has been resolved in the natural course of scientific progress. The IPCC favors the geochemist’s view. In modern climate models, the contribution to emissions from land use change is minimal, within a spitting distance of zero.
      </p>
-     <p>
+<p>
       But where did the problem come from, and how should policymakers adjust their thinking? I traced Houghton’s modeling back to its origin, including a 1983
       <em>
        Science
@@ -145,100 +137,100 @@
       <em>
        Carbon Cycle Modelling
       </em>
-      <a class="footnote-anchor" href="#footnote-5" id="footnote-anchor-5" target="_self">
+<a class="footnote-anchor" href="#footnote-5" id="footnote-anchor-5" target="_self">
        5
       </a>
       , the proceedings of a 1979 academic meeting in La Jolla, California. In this book, the basis for the model is explained with several primitive modeling diagrams, like these:
      </p>
-     <figure>
-      <img alt="" height="333" src="./images/a66f31f9-21c9-4869-8ae0-c5db5f0e75a2_704x333.png" title="" width="704"/>
-     </figure>
-     <figure>
-      <img alt="" height="363" src="./images/99aff19d-f27a-4910-a7ae-55bcaa01d42a_702x363.png" width="702"/>
-      <figcaption>
+<figure>
+<img alt="" height="333" src="./images/a66f31f9-21c9-4869-8ae0-c5db5f0e75a2_704x333.png" title="" width="704"/>
+</figure>
+<figure>
+<img alt="" height="363" src="./images/99aff19d-f27a-4910-a7ae-55bcaa01d42a_702x363.png" width="702"/>
+<figcaption>
        From pg. 369 &amp; 370 of a chapter titled A Simple Model for Analysis of the Role of Terrestrial Ecosystems in The Global Carbon Budget, by B. Moore, R .D. Boone, J, E. Hobbie, R. A., Houghton, J. M . Melillo, B. J,  Peterson, G. R. Shaver, C. J. Vörösmarty, and G.M. Woodwell
       </figcaption>
-     </figure>
-     <p>
+</figure>
+<p>
       In the abstract of this chapter, the authors state the modeler’s premise:
      </p>
-     <blockquote>
-      <p>
+<blockquote>
+<p>
        Carbon is released to the atmosphere as harvested wood and soil organic matter are oxidized following either of two major disturbances: the harvest of forests or the transformation of natural systems to agriculture.
       </p>
-     </blockquote>
-     <p>
+</blockquote>
+<p>
       Ah. So, the ecosystem model assumes that harvested vegetation is burned to completion or decays by oxidation. From a modeling perspective, at the point labeled “harvest,” all ecosystem carbon is presumed to be released into the atmosphere. Alternatively, if an ecosystem is converted to agriculture, carbon is permanently reduced until agriculture is abandoned, probably because most agriculture favors annual crops.
      </p>
-     <p>
+<p>
       There’s no accounting for the obvious: Harvesting removes carbon from land, so
       <strong>
        what we do with the harvest matters a lot more than the change in land use
       </strong>
       .
      </p>
-     <p>
+<p>
       But now we have potentially testable assumptions that underpin iLUC.
      </p>
-     <ol>
-      <li>
-       <p>
+<ol>
+<li>
+<p>
         Given the increase of biofuels in our fuel mix in the past few decades, are there measurable changes in land use that support the one-for-one substitution assumed by iLUC?
        </p>
-      </li>
-      <li>
-       <p>
+</li>
+<li>
+<p>
         While the amount of carbon in a given land area (as seen in the figure above) naturally decreases with harvest, is an undisturbed ecosystem really at a steady state?
        </p>
-      </li>
-     </ol>
-     <p>
+</li>
+</ol>
+<p>
       Like all models, we know that ecosystem models are wrong, so that’s not the point of the exercise. The question is, are these ecosystem models practically useless because they are based on such wrong-headed assumptions buried beneath layers of complexity?
      </p>
-     <div data-attrs='{"url":"../2024-08-03_000_Engineering and iLUC (Part 1)/index.html","text":"Share"}'>
-      <p class="cta-caption">
+<div data-attrs='{"url":"../2024-08-03_000_Engineering and iLUC (Part 1)/index.html","text":"Share"}'>
+<p class="cta-caption">
        Thank you for reading Healing the Earth with Technology. This post is public, so feel free to share it.
       </p>
-     </div>
-     <div>
-      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-1" id="footnote-1" target="_self">
+</div>
+<div>
+<a class="footnote-number" contenteditable="false" href="#footnote-anchor-1" id="footnote-1" target="_self">
        1
       </a>
-      <p>
-       <a href="http://www.princeton.edu/~tsearchi/writings/Searchinger_et_al-ScienceExpress.pdf">
+<p>
+<a href="http://www.princeton.edu/~tsearchi/writings/Searchinger_et_al-ScienceExpress.pdf">
         princeton.edu
        </a>
-      </p>
-     </div>
-     <div>
-      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-2" id="footnote-2" target="_self">
+</p>
+</div>
+<div>
+<a class="footnote-number" contenteditable="false" href="#footnote-anchor-2" id="footnote-2" target="_self">
        2
       </a>
-      <p>
+<p>
        Vinod Khosla, Biofuels: Clarifying Assumptions.
        <em>
         Science
        </em>
-       <strong>
+<strong>
         322
        </strong>
        , 371-374 (2008). DOI:
        <a href="https://doi.org/10.1126/science.322.5900.371b">
         10.1126/science.322.5900.371b
        </a>
-      </p>
-     </div>
-     <div>
-      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-3" id="footnote-3" target="_self">
+</p>
+</div>
+<div>
+<a class="footnote-number" contenteditable="false" href="#footnote-anchor-3" id="footnote-3" target="_self">
        3
       </a>
-     <p>[See earlier posts in this series]</p>
-     </div>
-     <div>
-      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-4" id="footnote-4" target="_self">
+<p>[See earlier posts in this series]</p>
+</div>
+<div>
+<a class="footnote-number" contenteditable="false" href="#footnote-anchor-4" id="footnote-4" target="_self">
        4
       </a>
-      <p>
+<p>
        G. M. Woodwell
        <em>
         et al.
@@ -247,45 +239,45 @@
        <em>
         Science
        </em>
-       <strong>
+<strong>
         222
        </strong>
        , 1081-1086 (1983).DOI:
        <a href="https://doi.org/10.1126/science.222.4628.1081">
         10.1126/science.222.4628.1081
        </a>
-      </p>
-     </div>
-     <div>
-      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-5" id="footnote-5" target="_self">
+</p>
+</div>
+<div>
+<a class="footnote-number" contenteditable="false" href="#footnote-anchor-5" id="footnote-5" target="_self">
        5
       </a>
-      <div>
-       <p>
+<div>
+<p>
         Carbon Cycle Modelling, Bert Bolin (ed.), by the Scientific Committee on Problems of the Environment (SCOPE) of the International Council of Scientific Unions (ICSU) in collaboration with the United Nations Environment Programme.
         <a href="https://scope.dge.carnegiescience.edu/SCOPE_16/SCOPE_16.html">
          scope.dge.carnegiescience.edu
         </a>
-       </p>
-       <p>
-       </p>
-      </div>
-     </div>
-    </div>
-    <nav class="post-nav">
-     <a href="../2024-07-27_000_Engineering vs. Economic Net Zero (Part 3)/index.html">
+</p>
+<p>
+</p>
+</div>
+</div>
+</div>
+<nav class="post-nav">
+<a href="../2024-07-27_000_Engineering vs. Economic Net Zero (Part 3)/index.html">
       ← Engineering vs. Economic Net Zero (Part ...
      </a>
-     <a href="../2024-08-10_000_Engineering and iLUC (Part 2)/index.html">
+<a href="../2024-08-10_000_Engineering and iLUC (Part 2)/index.html">
       Engineering and iLUC (Part 2)... →
      </a>
-    </nav>
-   </article>
-   <footer>
-    <p>
+</nav>
+</article>
+<footer>
+<p>
      Healing Earth with Technology Archive
     </p>
-   </footer>
-  </div>
- </body>
+</footer>
+</div>
+</body>
 </html>
