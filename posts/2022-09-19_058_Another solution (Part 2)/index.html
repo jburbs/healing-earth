@@ -1,39 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light only">
-    <title>58. Another solution? (Part 2) - Healing Earth with Technology</title>
-    <link rel="stylesheet" href="../../style.css?v=2">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1 class="site-title"><a href="../../index.html">Healing Earth with Technology</a></h1>
-            <nav>
-                <a href="../../index.html">All Posts</a>
-                <a href="../../about.html">About</a>
-            </nav>
-        </header>
-
-        <article>
-            <div class="post-header">
-                <h1 class="post-title">58. Another solution? (Part 2)</h1>
-                
-                <p class="post-meta">2022-09-19</p>
-            </div>
-
-            <div class="post-content">
-                <p>In preparing this installment, I realized I mischaracterized a semantic pivot in a previous issue, the one where I criticized the new wave of carbon capture technoacronym, BiCRS<a class="footnote-anchor" href="#footnote-1" id="footnote-anchor-1" target="_self">1</a>. Specifically, I asked, “What happened to ‘utilization’?” The truth is that BiCRS doesn’t <em>ignore</em> utilization. It obfuscates it. Here’s the published definition:</p><p>BiCRS is defined<a class="footnote-anchor" href="#footnote-2" id="footnote-anchor-2" target="_self">2</a> as a process that:</p><ol><li><p>Uses biomass to remove CO2 from the atmosphere, </p></li><li><p>Stores that CO2 underground or in long-lived products, and </p></li><li><p>Does no damage to—and ideally promotes—food security, rural livelihoods, biodiversity conservation and other important values. </p></li></ol><p>So, carbon can be “used” provided it is used to create “long-lived products” for various non-destructive, socially-acceptable purposes. The recasting of BECCS as BiCRS avoids the awkward problem that using captured carbon for energy means that the carbon is just cycled back into the atmosphere. Further, energy tends to have low economic value—the source has to be “cheap enough to burn,” a key feature of geologic carbon. By postulating more valuable “products” than fuel, BiCRS makes its technoeconomics less distasteful.  Nevertheless, I’m warming to the concept.</p><p>Last time, we ended with the perhaps surprising observation that the carbon capture efficiency of a cultivated sugarcane field is higher than mature tropical rainforests. The difference is not insignificant; sugarcane looks to be about twice as absorptive. The question at hand, now, is, “What would happen if the mature rainforest were clearcut and the biological carbon entirely removed from the Earth’s carbon cycle?” This solution would accomplish “indirect air capture” by removing biological carbon from the system in the long run but would reduce photosynthetic carbon capture in the short run.</p><p>Naturally, it matters what we do with the harvest. If it were burned, for example, that’d make the whole process pointless. Alternatively, if it were plowed under or composted, some unspecified percentage of the captured carbon would be released over time. For this piece, let’s assume that the carbon is deleted from the system to be regenerated naturally over time through regrowth or land use for agriculture. If such a simplification makes you uncomfortable, you can imagine it’s buried in abandoned coal mines. Regardless, from a modeling perspective, it doesn’t really matter. Any post-harvest process can be described mathematically as a “retention efficiency” since a fraction between all and none of the carbon will be retained. </p><p>This framing puts us in an interesting space to consider solutions. The problem, at its core, is that humans have been releasing energy from ancient sources for the past few centuries. I’ve referred to these sources (consistently, I hope!) as “geologic carbon” rather than the more common but less accurate “fossil fuels”. From an engineering perspective, the origin of these sources is ancient photosynthesis. Energy storage occurred when photosynthesis combined ancient sunlight and carbon dioxide (albeit slowly and inefficiently) in the first place. The proposal is to reverse the resource extraction process by removing carbon from the <em>biosphere</em> rather than the <em>atmosphere</em>. Then, if we plant more efficient crops, we can pull more carbon out of the air yearly. If we overcompensate, nature can be readjusted through regenerative forestry.</p><p>Let’s look at the dataset I identified the last time<a class="footnote-anchor" href="#footnote-3" id="footnote-anchor-3" target="_self">3</a> that tabulates above-ground biomass, as observed from space and derived from models. I’m not going to examine the models used critically. Instead, I’m going to use the table to determine whether such an approach has a chance of being practical. The dataset is high-resolution, with each data point equal to 1 hectare, and the values are in Mg per hectare or metric tons in each modeled pixel. The global distribution looks like this:</p><figure><img alt="" height="406" src="./images/30162d56-975f-4a7f-b8a1-7c81e0b7bc67_716x406.png" width="716"/></figure><p>I’ve reduced the resolution of the data such that each pixel is about a square kilometer (the figure is 43,200 pixels wide; Earth’s diameter at the Equator is 40,075 km), but I haven’t made all the geographic adjustments needed to normalize the data by surface area, so it’s presented as-is. But, you should note that a square kilometer of rainforest (1,000,000 square meters) can support about 25,000 tonnes of biomass.</p><p>The total amount of biomass in the database is an astounding 820 gigatonnes, and according to the database’s description, it is <em>dry</em> biomass, which is 40-45% carbon. Earth’s biomass consequently projects about 1,200 gigatonnes (1.2 teratonnes, or 1.2 petagrams) of fixed carbon dioxide above the surface. According to <a href="https://en.wikipedia.org/wiki/Carbon_dioxide_in_Earth%27s_atmosphere">Wikipedia</a>, each ppm is the same as 7.82 gigatonnes of CO2, so to go from 420 ppm to 280 ppm (the preindustrial baseline), we would need to bury more than half of the Earth’s above-ground biomass. But, to balance our annual increase of 1-2 ppm (in other words, “engineered net zero”) would “only” require the removal of about ten gigatonnes of above-ground biomass. In the rainforest, at 25 kilotonnes per square kilometer, this works out to clearing about 400,000 square kilometers (approximately 7% of the Amazon rainforest) to balance emissions from the combustion of geologic carbon. That’d be hard but not impossible. If that makes you cringe, you should have known that the scale of the problem was enormous before we started. These numbers here are rough, but they could be verified in practice so that future directions could be adjusted based on data rather than conjecture. Furthermore, we have the tools (Eddy Flux Covariance) to measure the consequences directly.</p><p>What happens if we go too far? Literature estimates<a class="footnote-anchor" href="#footnote-4" id="footnote-anchor-4" target="_self">4</a> suggest that a rainforest ecosystem can recover quickly, but regaining biomass takes about a century. But, there’s a significant concern about running out of forest to cut down before we get to zero if renewable energy sources don’t come online as quickly as projected--at 7% per year, that's only 10-15 years of harvest. Alternatively, if sugarcane were purposefully replanted on the cleared land, at least three factors would come into play. First, the natural ecosystem wouldn’t need to regrow to see the benefits of agriculture, and we would be able to control the portion of the ecosystem that respires (preventing the release of CO2). Second, sugarcane is an economically valuable crop, and many renewable chemicals are accessible from sugar. Increasing and automating sugarcane production at such a large scale would drive down costs and enable us to turn sugars into durable goods. Third, with more land doing C4 photosynthesis, less of the rainforest would need to be cultivated to realize the benefits.</p><p>That’s a ballpark, back-of-the-envelope calculation, and it makes a lot of oversimplified assumptions about the near-term consequences. But it does suggest that there is an alternative path forward.</p><p>Next time, I’ll look at the process(es) involved for two features (if I can find data). First, what is the correct “retention efficiency” number? It’s not one, and it’s not zero. Second, how much additional CO2 is released when 400,000 square kilometers of rainforest is taken out of commission?</p><div data-attrs='{"url":"https://healingearth.substack.com/p/58-another-solution-part-2?utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;action=share","text":"Share"}'><p class="cta-caption">Thank you for reading Healing the Earth with Technology. This post is public so feel free to share it.</p></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-1" id="footnote-1" target="_self">1</a><div><div data-attrs="{&quot;id&quot;:56971594,&quot;url&quot;:&quot;https://healingearth.substack.com/p/46-low-cost-desalination-and-the&quot;,&quot;publication_id&quot;:359195,&quot;publication_name&quot;:&quot;Healing the Earth with Technology&quot;,&quot;publication_logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;title&quot;:&quot;46. Low-cost Desalination and the ARPA-E Summit&quot;,&quot;truncated_body_text&quot;:&quot;I apologize for skipping a week, but I hope many of you were on a well-deserved holiday/spring break over Memorial Day. My lame excuse is the ARPA-E Summit, the first in-person conference I’ve attended since COVID. I’ve been to all but one of these epic events since 2010. For me, it’s a reliable venue for both catching up with the “alumni” group and tra…&quot;,&quot;date&quot;:&quot;2022-06-05T22:00:41.462Z&quot;,&quot;like_count&quot;:1,&quot;comment_count&quot;:0,&quot;bylines&quot;:[{&quot;id&quot;:23437316,&quot;name&quot;:&quot;Jonathan Burbaum&quot;,&quot;previous_name&quot;:null,&quot;photo_url&quot;:&quot;https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/543d1a93-fd05-4f3f-8feb-41a9c7234896_927x1065.jpeg&quot;,&quot;bio&quot;:&quot;Pragmatic molecular scientist seeking solutions to existential human problems&quot;,&quot;profile_set_up_at&quot;:&quot;2021-05-12T17:04:04.671Z&quot;,&quot;publicationUsers&quot;:[{&quot;id&quot;:281335,&quot;user_id&quot;:23437316,&quot;publication_id&quot;:359195,&quot;role&quot;:&quot;admin&quot;,&quot;public&quot;:true,&quot;is_primary&quot;:false,&quot;publication&quot;:{&quot;id&quot;:359195,&quot;name&quot;:&quot;Healing the Earth with Technology&quot;,&quot;subdomain&quot;:&quot;healingearth&quot;,&quot;custom_domain&quot;:null,&quot;custom_domain_optional&quot;:false,&quot;hero_text&quot;:&quot;Are you skeptical about climate change? Are you convinced that you know all about it? Here's some food for thought. &quot;,&quot;logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;author_id&quot;:23437316,&quot;theme_var_background_pop&quot;:&quot;#A33ACB&quot;,&quot;created_at&quot;:&quot;2021-05-11T21:29:09.257Z&quot;,&quot;rss_website_url&quot;:null,&quot;email_from_name&quot;:null,&quot;copyright&quot;:&quot;Jonathan Burbaum&quot;,&quot;founding_plan_name&quot;:null,&quot;community_enabled&quot;:true,&quot;invite_only&quot;:false,&quot;payments_state&quot;:&quot;enabled&quot;}}],&quot;twitter_screen_name&quot;:&quot;burbaum&quot;,&quot;is_guest&quot;:false}],&quot;utm_campaign&quot;:null,&quot;belowTheFold&quot;:true,&quot;type&quot;:null,&quot;language&quot;:&quot;en&quot;}"><a class="embedded-post" href="../2022-06-05_046_Low-cost Desalination and the ARPA-E Summit/index.html" native="true" title="Local archive link"><div><img src="./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png"/><span class="embedded-post-publication-name">Healing the Earth with Technology</span></div><div><div>46. Low-cost Desalination and the ARPA-E Summit</div></div><div>I apologize for skipping a week, but I hope many of you were on a well-deserved holiday/spring break over Memorial Day. My lame excuse is the ARPA-E Summit, the first in-person conference I’ve attended since COVID. I’ve been to all but one of these epic events since 2010. For me, it’s a reliable venue for both catching up with the “alumni” group and tra…</div><div><span class="embedded-post-cta">Read more</span></div><div>4 years ago · 1 like · Jonathan Burbaum</div></a></div><p></p></div></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-2" id="footnote-2" target="_self">2</a><p><a href="https://www.icef.go.jp/pdf/summary/roadmap/icef2020_roadmap.pdf">https://www.icef.go.jp/pdf/summary/roadmap/icef2020_roadmap.pdf</a></p></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-3" id="footnote-3" target="_self">3</a><div><div data-attrs="{&quot;id&quot;:72848115,&quot;url&quot;:&quot;https://healingearth.substack.com/p/57-another-solution-part-1&quot;,&quot;publication_id&quot;:359195,&quot;publication_name&quot;:&quot;Healing the Earth with Technology&quot;,&quot;publication_logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;title&quot;:&quot;57. Another solution? (Part 1)&quot;,&quot;truncated_body_text&quot;:&quot;Today is an interesting date. It marks the 21st anniversary of the 9/11 terrorist attacks, so there are now adults who have known only the post-9/11 world. And yesterday, the United Kingdom elevated a new monarch, King Charles III. We’re also in an interesting intellectual position. In the past few installments, the data have guided to a hypothesis that …&quot;,&quot;date&quot;:&quot;2022-09-11T22:36:11.904Z&quot;,&quot;like_count&quot;:0,&quot;comment_count&quot;:0,&quot;bylines&quot;:[{&quot;id&quot;:23437316,&quot;name&quot;:&quot;Jonathan Burbaum&quot;,&quot;previous_name&quot;:null,&quot;photo_url&quot;:&quot;https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/543d1a93-fd05-4f3f-8feb-41a9c7234896_927x1065.jpeg&quot;,&quot;bio&quot;:&quot;Pragmatic molecular scientist seeking solutions to existential human problems&quot;,&quot;profile_set_up_at&quot;:&quot;2021-05-12T17:04:04.671Z&quot;,&quot;publicationUsers&quot;:[{&quot;id&quot;:281335,&quot;user_id&quot;:23437316,&quot;publication_id&quot;:359195,&quot;role&quot;:&quot;admin&quot;,&quot;public&quot;:true,&quot;is_primary&quot;:false,&quot;publication&quot;:{&quot;id&quot;:359195,&quot;name&quot;:&quot;Healing the Earth with Technology&quot;,&quot;subdomain&quot;:&quot;healingearth&quot;,&quot;custom_domain&quot;:null,&quot;custom_domain_optional&quot;:false,&quot;hero_text&quot;:&quot;Are you skeptical about climate change? Are you convinced that you know all about it? Here's some food for thought. &quot;,&quot;logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;author_id&quot;:23437316,&quot;theme_var_background_pop&quot;:&quot;#A33ACB&quot;,&quot;created_at&quot;:&quot;2021-05-11T21:29:09.257Z&quot;,&quot;rss_website_url&quot;:null,&quot;email_from_name&quot;:null,&quot;copyright&quot;:&quot;Jonathan Burbaum&quot;,&quot;founding_plan_name&quot;:null,&quot;community_enabled&quot;:true,&quot;invite_only&quot;:false,&quot;payments_state&quot;:&quot;enabled&quot;}}],&quot;twitter_screen_name&quot;:&quot;burbaum&quot;,&quot;is_guest&quot;:false}],&quot;utm_campaign&quot;:null,&quot;belowTheFold&quot;:true,&quot;type&quot;:null,&quot;language&quot;:&quot;en&quot;}"><a class="embedded-post" href="../2022-09-11_057_Another solution (Part 1)/index.html" native="true" title="Local archive link"><div><img src="./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png"/><span class="embedded-post-publication-name">Healing the Earth with Technology</span></div><div><div>57. Another solution? (Part 1)</div></div><div>Today is an interesting date. It marks the 21st anniversary of the 9/11 terrorist attacks, so there are now adults who have known only the post-9/11 world. And yesterday, the United Kingdom elevated a new monarch, King Charles III. We’re also in an interesting intellectual position. In the past few installments, the data have guided to a hypothesis that …</div><div><span class="embedded-post-cta">Read more</span></div><div>3 years ago · Jonathan Burbaum</div></a></div></div></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-4" id="footnote-4" target="_self">4</a><div><p>Poorter <em>et al., </em>“Multidimensional tropical forest recovery”, <em>Science</em> <strong>374</strong>, 1370-1376 (2021)</p><p></p></div></div>
-            </div>
-
-            <nav class="post-nav"><a href="../2022-09-11_057_Another solution (Part 1)/index.html">← 57. Another solution? (Part 1)...</a><a href="../2022-09-25_059_Another solution (Part 3)/index.html">59. Another solution? (Part 3)... →</a></nav>
-        </article>
-
-        <footer>
-            <p>Healing Earth with Technology Archive</p>
-        </footer>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="light only" name="color-scheme"/>
+  <title>
+   58. Another solution? (Part 2) - Healing Earth with Technology
+  </title>
+  <link href="../../style.css?v=2" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="container">
+   <header>
+    <h1 class="site-title">
+     <a href="../../index.html">
+      Healing Earth with Technology
+     </a>
+    </h1>
+    <nav>
+     <a href="../../index.html">
+      All Posts
+     </a>
+     <a href="../../about.html">
+      About
+     </a>
+    </nav>
+   </header>
+   <article>
+    <div class="post-header">
+     <h1 class="post-title">
+      58. Another solution? (Part 2)
+     </h1>
+     <p class="post-meta">
+      2022-09-19
+     </p>
     </div>
-</body>
+    <div class="post-content">
+     <p>
+      In preparing this installment, I realized I mischaracterized a semantic pivot in a previous issue, the one where I criticized the new wave of carbon capture technoacronym, BiCRS
+      <a class="footnote-anchor" href="#footnote-1" id="footnote-anchor-1" target="_self">
+       1
+      </a>
+      . Specifically, I asked, “What happened to ‘utilization’?” The truth is that BiCRS doesn’t
+      <em>
+       ignore
+      </em>
+      utilization. It obfuscates it. Here’s the published definition:
+     </p>
+     <p>
+      BiCRS is defined
+      <a class="footnote-anchor" href="#footnote-2" id="footnote-anchor-2" target="_self">
+       2
+      </a>
+      as a process that:
+     </p>
+     <ol>
+      <li>
+       <p>
+        Uses biomass to remove CO2 from the atmosphere,
+       </p>
+      </li>
+      <li>
+       <p>
+        Stores that CO2 underground or in long-lived products, and
+       </p>
+      </li>
+      <li>
+       <p>
+        Does no damage to—and ideally promotes—food security, rural livelihoods, biodiversity conservation and other important values.
+       </p>
+      </li>
+     </ol>
+     <p>
+      So, carbon can be “used” provided it is used to create “long-lived products” for various non-destructive, socially-acceptable purposes. The recasting of BECCS as BiCRS avoids the awkward problem that using captured carbon for energy means that the carbon is just cycled back into the atmosphere. Further, energy tends to have low economic value—the source has to be “cheap enough to burn,” a key feature of geologic carbon. By postulating more valuable “products” than fuel, BiCRS makes its technoeconomics less distasteful.  Nevertheless, I’m warming to the concept.
+     </p>
+     <p>
+      Last time, we ended with the perhaps surprising observation that the carbon capture efficiency of a cultivated sugarcane field is higher than mature tropical rainforests. The difference is not insignificant; sugarcane looks to be about twice as absorptive. The question at hand, now, is, “What would happen if the mature rainforest were clearcut and the biological carbon entirely removed from the Earth’s carbon cycle?” This solution would accomplish “indirect air capture” by removing biological carbon from the system in the long run but would reduce photosynthetic carbon capture in the short run.
+     </p>
+     <p>
+      Naturally, it matters what we do with the harvest. If it were burned, for example, that’d make the whole process pointless. Alternatively, if it were plowed under or composted, some unspecified percentage of the captured carbon would be released over time. For this piece, let’s assume that the carbon is deleted from the system to be regenerated naturally over time through regrowth or land use for agriculture. If such a simplification makes you uncomfortable, you can imagine it’s buried in abandoned coal mines. Regardless, from a modeling perspective, it doesn’t really matter. Any post-harvest process can be described mathematically as a “retention efficiency” since a fraction between all and none of the carbon will be retained.
+     </p>
+     <p>
+      This framing puts us in an interesting space to consider solutions. The problem, at its core, is that humans have been releasing energy from ancient sources for the past few centuries. I’ve referred to these sources (consistently, I hope!) as “geologic carbon” rather than the more common but less accurate “fossil fuels”. From an engineering perspective, the origin of these sources is ancient photosynthesis. Energy storage occurred when photosynthesis combined ancient sunlight and carbon dioxide (albeit slowly and inefficiently) in the first place. The proposal is to reverse the resource extraction process by removing carbon from the
+      <em>
+       biosphere
+      </em>
+      rather than the
+      <em>
+       atmosphere
+      </em>
+      . Then, if we plant more efficient crops, we can pull more carbon out of the air yearly. If we overcompensate, nature can be readjusted through regenerative forestry.
+     </p>
+     <p>
+      Let’s look at the dataset I identified the last time
+      <a class="footnote-anchor" href="#footnote-3" id="footnote-anchor-3" target="_self">
+       3
+      </a>
+      that tabulates above-ground biomass, as observed from space and derived from models. I’m not going to examine the models used critically. Instead, I’m going to use the table to determine whether such an approach has a chance of being practical. The dataset is high-resolution, with each data point equal to 1 hectare, and the values are in Mg per hectare or metric tons in each modeled pixel. The global distribution looks like this:
+     </p>
+     <figure>
+      <img alt="" height="406" src="./images/30162d56-975f-4a7f-b8a1-7c81e0b7bc67_716x406.png" width="716"/>
+     </figure>
+     <p>
+      I’ve reduced the resolution of the data such that each pixel is about a square kilometer (the figure is 43,200 pixels wide; Earth’s diameter at the Equator is 40,075 km), but I haven’t made all the geographic adjustments needed to normalize the data by surface area, so it’s presented as-is. But, you should note that a square kilometer of rainforest (1,000,000 square meters) can support about 25,000 tonnes of biomass.
+     </p>
+     <p>
+      The total amount of biomass in the database is an astounding 820 gigatonnes, and according to the database’s description, it is
+      <em>
+       dry
+      </em>
+      biomass, which is 40-45% carbon. Earth’s biomass consequently projects about 1,200 gigatonnes (1.2 teratonnes, or 1.2 petagrams) of fixed carbon dioxide above the surface. According to
+      <a href="https://en.wikipedia.org/wiki/Carbon_dioxide_in_Earth%27s_atmosphere">
+       Wikipedia
+      </a>
+      , each ppm is the same as 7.82 gigatonnes of CO2, so to go from 420 ppm to 280 ppm (the preindustrial baseline), we would need to bury more than half of the Earth’s above-ground biomass. But, to balance our annual increase of 1-2 ppm (in other words, “engineered net zero”) would “only” require the removal of about ten gigatonnes of above-ground biomass. In the rainforest, at 25 kilotonnes per square kilometer, this works out to clearing about 400,000 square kilometers (approximately 7% of the Amazon rainforest) to balance emissions from the combustion of geologic carbon. That’d be hard but not impossible. If that makes you cringe, you should have known that the scale of the problem was enormous before we started. These numbers here are rough, but they could be verified in practice so that future directions could be adjusted based on data rather than conjecture. Furthermore, we have the tools (Eddy Flux Covariance) to measure the consequences directly.
+     </p>
+     <p>
+      What happens if we go too far? Literature estimates
+      <a class="footnote-anchor" href="#footnote-4" id="footnote-anchor-4" target="_self">
+       4
+      </a>
+      suggest that a rainforest ecosystem can recover quickly, but regaining biomass takes about a century. But, there’s a significant concern about running out of forest to cut down before we get to zero if renewable energy sources don’t come online as quickly as projected--at 7% per year, that's only 10-15 years of harvest. Alternatively, if sugarcane were purposefully replanted on the cleared land, at least three factors would come into play. First, the natural ecosystem wouldn’t need to regrow to see the benefits of agriculture, and we would be able to control the portion of the ecosystem that respires (preventing the release of CO2). Second, sugarcane is an economically valuable crop, and many renewable chemicals are accessible from sugar. Increasing and automating sugarcane production at such a large scale would drive down costs and enable us to turn sugars into durable goods. Third, with more land doing C4 photosynthesis, less of the rainforest would need to be cultivated to realize the benefits.
+     </p>
+     <p>
+      That’s a ballpark, back-of-the-envelope calculation, and it makes a lot of oversimplified assumptions about the near-term consequences. But it does suggest that there is an alternative path forward.
+     </p>
+     <p>
+      Next time, I’ll look at the process(es) involved for two features (if I can find data). First, what is the correct “retention efficiency” number? It’s not one, and it’s not zero. Second, how much additional CO2 is released when 400,000 square kilometers of rainforest is taken out of commission?
+     </p>
+     <div data-attrs='{"url":"../2022-09-19_058_Another solution (Part 2)/index.html","text":"Share"}'>
+      <p class="cta-caption">
+       Thank you for reading Healing the Earth with Technology. This post is public so feel free to share it.
+      </p>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-1" id="footnote-1" target="_self">
+       1
+      </a>
+      <div>
+       <div data-attrs="{&quot;id&quot;:56971594,&quot;url&quot;:&quot;../2022-09-19_058_Another solution (Part 2)/index.html the Earth with Technology&quot;,&quot;publication_logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;title&quot;:&quot;46. Low-cost Desalination and the ARPA-E Summit&quot;,&quot;truncated_body_text&quot;:&quot;I apologize for skipping a week, but I hope many of you were on a well-deserved holiday/spring break over Memorial Day. My lame excuse is the ARPA-E Summit, the first in-person conference I’ve attended since COVID. I’ve been to all but one of these epic events since 2010. For me, it’s a reliable venue for both catching up with the “alumni” group and tra…&quot;,&quot;date&quot;:&quot;2022-06-05T22:00:41.462Z&quot;,&quot;like_count&quot;:1,&quot;comment_count&quot;:0,&quot;bylines&quot;:[{&quot;id&quot;:23437316,&quot;name&quot;:&quot;Jonathan Burbaum&quot;,&quot;previous_name&quot;:null,&quot;photo_url&quot;:&quot;https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/543d1a93-fd05-4f3f-8feb-41a9c7234896_927x1065.jpeg&quot;,&quot;bio&quot;:&quot;Pragmatic molecular scientist seeking solutions to existential human problems&quot;,&quot;profile_set_up_at&quot;:&quot;2021-05-12T17:04:04.671Z&quot;,&quot;publicationUsers&quot;:[{&quot;id&quot;:281335,&quot;user_id&quot;:23437316,&quot;publication_id&quot;:359195,&quot;role&quot;:&quot;admin&quot;,&quot;public&quot;:true,&quot;is_primary&quot;:false,&quot;publication&quot;:{&quot;id&quot;:359195,&quot;name&quot;:&quot;Healing the Earth with Technology&quot;,&quot;subdomain&quot;:&quot;healingearth&quot;,&quot;custom_domain&quot;:null,&quot;custom_domain_optional&quot;:false,&quot;hero_text&quot;:&quot;Are you skeptical about climate change? Are you convinced that you know all about it? Here's some food for thought. &quot;,&quot;logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;author_id&quot;:23437316,&quot;theme_var_background_pop&quot;:&quot;#A33ACB&quot;,&quot;created_at&quot;:&quot;2021-05-11T21:29:09.257Z&quot;,&quot;rss_website_url&quot;:null,&quot;email_from_name&quot;:null,&quot;copyright&quot;:&quot;Jonathan Burbaum&quot;,&quot;founding_plan_name&quot;:null,&quot;community_enabled&quot;:true,&quot;invite_only&quot;:false,&quot;payments_state&quot;:&quot;enabled&quot;}}],&quot;twitter_screen_name&quot;:&quot;burbaum&quot;,&quot;is_guest&quot;:false}],&quot;utm_campaign&quot;:null,&quot;belowTheFold&quot;:true,&quot;type&quot;:null,&quot;language&quot;:&quot;en&quot;}">
+        <a class="embedded-post" href="../2022-06-05_046_Low-cost Desalination and the ARPA-E Summit/index.html" native="true" title="Local archive link">
+         <div>
+          <img src="./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png"/>
+          <span class="embedded-post-publication-name">
+           Healing the Earth with Technology
+          </span>
+         </div>
+         <div>
+          <div>
+           46. Low-cost Desalination and the ARPA-E Summit
+          </div>
+         </div>
+         <div>
+          I apologize for skipping a week, but I hope many of you were on a well-deserved holiday/spring break over Memorial Day. My lame excuse is the ARPA-E Summit, the first in-person conference I’ve attended since COVID. I’ve been to all but one of these epic events since 2010. For me, it’s a reliable venue for both catching up with the “alumni” group and tra…
+         </div>
+         <div>
+          <span class="embedded-post-cta">
+           Read more
+          </span>
+         </div>
+         <div>
+          4 years ago · 1 like · Jonathan Burbaum
+         </div>
+        </a>
+       </div>
+       <p>
+       </p>
+      </div>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-2" id="footnote-2" target="_self">
+       2
+      </a>
+      <p>
+       <a href="https://www.icef.go.jp/pdf/summary/roadmap/icef2020_roadmap.pdf">
+        icef.go.jp
+       </a>
+      </p>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-3" id="footnote-3" target="_self">
+       3
+      </a>
+      <div>
+       <div data-attrs="{&quot;id&quot;:72848115,&quot;url&quot;:&quot;../2022-09-11_057_Another solution (Part 1)/index.html the Earth with Technology&quot;,&quot;publication_logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;title&quot;:&quot;57. Another solution? (Part 1)&quot;,&quot;truncated_body_text&quot;:&quot;Today is an interesting date. It marks the 21st anniversary of the 9/11 terrorist attacks, so there are now adults who have known only the post-9/11 world. And yesterday, the United Kingdom elevated a new monarch, King Charles III. We’re also in an interesting intellectual position. In the past few installments, the data have guided to a hypothesis that …&quot;,&quot;date&quot;:&quot;2022-09-11T22:36:11.904Z&quot;,&quot;like_count&quot;:0,&quot;comment_count&quot;:0,&quot;bylines&quot;:[{&quot;id&quot;:23437316,&quot;name&quot;:&quot;Jonathan Burbaum&quot;,&quot;previous_name&quot;:null,&quot;photo_url&quot;:&quot;https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/543d1a93-fd05-4f3f-8feb-41a9c7234896_927x1065.jpeg&quot;,&quot;bio&quot;:&quot;Pragmatic molecular scientist seeking solutions to existential human problems&quot;,&quot;profile_set_up_at&quot;:&quot;2021-05-12T17:04:04.671Z&quot;,&quot;publicationUsers&quot;:[{&quot;id&quot;:281335,&quot;user_id&quot;:23437316,&quot;publication_id&quot;:359195,&quot;role&quot;:&quot;admin&quot;,&quot;public&quot;:true,&quot;is_primary&quot;:false,&quot;publication&quot;:{&quot;id&quot;:359195,&quot;name&quot;:&quot;Healing the Earth with Technology&quot;,&quot;subdomain&quot;:&quot;healingearth&quot;,&quot;custom_domain&quot;:null,&quot;custom_domain_optional&quot;:false,&quot;hero_text&quot;:&quot;Are you skeptical about climate change? Are you convinced that you know all about it? Here's some food for thought. &quot;,&quot;logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;author_id&quot;:23437316,&quot;theme_var_background_pop&quot;:&quot;#A33ACB&quot;,&quot;created_at&quot;:&quot;2021-05-11T21:29:09.257Z&quot;,&quot;rss_website_url&quot;:null,&quot;email_from_name&quot;:null,&quot;copyright&quot;:&quot;Jonathan Burbaum&quot;,&quot;founding_plan_name&quot;:null,&quot;community_enabled&quot;:true,&quot;invite_only&quot;:false,&quot;payments_state&quot;:&quot;enabled&quot;}}],&quot;twitter_screen_name&quot;:&quot;burbaum&quot;,&quot;is_guest&quot;:false}],&quot;utm_campaign&quot;:null,&quot;belowTheFold&quot;:true,&quot;type&quot;:null,&quot;language&quot;:&quot;en&quot;}">
+        <a class="embedded-post" href="../2022-09-11_057_Another solution (Part 1)/index.html" native="true" title="Local archive link">
+         <div>
+          <img src="./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png"/>
+          <span class="embedded-post-publication-name">
+           Healing the Earth with Technology
+          </span>
+         </div>
+         <div>
+          <div>
+           57. Another solution? (Part 1)
+          </div>
+         </div>
+         <div>
+          Today is an interesting date. It marks the 21st anniversary of the 9/11 terrorist attacks, so there are now adults who have known only the post-9/11 world. And yesterday, the United Kingdom elevated a new monarch, King Charles III. We’re also in an interesting intellectual position. In the past few installments, the data have guided to a hypothesis that …
+         </div>
+         <div>
+          <span class="embedded-post-cta">
+           Read more
+          </span>
+         </div>
+         <div>
+          3 years ago · Jonathan Burbaum
+         </div>
+        </a>
+       </div>
+      </div>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-4" id="footnote-4" target="_self">
+       4
+      </a>
+      <div>
+       <p>
+        Poorter
+        <em>
+         et al.,
+        </em>
+        “Multidimensional tropical forest recovery”,
+        <em>
+         Science
+        </em>
+        <strong>
+         374
+        </strong>
+        , 1370-1376 (2021)
+       </p>
+       <p>
+       </p>
+      </div>
+     </div>
+    </div>
+    <nav class="post-nav">
+     <a href="../2022-09-11_057_Another solution (Part 1)/index.html">
+      ← 57. Another solution? (Part 1)...
+     </a>
+     <a href="../2022-09-25_059_Another solution (Part 3)/index.html">
+      59. Another solution? (Part 3)... →
+     </a>
+    </nav>
+   </article>
+   <footer>
+    <p>
+     Healing Earth with Technology Archive
+    </p>
+   </footer>
+  </div>
+ </body>
 </html>

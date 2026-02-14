@@ -1,39 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light only">
-    <title>97. Developing a Third Solution (Part 9) - Healing Earth with Technology</title>
-    <link rel="stylesheet" href="../../style.css?v=2">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1 class="site-title"><a href="../../index.html">Healing Earth with Technology</a></h1>
-            <nav>
-                <a href="../../index.html">All Posts</a>
-                <a href="../../about.html">About</a>
-            </nav>
-        </header>
-
-        <article>
-            <div class="post-header">
-                <h1 class="post-title">97. Developing a Third Solution (Part 9)</h1>
-                <p class="post-subtitle">Can the financials work?</p>
-                <p class="post-meta">2023-07-21</p>
-            </div>
-
-            <div class="post-content">
-                <p>I apologize to at least some of my readers for the recent surge of math in this series. It’s a process of refining ideas by eliminating the mathematically implausible. Ultimately, engaging both creatively and analytically provides a reality check on the value of different approaches. And I’m not trying to publish a “breakthrough” manuscript in a prominent academic journal; I only want to see if there’s a valid destination for investigation and investment. I don’t need to get the model past an Editorial Board and gain nothing from unrealistic assumptions. </p><p>So far, we’ve established that collecting salt-free water in floating industrial-scale cisterns near the equator and delivering it to coastal desert areas for irrigation is not implausible from either a supply or timing perspective, and it can be accomplished with well-established technologies (primarily wind power) that add no carbon to the atmosphere. The innovation in this solution combines ancient intermittent energy sources with modern electronics, satellite communications, and autonomous (crewless) navigation to reduce costs and increase availability. </p><p>But what about taking a cost perspective? Can the system as a whole conceivably make a profit? Let’s take a shot at a techno-economic analysis of the proposal from the perspective of a potential return on investment:</p><ul><li><p>Excluding non-recurring engineering costs, what would the material for this system cost, and how long might it last? </p></li><li><p>Taking carbon credits into account, what is the financial value of our hypothetical sugarcane crop? </p></li></ul><p>Here’s the system:</p><figure><img alt="" src="./images/b7c441e9-978d-4a5d-b76e-939966e889f5_3036x2103.png" width="100%"/><figcaption>The Equatorial collection zone (red box) is serviced by 20 floating collectors (circles) and three transport vessels, one emptied, one arriving for filling, and one preparing to depart. Pumping to irrigated land on shore is accomplished using wind power.</figcaption></figure><p>The system is complete enough to create a bare-bones cost model. The levelized cost of water (the unit value of the water divided by the lifetime of the production equipment) will be determined by the cost and durability of the equipment because the product itself is free.  The interconnections between system components are sketchy at this point, but we can estimate a bill of materials for major components to see if the system as a whole makes sense. There will be missing pieces, like the cost of engineering and satellite controllers, labor for installation, maintenance, fleet management, etc.<a class="footnote-anchor" href="#footnote-1" id="footnote-anchor-1" target="_self">1</a>, so any estimate will be low. But, the system has a lot of hardware, so if the parts are too expensive, the math will never work out.</p><p>In developing the cost model, I’ve looked at public “off-the-shelf” equipment costs (where available) and then modeled costs of the oversized vessels as done previously, costs scaling with the volume raised to the 0.6 power:</p><figure><img alt="" height="292" src="./images/64f7c58f-4d89-45e7-817d-57fae9a55e3d_653x292.png" width="653"/><figcaption>Derivations are available on request. All costs are given in US$.</figcaption></figure><p>The transport vessels are scaled aluminum rowboats, and the floating collectors were described earlier. I raised the number of collection vessels to 20 to ensure that some of them collect the needed amount of 400 acre-feet per month. I set the storage buffer to an entire day’s irrigation and scaled from a DIY water tower found online. I didn’t apply a scaling factor to the pumps because I couldn’t find a suitable piece of hardware, so I used 60 12VDC pumps, each with a capacity of 3,120 gallons per hour, to provide the necessary pumping capacity. This adds cost but has the virtues of redundancy as protection at a critical point and scalability based on wind velocity. The value for drip irrigation (US$1,600 per acre) is the average installed cost per acre in the US, so it’s probably high. As a starting point, let’s assume that the LCOW from the complete system will work out to be US$200 per acre-foot, or a total cost of US$1,000 per acre (AU$3,600 per hectare) per year to grow sugarcane in the desert. </p><p>The exercise suggests that even with off-the-shelf parts, water with value on the spot market (proposed earlier to be profitable below $200/acre-foot) is achievable through “atmospheric mining”. Further, it provides some insight into reducing the system cost. The vessels for collection and transport are, unsurprisingly, the most expensive components, followed by the drip irrigation system. Any choice that lowers costs or extends these components’ usable lifetime will reduce LCOW. </p><p>There are omitted costs, of course, but this water (despite being ‘free’ at least at the origin) is somewhat expensive as a sole source for agriculture. Farmers take free water delivered from the sky when available, then use flowing river water for irrigation. Only after those sources are exhausted will they pay a premium on the spot market (per the NQH2O index)<a class="footnote-anchor" href="#footnote-2" id="footnote-anchor-2" target="_self">2</a>. In this instance, our notional farmers are far from a river in the desert, so they always pay a premium. The seasonal cost of water will therefore be higher. At the same time, it’s below-marginal barren land, and we’ve chosen a thirsty crop (albeit one with high carbon capture value), so costs will vary compared to other crops in other areas. </p><p>The Australian government published the financial performance of the nation’s sugarcane farms in 2021<a class="footnote-anchor" href="#footnote-3" id="footnote-anchor-3" target="_self">3</a> and reported that the average cost (including irrigation) of growing was AU$2,380/hectare<a class="footnote-anchor" href="#footnote-4" id="footnote-anchor-4" target="_self">4</a> with a profit of AU$1,000. So, if nothing else changes (invoking the economist’s phrase <em>ceteris paribus</em>, Latin for ‘all else equal’) at this LCOW, planting sugarcane would be unprofitable—the water costs more than the profit.  Factors such as land cost, fertilizer use, and labor (spraying for insects) may be lower with drip irrigation in this situation, and it’s close enough that further refinements might shed light on more cost savings.</p><p>Now, let’s consider the harvest. Drip-irrigated sugarcane requires 1,530 mm (roughly 5 feet) of water, evenly spread across the year.<a class="footnote-anchor" href="#footnote-5" id="footnote-anchor-5" target="_self">5</a> After yearly harvest, sugarcane grows back, like mown grass, for up to eight years. It has been successfully grown in the freshly irrigated desert with favorable results:</p><div data-attrs='{"videoId":"bYpn295-9v0","startTime":null,"endTime":null}' id="youtube2-bYpn295-9v0"><div><iframe allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" frameborder="0" gesture="media" height="409" loading="lazy" src="https://www.youtube-nocookie.com/embed/bYpn295-9v0?rel=0&amp;autoplay=0&amp;showinfo=0&amp;enablejsapi=0" width="728"></iframe></div></div><p>This marketing video suggests that yields under drip irrigation in the Senegal desert are about 50% higher than the best-performing Australian farms (150 vs. 94 tonnes/ha). That’s significant. If the higher yield holds in Australia, the increased profits from the system will swing toward profitability.</p><p>Now, what about carbon credits? I don’t know what Australia offers, but the American government has set a price of US$60 per ton of CO2. Let’s assume the sugar is removed and sold, and the remainder of the dry biomass is carbohydrate. </p><p>The composition of a harvested hectare (assuming 150 tonnes/ha) is about 102 tonnes of water and 22 tons of sucrose, with about 26 tons of other carbohydrates, or 38 tons of captured CO2, above ground, consistent with our earlier analysis.<a class="footnote-anchor" href="#footnote-6" id="footnote-anchor-6" target="_self">6</a> That leaves about 7 tons of CO2 captured as organic carbon in the soil, roughly equivalent to the amount measured in the freshly irrigated desert.<a class="footnote-anchor" href="#footnote-7" id="footnote-anchor-7" target="_self">7</a> If all of this carbon could be monetized, that’d be US$2,700 (AU$3,970), with a nominal harvest value of AU$1,500 (assuming the yield increase holds). This factor would make the operation profitable even under <em>ceteris paribus</em>. Notably, as this new approach progresses down the learning curve, it is plausible to survive the elimination of subsidies.</p><p>This seesawing of “Profitable or not?” highlights a problem with looking only at the “bottom line” in models. Whether an operation is projected to be profitable is naturally dependent on assumptions, and profit is a difference between big numbers. So even with plausible assumptions, there is an outsized impact of errors in assumptions. We’ve made quite a few here, and building it is the only sure way to see how far off we are in our assumptions. Ten million dollars is more than I can afford, but a relatively small investment from most “cleantech” or “impact” investors. And, unlike many unproven research projects, this one will work. The only unknown is whether it’ll pay back the investment, and no one has unleashed a crack engineering team, constrained by cost, on the problem.</p><p>So, the idea is still alive, despite yet another attempt to kill it.</p><div data-attrs='{"url":"https://healingearth.substack.com/p/97-developing-a-third-solution-part?utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;action=share","text":"Share"}'><p class="cta-caption">Thank you for reading Healing the Earth with Technology. This post is public so feel free to share it.</p></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-1" id="footnote-1" target="_self">1</a><p>I believe it’s appropriate to exclude the cost of capital. While any project at scale is capital intensive, I’m projecting that the social value of the operation will lead to subsidies or other forms of government support that reduce or eliminate capital costs. At this stage of model development, it will be a minor factor, anyway.</p></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-2" id="footnote-2" target="_self">2</a></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-3" id="footnote-3" target="_self">3</a><p>Topp, V, Litchfield, F, Coelli, R &amp; Ashton, D 2021, Financial performance of sugarcane farms 2020–21 to 2021–22, ABARES, Canberra, December. <a href="https://doi.org/10.25814/czw3-ez74">https://doi.org/10.25814/czw3-ez74</a></p></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-4" id="footnote-4" target="_self">4</a><div><p>Average cost breakdown based on the data provided in the above report (in AU$/ha):</p><ul><li><p>Contracts, $496.99 (21%)</p></li><li><p>Fertilizer, $423.36 (18%)</p></li><li><p>Repairs/maintenance, $271.95 (11%)</p></li><li><p>Hired labor, $194.76 (8%)</p></li><li><p>Fuel, oil &amp; grease, $158.54 (7%)</p></li><li><p>Chemicals,  $107.47 (5%)</p></li><li><p>Electricity, $99.75 (4%)</p></li><li><p>Rates, $98.57 (4%)</p></li><li><p>Handling/Mktg, $95.60 (4%)</p></li><li><p><strong>Water, $71.25 (3%)</strong></p></li><li><p>Interest, $71.25 (3%)</p></li><li><p>Insurance, $41.56 (2%)</p></li><li><p>Land Rent, $33.25 (1%)</p></li><li><p>Administration, $30.28 (1%)</p></li><li><p>Motor Vehicles, $15.44 (1%)</p></li><li><p>Lease Payments, $6.53</p></li><li><p>Other, $162.69 (7%)</p></li></ul></div></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-5" id="footnote-5" target="_self">5</a><p>Marin et al., “Sugarcane evapotranspiration and irrigation requirements in tropical climates”, Theoretical and Applied Climatology <a href="https://doi.org/10.1007/s00704-020-03161-z">https://doi.org/10.1007/s00704-020-03161-z</a></p></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-6" id="footnote-6" target="_self">6</a></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-7" id="footnote-7" target="_self">7</a></div>
-            </div>
-
-            <nav class="post-nav"><a href="../2023-07-14_096_Developing a Third Solution (Part 8)/index.html">← 96. Developing a Third Solution (Part 8)...</a><a href="../2023-08-03_098_Developing a Third Solution (Part 10)/index.html">98. Developing a Third Solution (Part 10... →</a></nav>
-        </article>
-
-        <footer>
-            <p>Healing Earth with Technology Archive</p>
-        </footer>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="light only" name="color-scheme"/>
+  <title>
+   97. Developing a Third Solution (Part 9) - Healing Earth with Technology
+  </title>
+  <link href="../../style.css?v=2" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="container">
+   <header>
+    <h1 class="site-title">
+     <a href="../../index.html">
+      Healing Earth with Technology
+     </a>
+    </h1>
+    <nav>
+     <a href="../../index.html">
+      All Posts
+     </a>
+     <a href="../../about.html">
+      About
+     </a>
+    </nav>
+   </header>
+   <article>
+    <div class="post-header">
+     <h1 class="post-title">
+      97. Developing a Third Solution (Part 9)
+     </h1>
+     <p class="post-subtitle">
+      Can the financials work?
+     </p>
+     <p class="post-meta">
+      2023-07-21
+     </p>
     </div>
-</body>
+    <div class="post-content">
+     <p>
+      I apologize to at least some of my readers for the recent surge of math in this series. It’s a process of refining ideas by eliminating the mathematically implausible. Ultimately, engaging both creatively and analytically provides a reality check on the value of different approaches. And I’m not trying to publish a “breakthrough” manuscript in a prominent academic journal; I only want to see if there’s a valid destination for investigation and investment. I don’t need to get the model past an Editorial Board and gain nothing from unrealistic assumptions.
+     </p>
+     <p>
+      So far, we’ve established that collecting salt-free water in floating industrial-scale cisterns near the equator and delivering it to coastal desert areas for irrigation is not implausible from either a supply or timing perspective, and it can be accomplished with well-established technologies (primarily wind power) that add no carbon to the atmosphere. The innovation in this solution combines ancient intermittent energy sources with modern electronics, satellite communications, and autonomous (crewless) navigation to reduce costs and increase availability.
+     </p>
+     <p>
+      But what about taking a cost perspective? Can the system as a whole conceivably make a profit? Let’s take a shot at a techno-economic analysis of the proposal from the perspective of a potential return on investment:
+     </p>
+     <ul>
+      <li>
+       <p>
+        Excluding non-recurring engineering costs, what would the material for this system cost, and how long might it last?
+       </p>
+      </li>
+      <li>
+       <p>
+        Taking carbon credits into account, what is the financial value of our hypothetical sugarcane crop?
+       </p>
+      </li>
+     </ul>
+     <p>
+      Here’s the system:
+     </p>
+     <figure>
+      <img alt="" src="./images/b7c441e9-978d-4a5d-b76e-939966e889f5_3036x2103.png" width="100%"/>
+      <figcaption>
+       The Equatorial collection zone (red box) is serviced by 20 floating collectors (circles) and three transport vessels, one emptied, one arriving for filling, and one preparing to depart. Pumping to irrigated land on shore is accomplished using wind power.
+      </figcaption>
+     </figure>
+     <p>
+      The system is complete enough to create a bare-bones cost model. The levelized cost of water (the unit value of the water divided by the lifetime of the production equipment) will be determined by the cost and durability of the equipment because the product itself is free.  The interconnections between system components are sketchy at this point, but we can estimate a bill of materials for major components to see if the system as a whole makes sense. There will be missing pieces, like the cost of engineering and satellite controllers, labor for installation, maintenance, fleet management, etc.
+      <a class="footnote-anchor" href="#footnote-1" id="footnote-anchor-1" target="_self">
+       1
+      </a>
+      , so any estimate will be low. But, the system has a lot of hardware, so if the parts are too expensive, the math will never work out.
+     </p>
+     <p>
+      In developing the cost model, I’ve looked at public “off-the-shelf” equipment costs (where available) and then modeled costs of the oversized vessels as done previously, costs scaling with the volume raised to the 0.6 power:
+     </p>
+     <figure>
+      <img alt="" height="292" src="./images/64f7c58f-4d89-45e7-817d-57fae9a55e3d_653x292.png" width="653"/>
+      <figcaption>
+       Derivations are available on request. All costs are given in US$.
+      </figcaption>
+     </figure>
+     <p>
+      The transport vessels are scaled aluminum rowboats, and the floating collectors were described earlier. I raised the number of collection vessels to 20 to ensure that some of them collect the needed amount of 400 acre-feet per month. I set the storage buffer to an entire day’s irrigation and scaled from a DIY water tower found online. I didn’t apply a scaling factor to the pumps because I couldn’t find a suitable piece of hardware, so I used 60 12VDC pumps, each with a capacity of 3,120 gallons per hour, to provide the necessary pumping capacity. This adds cost but has the virtues of redundancy as protection at a critical point and scalability based on wind velocity. The value for drip irrigation (US$1,600 per acre) is the average installed cost per acre in the US, so it’s probably high. As a starting point, let’s assume that the LCOW from the complete system will work out to be US$200 per acre-foot, or a total cost of US$1,000 per acre (AU$3,600 per hectare) per year to grow sugarcane in the desert.
+     </p>
+     <p>
+      The exercise suggests that even with off-the-shelf parts, water with value on the spot market (proposed earlier to be profitable below $200/acre-foot) is achievable through “atmospheric mining”. Further, it provides some insight into reducing the system cost. The vessels for collection and transport are, unsurprisingly, the most expensive components, followed by the drip irrigation system. Any choice that lowers costs or extends these components’ usable lifetime will reduce LCOW.
+     </p>
+     <p>
+      There are omitted costs, of course, but this water (despite being ‘free’ at least at the origin) is somewhat expensive as a sole source for agriculture. Farmers take free water delivered from the sky when available, then use flowing river water for irrigation. Only after those sources are exhausted will they pay a premium on the spot market (per the NQH2O index)
+      <a class="footnote-anchor" href="#footnote-2" id="footnote-anchor-2" target="_self">
+       2
+      </a>
+      . In this instance, our notional farmers are far from a river in the desert, so they always pay a premium. The seasonal cost of water will therefore be higher. At the same time, it’s below-marginal barren land, and we’ve chosen a thirsty crop (albeit one with high carbon capture value), so costs will vary compared to other crops in other areas.
+     </p>
+     <p>
+      The Australian government published the financial performance of the nation’s sugarcane farms in 2021
+      <a class="footnote-anchor" href="#footnote-3" id="footnote-anchor-3" target="_self">
+       3
+      </a>
+      and reported that the average cost (including irrigation) of growing was AU$2,380/hectare
+      <a class="footnote-anchor" href="#footnote-4" id="footnote-anchor-4" target="_self">
+       4
+      </a>
+      with a profit of AU$1,000. So, if nothing else changes (invoking the economist’s phrase
+      <em>
+       ceteris paribus
+      </em>
+      , Latin for ‘all else equal’) at this LCOW, planting sugarcane would be unprofitable—the water costs more than the profit.  Factors such as land cost, fertilizer use, and labor (spraying for insects) may be lower with drip irrigation in this situation, and it’s close enough that further refinements might shed light on more cost savings.
+     </p>
+     <p>
+      Now, let’s consider the harvest. Drip-irrigated sugarcane requires 1,530 mm (roughly 5 feet) of water, evenly spread across the year.
+      <a class="footnote-anchor" href="#footnote-5" id="footnote-anchor-5" target="_self">
+       5
+      </a>
+      After yearly harvest, sugarcane grows back, like mown grass, for up to eight years. It has been successfully grown in the freshly irrigated desert with favorable results:
+     </p>
+     <div data-attrs='{"videoId":"bYpn295-9v0","startTime":null,"endTime":null}' id="youtube2-bYpn295-9v0">
+      <div>
+       <iframe allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" frameborder="0" gesture="media" height="409" loading="lazy" src="https://www.youtube-nocookie.com/embed/bYpn295-9v0?rel=0&amp;autoplay=0&amp;showinfo=0&amp;enablejsapi=0" width="728">
+       </iframe>
+      </div>
+     </div>
+     <p>
+      This marketing video suggests that yields under drip irrigation in the Senegal desert are about 50% higher than the best-performing Australian farms (150 vs. 94 tonnes/ha). That’s significant. If the higher yield holds in Australia, the increased profits from the system will swing toward profitability.
+     </p>
+     <p>
+      Now, what about carbon credits? I don’t know what Australia offers, but the American government has set a price of US$60 per ton of CO2. Let’s assume the sugar is removed and sold, and the remainder of the dry biomass is carbohydrate.
+     </p>
+     <p>
+      The composition of a harvested hectare (assuming 150 tonnes/ha) is about 102 tonnes of water and 22 tons of sucrose, with about 26 tons of other carbohydrates, or 38 tons of captured CO2, above ground, consistent with our earlier analysis.
+      <a class="footnote-anchor" href="#footnote-6" id="footnote-anchor-6" target="_self">
+       6
+      </a>
+      That leaves about 7 tons of CO2 captured as organic carbon in the soil, roughly equivalent to the amount measured in the freshly irrigated desert.
+      <a class="footnote-anchor" href="#footnote-7" id="footnote-anchor-7" target="_self">
+       7
+      </a>
+      If all of this carbon could be monetized, that’d be US$2,700 (AU$3,970), with a nominal harvest value of AU$1,500 (assuming the yield increase holds). This factor would make the operation profitable even under
+      <em>
+       ceteris paribus
+      </em>
+      . Notably, as this new approach progresses down the learning curve, it is plausible to survive the elimination of subsidies.
+     </p>
+     <p>
+      This seesawing of “Profitable or not?” highlights a problem with looking only at the “bottom line” in models. Whether an operation is projected to be profitable is naturally dependent on assumptions, and profit is a difference between big numbers. So even with plausible assumptions, there is an outsized impact of errors in assumptions. We’ve made quite a few here, and building it is the only sure way to see how far off we are in our assumptions. Ten million dollars is more than I can afford, but a relatively small investment from most “cleantech” or “impact” investors. And, unlike many unproven research projects, this one will work. The only unknown is whether it’ll pay back the investment, and no one has unleashed a crack engineering team, constrained by cost, on the problem.
+     </p>
+     <p>
+      So, the idea is still alive, despite yet another attempt to kill it.
+     </p>
+     <div data-attrs='{"url":"../2023-07-21_097_Developing a Third Solution (Part 9)/index.html","text":"Share"}'>
+      <p class="cta-caption">
+       Thank you for reading Healing the Earth with Technology. This post is public so feel free to share it.
+      </p>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-1" id="footnote-1" target="_self">
+       1
+      </a>
+      <p>
+       I believe it’s appropriate to exclude the cost of capital. While any project at scale is capital intensive, I’m projecting that the social value of the operation will lead to subsidies or other forms of government support that reduce or eliminate capital costs. At this stage of model development, it will be a minor factor, anyway.
+      </p>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-2" id="footnote-2" target="_self">
+       2
+      </a>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-3" id="footnote-3" target="_self">
+       3
+      </a>
+      <p>
+       Topp, V, Litchfield, F, Coelli, R &amp; Ashton, D 2021, Financial performance of sugarcane farms 2020–21 to 2021–22, ABARES, Canberra, December.
+       <a href="https://doi.org/10.25814/czw3-ez74">
+        doi.org
+       </a>
+      </p>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-4" id="footnote-4" target="_self">
+       4
+      </a>
+      <div>
+       <p>
+        Average cost breakdown based on the data provided in the above report (in AU$/ha):
+       </p>
+       <ul>
+        <li>
+         <p>
+          Contracts, $496.99 (21%)
+         </p>
+        </li>
+        <li>
+         <p>
+          Fertilizer, $423.36 (18%)
+         </p>
+        </li>
+        <li>
+         <p>
+          Repairs/maintenance, $271.95 (11%)
+         </p>
+        </li>
+        <li>
+         <p>
+          Hired labor, $194.76 (8%)
+         </p>
+        </li>
+        <li>
+         <p>
+          Fuel, oil &amp; grease, $158.54 (7%)
+         </p>
+        </li>
+        <li>
+         <p>
+          Chemicals,  $107.47 (5%)
+         </p>
+        </li>
+        <li>
+         <p>
+          Electricity, $99.75 (4%)
+         </p>
+        </li>
+        <li>
+         <p>
+          Rates, $98.57 (4%)
+         </p>
+        </li>
+        <li>
+         <p>
+          Handling/Mktg, $95.60 (4%)
+         </p>
+        </li>
+        <li>
+         <p>
+          <strong>
+           Water, $71.25 (3%)
+          </strong>
+         </p>
+        </li>
+        <li>
+         <p>
+          Interest, $71.25 (3%)
+         </p>
+        </li>
+        <li>
+         <p>
+          Insurance, $41.56 (2%)
+         </p>
+        </li>
+        <li>
+         <p>
+          Land Rent, $33.25 (1%)
+         </p>
+        </li>
+        <li>
+         <p>
+          Administration, $30.28 (1%)
+         </p>
+        </li>
+        <li>
+         <p>
+          Motor Vehicles, $15.44 (1%)
+         </p>
+        </li>
+        <li>
+         <p>
+          Lease Payments, $6.53
+         </p>
+        </li>
+        <li>
+         <p>
+          Other, $162.69 (7%)
+         </p>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-5" id="footnote-5" target="_self">
+       5
+      </a>
+      <p>
+       Marin et al., “Sugarcane evapotranspiration and irrigation requirements in tropical climates”, Theoretical and Applied Climatology
+       <a href="https://doi.org/10.1007/s00704-020-03161-z">
+        doi.org
+       </a>
+      </p>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-6" id="footnote-6" target="_self">
+       6
+      </a>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-7" id="footnote-7" target="_self">
+       7
+      </a>
+     </div>
+    </div>
+    <nav class="post-nav">
+     <a href="../2023-07-14_096_Developing a Third Solution (Part 8)/index.html">
+      ← 96. Developing a Third Solution (Part 8)...
+     </a>
+     <a href="../2023-08-03_098_Developing a Third Solution (Part 10)/index.html">
+      98. Developing a Third Solution (Part 10... →
+     </a>
+    </nav>
+   </article>
+   <footer>
+    <p>
+     Healing Earth with Technology Archive
+    </p>
+   </footer>
+  </div>
+ </body>
 </html>

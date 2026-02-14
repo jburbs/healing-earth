@@ -1,39 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light only">
-    <title>96. Developing a Third Solution (Part 8) - Healing Earth with Technology</title>
-    <link rel="stylesheet" href="../../style.css?v=2">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1 class="site-title"><a href="../../index.html">Healing Earth with Technology</a></h1>
-            <nav>
-                <a href="../../index.html">All Posts</a>
-                <a href="../../about.html">About</a>
-            </nav>
-        </header>
-
-        <article>
-            <div class="post-header">
-                <h1 class="post-title">96. Developing a Third Solution (Part 8)</h1>
-                <p class="post-subtitle">Moving large amounts of water, on the water</p>
-                <p class="post-meta">2023-07-14</p>
-            </div>
-
-            <div class="post-content">
-                <p>I apologize for being slightly late with this installment, but I found the results this week incredible—as in, “I am not sure I believe this result”. I’m still not 100% sure, frankly. I subscribe to the adage, “If it sounds too good to be true, it probably isn’t!” So, I wanted to be more sure of the numbers before I ended up with egg on my face. Now, after sleeping on it and visualizing the result, I think I believe them.</p><p>One of the assumptions in this possible solution is the idea of transporting a supertanker load (400 acre-feet, or about 500,000 tons) of water in a sailing vessel from the equator (where it’s collected) to the coast of Western Australia (where it’s used). Indeed, we know how to make sailboats: Basic engineering parameters for sailboat construction were established before engineering became a profession. </p><p>So what amount of propulsion energy will our shuttle system require? Let’s assume that the velocity will get the boat from the center of the collection zone to the water dock in 15 days as the crow flies, with the specification of on-time, monthly deliveries. If the boat is stuck in a windless area or needs to take a longer route, it gives room for error.</p><p>It’s about 1,800 nautical miles from the collection zone to the water port, so that’s 120 nautical miles per day, or 5 knots on average. Supertankers travel about three times faster than that, but they have a crew, an expensive asset that leads many supply chains, and one that’s environmentally toxic. In this hypothetical, the boats are crewless, and spills or leaks are inconsequential, so the ship must be mechanically robust. Think of it as a large aluminum rowboat. Moving at that speed with that cargo, safety will be baked in, so I believe it can be constructed cheaply. </p><p>The question is, for such a beast, how large a sail would be needed to propel a boat that size at that velocity? I’m starting with the concept of a cargo ship that can be fully loaded with rainwater over the equatorial ocean (my current thought is that collection and shipment will happen in separate vessels so that a more extensive collection area can be maintained without resorting to a funnel). Because of its inexpensive cargo and snail’s pace, this ship is managed remotely and  autonomously for the most part—delivery isn’t particularly time-sensitive. It is driven by wind power, with sails that are actuated through modern telecommunication. This is not fanciful: Sail-enhanced supertankers are being deployed today, and autonomous remote-controlled sailboats are already at sea.<a class="footnote-anchor" href="#footnote-1" id="footnote-anchor-1" target="_self">1</a></p><p>I’m not a naval engineer by any stretch of the imagination, but I can fake it with the appropriate software. I downloaded a <a href="https://download.delftship.net/DSFree.php">free version of DelftShip</a>, a software modeling package for ships of all shapes and sizes. As part of the package, it includes a detailed model of a cargo ship:</p><figure><img alt="" src="./images/f887ab95-8d90-4f8a-a996-bdacb12b73bc_2029x720.png" width="100%"/><figcaption>From <em>DELFTship cargo vessel - complete </em>design<em> </em>file provided at the link above; Perspective view.</figcaption></figure><p>All I needed to do was to scale this ship to the volume of 400 acre-feet and ask the program to calculate the power required to move the vessel at 5 knots. Here’s the result:</p><figure><img alt="" src="./images/c5c8966a-3873-4fbd-b9eb-ee2c2e8eb9e2_1373x1185.png" width="100%"/><figcaption>Effective power as a function of speed for the supertanker-sized boat above. Effective power is the amount needed to tow the boat in a straight line on seawater at nominal composition and temperature. </figcaption></figure><p>It makes sense to anyone who’s spent time in or on the water that the faster you try to go, the harder it is to speed up. It also makes sense that it can take a long time to slow down to a dead stop once the ship is in motion. The resistance of the water at very slow speeds is minimal, and the curve reflects that. So, 200 kW can move this boat fast enough. Unit conversion time! 200 kW is…just under 300 HP. Wait, can that be right? Could we use a large outboard motor to move this behemoth? </p><p>I’ve checked and rechecked this factoid and cannot find an error. The boat shape is fixed, and the calculations are presumably done according to the best boat engineering practices. The ship is ginormous, 385 m long and 69 m wide ( a little under two football fields in the deck area, consistent with a supertanker). However, because of the limited resistance of water at slow speeds, it can be moved at relatively low power. (Consider the strongman stunt of pulling a semitrailer truck on a level surface with just a rope—all that’s needed is to overcome inertia and relatively small rolling resistance, and the truck will move, albeit slowly). </p><p>Now, what size sail is needed to generate 300 HP? It turns out that there is a convenient rule of thumb: A sail generates roughly 2 HP per square foot of area. So, to move this boat, we’d need 150 square feet of sail. That’s not a lot. Indeed, the sail-enhanced supertankers have four sails of 3,000 square feet each, so a single sail will be more than adequate to power the entire journey! The total HP of such a sail is roughly equivalent to a high-powered tugboat. </p><p>That’s another idea stopper avoided, I think. As always, dissent is encouraged! Intelligent and constructive confrontation makes good ideas stronger (or kills off the weak ones). </p><p>So, here’s the current model—a small fleet of inflatable cisterns stationed in the ITCZ (rain zone) near the equator, each capable of collecting 1 foot of rainwater, and a shuttle boat that can empty these cisterns into a sailing vessel for transportation. That adds a bit of complexity, but that decouples water collection and transport. Enough cisterns can be deployed to ensure a continuous supply of collected rainwater, and they may not need to move much to be effective.</p><div data-attrs='{"url":"https://healingearth.substack.com/p/96-developing-a-third-solution-part?utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;action=share","text":"Share"}'><p class="cta-caption">Thank you for reading Healing the Earth with Technology. This post is public so feel free to share it.</p></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-1" id="footnote-1" target="_self">1</a><p>See this installment:</p></div>
-            </div>
-
-            <nav class="post-nav"><a href="../2023-07-07_000_Something a little different/index.html">← Something a little different...</a><a href="../2023-07-21_097_Developing a Third Solution (Part 9)/index.html">97. Developing a Third Solution (Part 9)... →</a></nav>
-        </article>
-
-        <footer>
-            <p>Healing Earth with Technology Archive</p>
-        </footer>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="light only" name="color-scheme"/>
+  <title>
+   96. Developing a Third Solution (Part 8) - Healing Earth with Technology
+  </title>
+  <link href="../../style.css?v=2" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="container">
+   <header>
+    <h1 class="site-title">
+     <a href="../../index.html">
+      Healing Earth with Technology
+     </a>
+    </h1>
+    <nav>
+     <a href="../../index.html">
+      All Posts
+     </a>
+     <a href="../../about.html">
+      About
+     </a>
+    </nav>
+   </header>
+   <article>
+    <div class="post-header">
+     <h1 class="post-title">
+      96. Developing a Third Solution (Part 8)
+     </h1>
+     <p class="post-subtitle">
+      Moving large amounts of water, on the water
+     </p>
+     <p class="post-meta">
+      2023-07-14
+     </p>
     </div>
-</body>
+    <div class="post-content">
+     <p>
+      I apologize for being slightly late with this installment, but I found the results this week incredible—as in, “I am not sure I believe this result”. I’m still not 100% sure, frankly. I subscribe to the adage, “If it sounds too good to be true, it probably isn’t!” So, I wanted to be more sure of the numbers before I ended up with egg on my face. Now, after sleeping on it and visualizing the result, I think I believe them.
+     </p>
+     <p>
+      One of the assumptions in this possible solution is the idea of transporting a supertanker load (400 acre-feet, or about 500,000 tons) of water in a sailing vessel from the equator (where it’s collected) to the coast of Western Australia (where it’s used). Indeed, we know how to make sailboats: Basic engineering parameters for sailboat construction were established before engineering became a profession.
+     </p>
+     <p>
+      So what amount of propulsion energy will our shuttle system require? Let’s assume that the velocity will get the boat from the center of the collection zone to the water dock in 15 days as the crow flies, with the specification of on-time, monthly deliveries. If the boat is stuck in a windless area or needs to take a longer route, it gives room for error.
+     </p>
+     <p>
+      It’s about 1,800 nautical miles from the collection zone to the water port, so that’s 120 nautical miles per day, or 5 knots on average. Supertankers travel about three times faster than that, but they have a crew, an expensive asset that leads many supply chains, and one that’s environmentally toxic. In this hypothetical, the boats are crewless, and spills or leaks are inconsequential, so the ship must be mechanically robust. Think of it as a large aluminum rowboat. Moving at that speed with that cargo, safety will be baked in, so I believe it can be constructed cheaply.
+     </p>
+     <p>
+      The question is, for such a beast, how large a sail would be needed to propel a boat that size at that velocity? I’m starting with the concept of a cargo ship that can be fully loaded with rainwater over the equatorial ocean (my current thought is that collection and shipment will happen in separate vessels so that a more extensive collection area can be maintained without resorting to a funnel). Because of its inexpensive cargo and snail’s pace, this ship is managed remotely and  autonomously for the most part—delivery isn’t particularly time-sensitive. It is driven by wind power, with sails that are actuated through modern telecommunication. This is not fanciful: Sail-enhanced supertankers are being deployed today, and autonomous remote-controlled sailboats are already at sea.
+      <a class="footnote-anchor" href="#footnote-1" id="footnote-anchor-1" target="_self">
+       1
+      </a>
+     </p>
+     <p>
+      I’m not a naval engineer by any stretch of the imagination, but I can fake it with the appropriate software. I downloaded a
+      <a href="https://download.delftship.net/DSFree.php">
+       free version of DelftShip
+      </a>
+      , a software modeling package for ships of all shapes and sizes. As part of the package, it includes a detailed model of a cargo ship:
+     </p>
+     <figure>
+      <img alt="" src="./images/f887ab95-8d90-4f8a-a996-bdacb12b73bc_2029x720.png" width="100%"/>
+      <figcaption>
+       From
+       <em>
+        DELFTship cargo vessel - complete
+       </em>
+       design
+       <em>
+       </em>
+       file provided at the link above; Perspective view.
+      </figcaption>
+     </figure>
+     <p>
+      All I needed to do was to scale this ship to the volume of 400 acre-feet and ask the program to calculate the power required to move the vessel at 5 knots. Here’s the result:
+     </p>
+     <figure>
+      <img alt="" src="./images/c5c8966a-3873-4fbd-b9eb-ee2c2e8eb9e2_1373x1185.png" width="100%"/>
+      <figcaption>
+       Effective power as a function of speed for the supertanker-sized boat above. Effective power is the amount needed to tow the boat in a straight line on seawater at nominal composition and temperature.
+      </figcaption>
+     </figure>
+     <p>
+      It makes sense to anyone who’s spent time in or on the water that the faster you try to go, the harder it is to speed up. It also makes sense that it can take a long time to slow down to a dead stop once the ship is in motion. The resistance of the water at very slow speeds is minimal, and the curve reflects that. So, 200 kW can move this boat fast enough. Unit conversion time! 200 kW is…just under 300 HP. Wait, can that be right? Could we use a large outboard motor to move this behemoth?
+     </p>
+     <p>
+      I’ve checked and rechecked this factoid and cannot find an error. The boat shape is fixed, and the calculations are presumably done according to the best boat engineering practices. The ship is ginormous, 385 m long and 69 m wide ( a little under two football fields in the deck area, consistent with a supertanker). However, because of the limited resistance of water at slow speeds, it can be moved at relatively low power. (Consider the strongman stunt of pulling a semitrailer truck on a level surface with just a rope—all that’s needed is to overcome inertia and relatively small rolling resistance, and the truck will move, albeit slowly).
+     </p>
+     <p>
+      Now, what size sail is needed to generate 300 HP? It turns out that there is a convenient rule of thumb: A sail generates roughly 2 HP per square foot of area. So, to move this boat, we’d need 150 square feet of sail. That’s not a lot. Indeed, the sail-enhanced supertankers have four sails of 3,000 square feet each, so a single sail will be more than adequate to power the entire journey! The total HP of such a sail is roughly equivalent to a high-powered tugboat.
+     </p>
+     <p>
+      That’s another idea stopper avoided, I think. As always, dissent is encouraged! Intelligent and constructive confrontation makes good ideas stronger (or kills off the weak ones).
+     </p>
+     <p>
+      So, here’s the current model—a small fleet of inflatable cisterns stationed in the ITCZ (rain zone) near the equator, each capable of collecting 1 foot of rainwater, and a shuttle boat that can empty these cisterns into a sailing vessel for transportation. That adds a bit of complexity, but that decouples water collection and transport. Enough cisterns can be deployed to ensure a continuous supply of collected rainwater, and they may not need to move much to be effective.
+     </p>
+     <div data-attrs='{"url":"../2023-07-14_096_Developing a Third Solution (Part 8)/index.html","text":"Share"}'>
+      <p class="cta-caption">
+       Thank you for reading Healing the Earth with Technology. This post is public so feel free to share it.
+      </p>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-1" id="footnote-1" target="_self">
+       1
+      </a>
+      <p>
+       See this installment:
+      </p>
+     </div>
+    </div>
+    <nav class="post-nav">
+     <a href="../2023-07-07_000_Something a little different/index.html">
+      ← Something a little different...
+     </a>
+     <a href="../2023-07-21_097_Developing a Third Solution (Part 9)/index.html">
+      97. Developing a Third Solution (Part 9)... →
+     </a>
+    </nav>
+   </article>
+   <footer>
+    <p>
+     Healing Earth with Technology Archive
+    </p>
+   </footer>
+  </div>
+ </body>
 </html>

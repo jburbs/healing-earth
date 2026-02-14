@@ -1,39 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light only">
-    <title>53. Are trees the best use of land? - Healing Earth with Technology</title>
-    <link rel="stylesheet" href="../../style.css?v=2">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1 class="site-title"><a href="../../index.html">Healing Earth with Technology</a></h1>
-            <nav>
-                <a href="../../index.html">All Posts</a>
-                <a href="../../about.html">About</a>
-            </nav>
-        </header>
-
-        <article>
-            <div class="post-header">
-                <h1 class="post-title">53. Are trees the best use of land?</h1>
-                <p class="post-subtitle">[6 min read]</p>
-                <p class="post-meta">2022-08-14</p>
-            </div>
-
-            <div class="post-content">
-                <p>For the past couple of issues, I’ve focused on two questions:</p><ul><li><p>In any given area, are trees the best use of the land for carbon sequestration?</p></li><li><p>Does it matter <em>what</em> is planted?</p></li></ul><p>To answer the first one, last time, I described the process for determining the net productivity of an area of land, the “NPP,” from satellite data. This measurement combines light spectrum data with a carbon capture model to determine how much carbon is retained in a given area. So, let’s convert this into a unitless storage efficiency ratio (Net ÷ Gross). That ratio will be a rough measurement of the percentage of carbon retained in a growing season. If all of the carbon is retained, the ratio will be one, and if none of it is, then the ratio will be zero. Since some areas capture no carbon at all (GPP = 0), we can set all of those to zero. </p><p>These measurements are publicly accessible if somewhat buried and complicated to analyze.  I’ve extracted and analyzed them without the objective of publishing my findings in a prominent journal, so there’s no “spin”. Here it is:</p><figure><img alt="" src="./images/2864da27-f47f-40a3-8f75-d41300fd29c7_3627x1691.jpeg" width="100%"/><figcaption>The ratio of 2021 annualized NPP to annualized GPP in the NASA Dataset MOD17A3HGF</figcaption></figure><p>[NOTE: The origin and processing of these datasets are described in an earlier installment.<a class="footnote-anchor" href="#footnote-1" id="footnote-anchor-1" target="_self">1</a> The code and data are freely available on request.]</p><p>The picture reveals the unexpected. The highest <em>efficiency</em> of carbon retention appears to be associated with mountainous terrain, including low gross productivity areas like Alaska and Siberia (note the bright red areas ~70% efficiency). At the same time, the equatorial rainforests in Brazil and Indonesia are only half as efficient. The place I’m most familiar with, California, looks like this:</p><figure><img alt="" src="./images/cbf85f05-6873-4b80-8243-da417b1bda09_2929x2234.png" width="100%"/></figure><p>It certainly appears that the coastal forests of Big Sur are more efficient than the Central Valley. San Francisco Bay shows areas of high efficiency surrounded by regions of no capture, which correspond to urbanized areas. If you zoom in, it’s even possible to pick out Golden Gate Park! </p><p>South America is particularly revealing:</p><figure><img alt="" height="480" src="./images/be9203dd-8262-4535-a7ee-3f89be5c2a95_640x480.png" width="640"/></figure><p>If the satellite-related model accurately reflects reality, then the rainforest captures a lot of carbon but then releases more than other ecosystems. Unfortunately, this doesn’t answer the question of “Are trees best?" although it suggests that rainforests' frequently-revered ability to retain carbon is overrated. That makes intuitive sense to me: Rainforests are vibrant ecosystems with plenty of visible biomass and can suck carbon out of the atmosphere like nowhere else on earth. But adding extra water to the rainforest probably results in more decomposition. So while carbon capture is still water-related, there are diminishing returns. But, of course, that’s my speculation. It’s not based on direct observation. </p><p>As a further caveat, these measurements are based on models, which invariably fall short of reality. But, from the processing algorithm I described the last time<a class="footnote-anchor" href="#footnote-2" id="footnote-anchor-2" target="_self">2</a>, observations of forests (mainly deciduous forests, those that periodically lose their leaves) are modeled to have <em>more</em> respiration unrelated to leaf area. This feature leads to a more significant model-based “correction” to the annualized NPP from observed data. So, if anything, forests are being undercounted.</p><p>To get to the crux of these questions, we need a data source closer to ground level that can measure carbon flux directly. That’s where “Eddy Flux Covariance” comes in. I mentioned this method in the last installment and thought I’d focus this issue on it. The technique is still valuable and provides an enormous amount of high-resolution data (sampling ten times a second over years!). But I haven’t had the time to dig into it as deeply as I’d like, so I’m punting it to next week. </p><p>To whet your appetite, you should applaud an international compilation of Eddy Flux Covariance data called <a href="https://fluxnet.org/data/fluxnet2015-dataset/">FLUXNET</a> that has compiled and standardized readings in many different locations over several years. This is the localized version of what Dave Keeling started to look into decades ago<a class="footnote-anchor" href="#footnote-3" id="footnote-anchor-3" target="_self">3</a> and is a worthy successor to his legacy.</p><p>As I described last time, this method simultaneously measures air’s directional flow (flux) and its composition. If some carbon is absorbed or released, then when air flows down, it has a different CO2 level than when it flows up. But it doesn’t rely on measuring light. Instead, CO2 is measured directly. This measurement includes both photosynthesis and respiration, not only by the plant itself (which would estimate NPP) but also by the surrounding life that uses the energy captured by the plant. This “ground truth” underpins the empirical models used by the MODIS satellites. The difference is subtle, but measuring CO2 over days, weeks, months, and years allows direct measurement of a much more relevant quantity called Net Ecosystem Efficiency (NEE). NEE measures which ecosystem, cropland or forest, will retain the most carbon.</p><p>As an appetizer for the next issue, I downloaded five data sets that should address this issue, from four different ecosystems, within the latitude range of 40°-43°N, covering stations based in the US. I chose two pine forests in Colorado,<a class="footnote-anchor" href="#footnote-4" id="footnote-anchor-4" target="_self">4</a> a cornfield in Nebraska (irrigated)<a class="footnote-anchor" href="#footnote-5" id="footnote-anchor-5" target="_self">5</a>, a deciduous forest in Massachusetts<a class="footnote-anchor" href="#footnote-6" id="footnote-anchor-6" target="_self">6</a>, and wetlands in Ohio<a class="footnote-anchor" href="#footnote-7" id="footnote-anchor-7" target="_self">7</a>.</p><figure><img alt="" src="./images/85bc46c3-0305-498f-ae89-da9474f808e5_2394x1385.jpeg" width="100%"/></figure><p>The data includes annualized NEE for each site, which will help guide the comparison. What we see is this:</p><figure><img alt="" src="./images/4ba7f2e3-f376-43b8-ae80-dff3575d1968_2858x2070.jpeg" width="100%"/><figcaption>The sources of the FLUXNET data are referenced below. The NEE_VUT_REF variable (Net Ecosystem Exchange, using Variable Ustar Threshold (VUT) for each year, reference selected based on the model efficiency (MEF). The MEF analysis is repeated for each time aggregation), measured in gC/m2 (released; up minus down), was converted to tCO2/ha (captured; down minus up). </figcaption></figure><p>As a general observation, in most years, more carbon is captured than released, which is good for controlling the atmosphere's composition. In a typical cornfield, a lot of that carbon is harvested and used by humans, a loss that Eddy Flux Covariance would not measure. But, the conclusion it’s not crystal clear. The data isn’t available for all years, and even the two pine forests differ, with some years showing net carbon release. </p><p>So, what’s going on with the net release in geographically similar pine forests? <a href="https://www.fs.usda.gov/rmrs/projects/glees-ameriflux-site-us-gle">According to the Forest Service </a>(which operates the Evergreen 1 site), “In the late 2000s, a spruce beetle outbreak caused the mortality of most of the mature Engelmann spruce trees….” If you’ve seen the eastern slope of the Rockies outside Denver, then you’ll know firsthand about “<a href="https://en.wikipedia.org/wiki/Beetle_kill_in_Colorado">beetle kill</a>”.<a class="footnote-anchor" href="#footnote-8" id="footnote-anchor-8" target="_self">8</a></p><p>I could go on speculating, but (as always) you should think for yourself. For comparison, next time, I’ll look at daily data for 2015 to see if we can find an answer to these questions.</p><p>Until next time.</p><div data-attrs='{"url":"https://healingearth.substack.com/p/questions-continued?utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;action=share","text":"Share"}'><p class="cta-caption">Thank you for reading Healing the Earth with Technology. This post is public, so feel free to share it.</p></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-1" id="footnote-1" target="_self">1</a><div><div data-attrs="{&quot;id&quot;:56971594,&quot;url&quot;:&quot;https://healingearth.substack.com/p/46-low-cost-desalination-and-the&quot;,&quot;publication_id&quot;:359195,&quot;publication_name&quot;:&quot;Healing the Earth with Technology&quot;,&quot;publication_logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;title&quot;:&quot;46. Low-cost Desalination and the ARPA-E Summit&quot;,&quot;truncated_body_text&quot;:&quot;I apologize for skipping a week, but I hope many of you were on a well-deserved holiday/spring break over Memorial Day. My lame excuse is the ARPA-E Summit, the first in-person conference I’ve attended since COVID. I’ve been to all but one of these epic events since 2010. For me, it’s a reliable venue for both catching up with the “alumni” group and tra…&quot;,&quot;date&quot;:&quot;2022-06-05T22:00:41.462Z&quot;,&quot;like_count&quot;:1,&quot;comment_count&quot;:0,&quot;bylines&quot;:[{&quot;id&quot;:23437316,&quot;name&quot;:&quot;Jonathan Burbaum&quot;,&quot;previous_name&quot;:null,&quot;photo_url&quot;:&quot;https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/543d1a93-fd05-4f3f-8feb-41a9c7234896_927x1065.jpeg&quot;,&quot;bio&quot;:&quot;Pragmatic molecular scientist seeking solutions to existential human problems&quot;,&quot;profile_set_up_at&quot;:&quot;2021-05-12T17:04:04.671Z&quot;,&quot;publicationUsers&quot;:[{&quot;id&quot;:281335,&quot;user_id&quot;:23437316,&quot;publication_id&quot;:359195,&quot;role&quot;:&quot;admin&quot;,&quot;public&quot;:true,&quot;is_primary&quot;:false,&quot;publication&quot;:{&quot;id&quot;:359195,&quot;name&quot;:&quot;Healing the Earth with Technology&quot;,&quot;subdomain&quot;:&quot;healingearth&quot;,&quot;custom_domain&quot;:null,&quot;custom_domain_optional&quot;:false,&quot;hero_text&quot;:&quot;Are you skeptical about climate change? Are you convinced that you know all about it? Here's some food for thought. &quot;,&quot;logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;author_id&quot;:23437316,&quot;theme_var_background_pop&quot;:&quot;#A33ACB&quot;,&quot;created_at&quot;:&quot;2021-05-11T21:29:09.257Z&quot;,&quot;rss_website_url&quot;:null,&quot;email_from_name&quot;:null,&quot;copyright&quot;:&quot;Jonathan Burbaum&quot;,&quot;founding_plan_name&quot;:null,&quot;community_enabled&quot;:true,&quot;invite_only&quot;:false,&quot;payments_state&quot;:&quot;enabled&quot;}}],&quot;twitter_screen_name&quot;:&quot;burbaum&quot;,&quot;is_guest&quot;:false}],&quot;utm_campaign&quot;:null,&quot;belowTheFold&quot;:true,&quot;type&quot;:null,&quot;language&quot;:&quot;en&quot;}"><a class="embedded-post" href="../2022-06-05_046_Low-cost Desalination and the ARPA-E Summit/index.html" native="true" title="Local archive link"><div><img src="./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png"/><span class="embedded-post-publication-name">Healing the Earth with Technology</span></div><div><div>46. Low-cost Desalination and the ARPA-E Summit</div></div><div>I apologize for skipping a week, but I hope many of you were on a well-deserved holiday/spring break over Memorial Day. My lame excuse is the ARPA-E Summit, the first in-person conference I’ve attended since COVID. I’ve been to all but one of these epic events since 2010. For me, it’s a reliable venue for both catching up with the “alumni” group and tra…</div><div><span class="embedded-post-cta">Read more</span></div><div>4 years ago · 1 like · Jonathan Burbaum</div></a></div></div></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-2" id="footnote-2" target="_self">2</a><div><div data-attrs="{&quot;id&quot;:67478525,&quot;url&quot;:&quot;https://healingearth.substack.com/p/questions-to-be-answered-with-data&quot;,&quot;publication_id&quot;:359195,&quot;publication_name&quot;:&quot;Healing the Earth with Technology&quot;,&quot;publication_logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;title&quot;:&quot;Questions to be answered. With data.&quot;,&quot;truncated_body_text&quot;:&quot;It’s summer, with all sorts of associated distractions, and I slacked this past week. Nevertheless, I want to ensure that the next installments are supported with solid facts rooted in direct measurements. My apologies for being late, and terse, with this one.&quot;,&quot;date&quot;:&quot;2022-08-08T17:50:19.686Z&quot;,&quot;like_count&quot;:1,&quot;comment_count&quot;:0,&quot;bylines&quot;:[{&quot;id&quot;:23437316,&quot;name&quot;:&quot;Jonathan Burbaum&quot;,&quot;previous_name&quot;:null,&quot;photo_url&quot;:&quot;https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/543d1a93-fd05-4f3f-8feb-41a9c7234896_927x1065.jpeg&quot;,&quot;bio&quot;:&quot;Pragmatic molecular scientist seeking solutions to existential human problems&quot;,&quot;profile_set_up_at&quot;:&quot;2021-05-12T17:04:04.671Z&quot;,&quot;publicationUsers&quot;:[{&quot;id&quot;:281335,&quot;user_id&quot;:23437316,&quot;publication_id&quot;:359195,&quot;role&quot;:&quot;admin&quot;,&quot;public&quot;:true,&quot;is_primary&quot;:false,&quot;publication&quot;:{&quot;id&quot;:359195,&quot;name&quot;:&quot;Healing the Earth with Technology&quot;,&quot;subdomain&quot;:&quot;healingearth&quot;,&quot;custom_domain&quot;:null,&quot;custom_domain_optional&quot;:false,&quot;hero_text&quot;:&quot;Are you skeptical about climate change? Are you convinced that you know all about it? Here's some food for thought. &quot;,&quot;logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;author_id&quot;:23437316,&quot;theme_var_background_pop&quot;:&quot;#A33ACB&quot;,&quot;created_at&quot;:&quot;2021-05-11T21:29:09.257Z&quot;,&quot;rss_website_url&quot;:null,&quot;email_from_name&quot;:null,&quot;copyright&quot;:&quot;Jonathan Burbaum&quot;,&quot;founding_plan_name&quot;:null,&quot;community_enabled&quot;:true,&quot;invite_only&quot;:false,&quot;payments_state&quot;:&quot;enabled&quot;}}],&quot;twitter_screen_name&quot;:&quot;burbaum&quot;,&quot;is_guest&quot;:false}],&quot;utm_campaign&quot;:null,&quot;belowTheFold&quot;:true,&quot;type&quot;:null,&quot;language&quot;:&quot;en&quot;}"><a class="embedded-post" href="../2022-08-08_000_Questions to be answered. With data./index.html" native="true" title="Local archive link"><div><img src="./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png"/><span class="embedded-post-publication-name">Healing the Earth with Technology</span></div><div><div>Questions to be answered. With data.</div></div><div>It’s summer, with all sorts of associated distractions, and I slacked this past week. Nevertheless, I want to ensure that the next installments are supported with solid facts rooted in direct measurements. My apologies for being late, and terse, with this one…</div><div><span class="embedded-post-cta">Read more</span></div><div>3 years ago · 1 like · Jonathan Burbaum</div></a></div></div></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-3" id="footnote-3" target="_self">3</a><div><div data-attrs="{&quot;id&quot;:37661718,&quot;url&quot;:&quot;https://healingearth.substack.com/p/5-leading-with-data&quot;,&quot;publication_id&quot;:359195,&quot;publication_name&quot;:&quot;Healing the Earth with Technology&quot;,&quot;publication_logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;title&quot;:&quot;5. Leading with Data&quot;,&quot;truncated_body_text&quot;:&quot;I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at least in the beginning) on climate change/global warming/decarbonization. I welcome comments, contributions, and discussions, particularly those that follow&quot;,&quot;date&quot;:&quot;2021-06-20T16:00:56.500Z&quot;,&quot;like_count&quot;:1,&quot;comment_count&quot;:0,&quot;bylines&quot;:[{&quot;id&quot;:23437316,&quot;name&quot;:&quot;Jonathan Burbaum&quot;,&quot;previous_name&quot;:null,&quot;photo_url&quot;:&quot;https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/543d1a93-fd05-4f3f-8feb-41a9c7234896_927x1065.jpeg&quot;,&quot;bio&quot;:&quot;Pragmatic molecular scientist seeking solutions to existential human problems&quot;,&quot;profile_set_up_at&quot;:&quot;2021-05-12T17:04:04.671Z&quot;,&quot;publicationUsers&quot;:[{&quot;id&quot;:281335,&quot;user_id&quot;:23437316,&quot;publication_id&quot;:359195,&quot;role&quot;:&quot;admin&quot;,&quot;public&quot;:true,&quot;is_primary&quot;:false,&quot;publication&quot;:{&quot;id&quot;:359195,&quot;name&quot;:&quot;Healing the Earth with Technology&quot;,&quot;subdomain&quot;:&quot;healingearth&quot;,&quot;custom_domain&quot;:null,&quot;custom_domain_optional&quot;:false,&quot;hero_text&quot;:&quot;Are you skeptical about climate change? Are you convinced that you know all about it? Here's some food for thought. &quot;,&quot;logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;author_id&quot;:23437316,&quot;theme_var_background_pop&quot;:&quot;#A33ACB&quot;,&quot;created_at&quot;:&quot;2021-05-11T21:29:09.257Z&quot;,&quot;rss_website_url&quot;:null,&quot;email_from_name&quot;:null,&quot;copyright&quot;:&quot;Jonathan Burbaum&quot;,&quot;founding_plan_name&quot;:null,&quot;community_enabled&quot;:true,&quot;invite_only&quot;:false,&quot;payments_state&quot;:&quot;enabled&quot;}}],&quot;twitter_screen_name&quot;:&quot;burbaum&quot;,&quot;is_guest&quot;:false}],&quot;utm_campaign&quot;:null,&quot;belowTheFold&quot;:true,&quot;type&quot;:null,&quot;language&quot;:&quot;en&quot;}"><a class="embedded-post" href="../2021-06-20_005_Leading with Data/index.html" native="true" title="Local archive link"><div><img src="./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png"/><span class="embedded-post-publication-name">Healing the Earth with Technology</span></div><div><div>5. Leading with Data</div></div><div>I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at least in the beginning) on climate change/global warming/decarbonization. I welcome comments, contributions, and discussions, particularly those that follow…</div><div><span class="embedded-post-cta">Read more</span></div><div>5 years ago · 1 like · Jonathan Burbaum</div></a></div></div></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-4" id="footnote-4" target="_self">4</a><p><a href="http://sites.fluxdata.org/US-NR1/">US-NR1</a> (<a href="http://sites.fluxdata.org/US-NR1/">Niwot Ridge Forest (LTER NWT1)</a>) and <a href="http://sites.fluxdata.org/US-GLE/">US-GLE</a> (Glacier Lakes Ecosystem Experiments Site)</p></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-5" id="footnote-5" target="_self">5</a><p><a href="http://sites.fluxdata.org/US-Ne1/">US-Ne1</a> (<a href="http://sites.fluxdata.org/US-Ne1/">Mead - irrigated continuous maize site</a>)</p></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-6" id="footnote-6" target="_self">6</a><p><a href="http://sites.fluxdata.org/US-Ha1/">US-Ha1</a> (<a href="http://sites.fluxdata.org/US-Ha1/">Harvard Forest EMS Tower (HFR1)</a>)</p></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-7" id="footnote-7" target="_self">7</a><p><a href="http://sites.fluxdata.org/US-ORv/">US-ORv</a> (<a href="http://sites.fluxdata.org/US-ORv/">Olentangy River Wetland Research Park</a>)</p></div><div><a class="footnote-number" contenteditable="false" href="#footnote-anchor-8" id="footnote-8" target="_self">8</a><p>Thanks to Will Regan for the following academic reference, entitled “<a href="https://www.frontiersin.org/articles/10.3389/ffgc.2022.930426/full">California’s forest carbon offsets buffer pool is severely undercapitalized.</a>” This article further describes how Nature laughs at our attempts to manage atmospheric carbon dioxide with economics rather than engineering.</p></div>
-            </div>
-
-            <nav class="post-nav"><a href="../2022-08-08_000_Questions to be answered. With data./index.html">← Questions to be answered. With data....</a><a href="../2022-08-21_054_Does it matter what we plant (Part 1)/index.html">54. Agriculture and Climate (Part 5)... →</a></nav>
-        </article>
-
-        <footer>
-            <p>Healing Earth with Technology Archive</p>
-        </footer>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="light only" name="color-scheme"/>
+  <title>
+   53. Are trees the best use of land? - Healing Earth with Technology
+  </title>
+  <link href="../../style.css?v=2" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="container">
+   <header>
+    <h1 class="site-title">
+     <a href="../../index.html">
+      Healing Earth with Technology
+     </a>
+    </h1>
+    <nav>
+     <a href="../../index.html">
+      All Posts
+     </a>
+     <a href="../../about.html">
+      About
+     </a>
+    </nav>
+   </header>
+   <article>
+    <div class="post-header">
+     <h1 class="post-title">
+      53. Are trees the best use of land?
+     </h1>
+     <p class="post-subtitle">
+      [6 min read]
+     </p>
+     <p class="post-meta">
+      2022-08-14
+     </p>
     </div>
-</body>
+    <div class="post-content">
+     <p>
+      For the past couple of issues, I’ve focused on two questions:
+     </p>
+     <ul>
+      <li>
+       <p>
+        In any given area, are trees the best use of the land for carbon sequestration?
+       </p>
+      </li>
+      <li>
+       <p>
+        Does it matter
+        <em>
+         what
+        </em>
+        is planted?
+       </p>
+      </li>
+     </ul>
+     <p>
+      To answer the first one, last time, I described the process for determining the net productivity of an area of land, the “NPP,” from satellite data. This measurement combines light spectrum data with a carbon capture model to determine how much carbon is retained in a given area. So, let’s convert this into a unitless storage efficiency ratio (Net ÷ Gross). That ratio will be a rough measurement of the percentage of carbon retained in a growing season. If all of the carbon is retained, the ratio will be one, and if none of it is, then the ratio will be zero. Since some areas capture no carbon at all (GPP = 0), we can set all of those to zero.
+     </p>
+     <p>
+      These measurements are publicly accessible if somewhat buried and complicated to analyze.  I’ve extracted and analyzed them without the objective of publishing my findings in a prominent journal, so there’s no “spin”. Here it is:
+     </p>
+     <figure>
+      <img alt="" src="./images/2864da27-f47f-40a3-8f75-d41300fd29c7_3627x1691.jpeg" width="100%"/>
+      <figcaption>
+       The ratio of 2021 annualized NPP to annualized GPP in the NASA Dataset MOD17A3HGF
+      </figcaption>
+     </figure>
+     <p>
+      [NOTE: The origin and processing of these datasets are described in an earlier installment.
+      <a class="footnote-anchor" href="#footnote-1" id="footnote-anchor-1" target="_self">
+       1
+      </a>
+      The code and data are freely available on request.]
+     </p>
+     <p>
+      The picture reveals the unexpected. The highest
+      <em>
+       efficiency
+      </em>
+      of carbon retention appears to be associated with mountainous terrain, including low gross productivity areas like Alaska and Siberia (note the bright red areas ~70% efficiency). At the same time, the equatorial rainforests in Brazil and Indonesia are only half as efficient. The place I’m most familiar with, California, looks like this:
+     </p>
+     <figure>
+      <img alt="" src="./images/cbf85f05-6873-4b80-8243-da417b1bda09_2929x2234.png" width="100%"/>
+     </figure>
+     <p>
+      It certainly appears that the coastal forests of Big Sur are more efficient than the Central Valley. San Francisco Bay shows areas of high efficiency surrounded by regions of no capture, which correspond to urbanized areas. If you zoom in, it’s even possible to pick out Golden Gate Park!
+     </p>
+     <p>
+      South America is particularly revealing:
+     </p>
+     <figure>
+      <img alt="" height="480" src="./images/be9203dd-8262-4535-a7ee-3f89be5c2a95_640x480.png" width="640"/>
+     </figure>
+     <p>
+      If the satellite-related model accurately reflects reality, then the rainforest captures a lot of carbon but then releases more than other ecosystems. Unfortunately, this doesn’t answer the question of “Are trees best?" although it suggests that rainforests' frequently-revered ability to retain carbon is overrated. That makes intuitive sense to me: Rainforests are vibrant ecosystems with plenty of visible biomass and can suck carbon out of the atmosphere like nowhere else on earth. But adding extra water to the rainforest probably results in more decomposition. So while carbon capture is still water-related, there are diminishing returns. But, of course, that’s my speculation. It’s not based on direct observation.
+     </p>
+     <p>
+      As a further caveat, these measurements are based on models, which invariably fall short of reality. But, from the processing algorithm I described the last time
+      <a class="footnote-anchor" href="#footnote-2" id="footnote-anchor-2" target="_self">
+       2
+      </a>
+      , observations of forests (mainly deciduous forests, those that periodically lose their leaves) are modeled to have
+      <em>
+       more
+      </em>
+      respiration unrelated to leaf area. This feature leads to a more significant model-based “correction” to the annualized NPP from observed data. So, if anything, forests are being undercounted.
+     </p>
+     <p>
+      To get to the crux of these questions, we need a data source closer to ground level that can measure carbon flux directly. That’s where “Eddy Flux Covariance” comes in. I mentioned this method in the last installment and thought I’d focus this issue on it. The technique is still valuable and provides an enormous amount of high-resolution data (sampling ten times a second over years!). But I haven’t had the time to dig into it as deeply as I’d like, so I’m punting it to next week.
+     </p>
+     <p>
+      To whet your appetite, you should applaud an international compilation of Eddy Flux Covariance data called
+      <a href="https://fluxnet.org/data/fluxnet2015-dataset/">
+       FLUXNET
+      </a>
+      that has compiled and standardized readings in many different locations over several years. This is the localized version of what Dave Keeling started to look into decades ago
+      <a class="footnote-anchor" href="#footnote-3" id="footnote-anchor-3" target="_self">
+       3
+      </a>
+      and is a worthy successor to his legacy.
+     </p>
+     <p>
+      As I described last time, this method simultaneously measures air’s directional flow (flux) and its composition. If some carbon is absorbed or released, then when air flows down, it has a different CO2 level than when it flows up. But it doesn’t rely on measuring light. Instead, CO2 is measured directly. This measurement includes both photosynthesis and respiration, not only by the plant itself (which would estimate NPP) but also by the surrounding life that uses the energy captured by the plant. This “ground truth” underpins the empirical models used by the MODIS satellites. The difference is subtle, but measuring CO2 over days, weeks, months, and years allows direct measurement of a much more relevant quantity called Net Ecosystem Efficiency (NEE). NEE measures which ecosystem, cropland or forest, will retain the most carbon.
+     </p>
+     <p>
+      As an appetizer for the next issue, I downloaded five data sets that should address this issue, from four different ecosystems, within the latitude range of 40°-43°N, covering stations based in the US. I chose two pine forests in Colorado,
+      <a class="footnote-anchor" href="#footnote-4" id="footnote-anchor-4" target="_self">
+       4
+      </a>
+      a cornfield in Nebraska (irrigated)
+      <a class="footnote-anchor" href="#footnote-5" id="footnote-anchor-5" target="_self">
+       5
+      </a>
+      , a deciduous forest in Massachusetts
+      <a class="footnote-anchor" href="#footnote-6" id="footnote-anchor-6" target="_self">
+       6
+      </a>
+      , and wetlands in Ohio
+      <a class="footnote-anchor" href="#footnote-7" id="footnote-anchor-7" target="_self">
+       7
+      </a>
+      .
+     </p>
+     <figure>
+      <img alt="" src="./images/85bc46c3-0305-498f-ae89-da9474f808e5_2394x1385.jpeg" width="100%"/>
+     </figure>
+     <p>
+      The data includes annualized NEE for each site, which will help guide the comparison. What we see is this:
+     </p>
+     <figure>
+      <img alt="" src="./images/4ba7f2e3-f376-43b8-ae80-dff3575d1968_2858x2070.jpeg" width="100%"/>
+      <figcaption>
+       The sources of the FLUXNET data are referenced below. The NEE_VUT_REF variable (Net Ecosystem Exchange, using Variable Ustar Threshold (VUT) for each year, reference selected based on the model efficiency (MEF). The MEF analysis is repeated for each time aggregation), measured in gC/m2 (released; up minus down), was converted to tCO2/ha (captured; down minus up).
+      </figcaption>
+     </figure>
+     <p>
+      As a general observation, in most years, more carbon is captured than released, which is good for controlling the atmosphere's composition. In a typical cornfield, a lot of that carbon is harvested and used by humans, a loss that Eddy Flux Covariance would not measure. But, the conclusion it’s not crystal clear. The data isn’t available for all years, and even the two pine forests differ, with some years showing net carbon release.
+     </p>
+     <p>
+      So, what’s going on with the net release in geographically similar pine forests?
+      <a href="https://www.fs.usda.gov/rmrs/projects/glees-ameriflux-site-us-gle">
+       According to the Forest Service
+      </a>
+      (which operates the Evergreen 1 site), “In the late 2000s, a spruce beetle outbreak caused the mortality of most of the mature Engelmann spruce trees….” If you’ve seen the eastern slope of the Rockies outside Denver, then you’ll know firsthand about “
+      <a href="https://en.wikipedia.org/wiki/Beetle_kill_in_Colorado">
+       beetle kill
+      </a>
+      ”.
+      <a class="footnote-anchor" href="#footnote-8" id="footnote-anchor-8" target="_self">
+       8
+      </a>
+     </p>
+     <p>
+      I could go on speculating, but (as always) you should think for yourself. For comparison, next time, I’ll look at daily data for 2015 to see if we can find an answer to these questions.
+     </p>
+     <p>
+      Until next time.
+     </p>
+     <div data-attrs='{"url":"../2022-08-14_053_Are trees the best use of land/index.html","text":"Share"}'>
+      <p class="cta-caption">
+       Thank you for reading Healing the Earth with Technology. This post is public, so feel free to share it.
+      </p>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-1" id="footnote-1" target="_self">
+       1
+      </a>
+      <div>
+       <div data-attrs="{&quot;id&quot;:56971594,&quot;url&quot;:&quot;../2022-09-19_058_Another solution (Part 2)/index.html the Earth with Technology&quot;,&quot;publication_logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;title&quot;:&quot;46. Low-cost Desalination and the ARPA-E Summit&quot;,&quot;truncated_body_text&quot;:&quot;I apologize for skipping a week, but I hope many of you were on a well-deserved holiday/spring break over Memorial Day. My lame excuse is the ARPA-E Summit, the first in-person conference I’ve attended since COVID. I’ve been to all but one of these epic events since 2010. For me, it’s a reliable venue for both catching up with the “alumni” group and tra…&quot;,&quot;date&quot;:&quot;2022-06-05T22:00:41.462Z&quot;,&quot;like_count&quot;:1,&quot;comment_count&quot;:0,&quot;bylines&quot;:[{&quot;id&quot;:23437316,&quot;name&quot;:&quot;Jonathan Burbaum&quot;,&quot;previous_name&quot;:null,&quot;photo_url&quot;:&quot;https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/543d1a93-fd05-4f3f-8feb-41a9c7234896_927x1065.jpeg&quot;,&quot;bio&quot;:&quot;Pragmatic molecular scientist seeking solutions to existential human problems&quot;,&quot;profile_set_up_at&quot;:&quot;2021-05-12T17:04:04.671Z&quot;,&quot;publicationUsers&quot;:[{&quot;id&quot;:281335,&quot;user_id&quot;:23437316,&quot;publication_id&quot;:359195,&quot;role&quot;:&quot;admin&quot;,&quot;public&quot;:true,&quot;is_primary&quot;:false,&quot;publication&quot;:{&quot;id&quot;:359195,&quot;name&quot;:&quot;Healing the Earth with Technology&quot;,&quot;subdomain&quot;:&quot;healingearth&quot;,&quot;custom_domain&quot;:null,&quot;custom_domain_optional&quot;:false,&quot;hero_text&quot;:&quot;Are you skeptical about climate change? Are you convinced that you know all about it? Here's some food for thought. &quot;,&quot;logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;author_id&quot;:23437316,&quot;theme_var_background_pop&quot;:&quot;#A33ACB&quot;,&quot;created_at&quot;:&quot;2021-05-11T21:29:09.257Z&quot;,&quot;rss_website_url&quot;:null,&quot;email_from_name&quot;:null,&quot;copyright&quot;:&quot;Jonathan Burbaum&quot;,&quot;founding_plan_name&quot;:null,&quot;community_enabled&quot;:true,&quot;invite_only&quot;:false,&quot;payments_state&quot;:&quot;enabled&quot;}}],&quot;twitter_screen_name&quot;:&quot;burbaum&quot;,&quot;is_guest&quot;:false}],&quot;utm_campaign&quot;:null,&quot;belowTheFold&quot;:true,&quot;type&quot;:null,&quot;language&quot;:&quot;en&quot;}">
+        <a class="embedded-post" href="../2022-06-05_046_Low-cost Desalination and the ARPA-E Summit/index.html" native="true" title="Local archive link">
+         <div>
+          <img src="./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png"/>
+          <span class="embedded-post-publication-name">
+           Healing the Earth with Technology
+          </span>
+         </div>
+         <div>
+          <div>
+           46. Low-cost Desalination and the ARPA-E Summit
+          </div>
+         </div>
+         <div>
+          I apologize for skipping a week, but I hope many of you were on a well-deserved holiday/spring break over Memorial Day. My lame excuse is the ARPA-E Summit, the first in-person conference I’ve attended since COVID. I’ve been to all but one of these epic events since 2010. For me, it’s a reliable venue for both catching up with the “alumni” group and tra…
+         </div>
+         <div>
+          <span class="embedded-post-cta">
+           Read more
+          </span>
+         </div>
+         <div>
+          4 years ago · 1 like · Jonathan Burbaum
+         </div>
+        </a>
+       </div>
+      </div>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-2" id="footnote-2" target="_self">
+       2
+      </a>
+      <div>
+       <div data-attrs="{&quot;id&quot;:67478525,&quot;url&quot;:&quot;https://healingearth.substack.com/p/questions-to-be-answered-with-data&quot;,&quot;publication_id&quot;:359195,&quot;publication_name&quot;:&quot;Healing the Earth with Technology&quot;,&quot;publication_logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;title&quot;:&quot;Questions to be answered. With data.&quot;,&quot;truncated_body_text&quot;:&quot;It’s summer, with all sorts of associated distractions, and I slacked this past week. Nevertheless, I want to ensure that the next installments are supported with solid facts rooted in direct measurements. My apologies for being late, and terse, with this one.&quot;,&quot;date&quot;:&quot;2022-08-08T17:50:19.686Z&quot;,&quot;like_count&quot;:1,&quot;comment_count&quot;:0,&quot;bylines&quot;:[{&quot;id&quot;:23437316,&quot;name&quot;:&quot;Jonathan Burbaum&quot;,&quot;previous_name&quot;:null,&quot;photo_url&quot;:&quot;https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/543d1a93-fd05-4f3f-8feb-41a9c7234896_927x1065.jpeg&quot;,&quot;bio&quot;:&quot;Pragmatic molecular scientist seeking solutions to existential human problems&quot;,&quot;profile_set_up_at&quot;:&quot;2021-05-12T17:04:04.671Z&quot;,&quot;publicationUsers&quot;:[{&quot;id&quot;:281335,&quot;user_id&quot;:23437316,&quot;publication_id&quot;:359195,&quot;role&quot;:&quot;admin&quot;,&quot;public&quot;:true,&quot;is_primary&quot;:false,&quot;publication&quot;:{&quot;id&quot;:359195,&quot;name&quot;:&quot;Healing the Earth with Technology&quot;,&quot;subdomain&quot;:&quot;healingearth&quot;,&quot;custom_domain&quot;:null,&quot;custom_domain_optional&quot;:false,&quot;hero_text&quot;:&quot;Are you skeptical about climate change? Are you convinced that you know all about it? Here's some food for thought. &quot;,&quot;logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;author_id&quot;:23437316,&quot;theme_var_background_pop&quot;:&quot;#A33ACB&quot;,&quot;created_at&quot;:&quot;2021-05-11T21:29:09.257Z&quot;,&quot;rss_website_url&quot;:null,&quot;email_from_name&quot;:null,&quot;copyright&quot;:&quot;Jonathan Burbaum&quot;,&quot;founding_plan_name&quot;:null,&quot;community_enabled&quot;:true,&quot;invite_only&quot;:false,&quot;payments_state&quot;:&quot;enabled&quot;}}],&quot;twitter_screen_name&quot;:&quot;burbaum&quot;,&quot;is_guest&quot;:false}],&quot;utm_campaign&quot;:null,&quot;belowTheFold&quot;:true,&quot;type&quot;:null,&quot;language&quot;:&quot;en&quot;}">
+        <a class="embedded-post" href="../2022-08-08_000_Questions to be answered. With data./index.html" native="true" title="Local archive link">
+         <div>
+          <img src="./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png"/>
+          <span class="embedded-post-publication-name">
+           Healing the Earth with Technology
+          </span>
+         </div>
+         <div>
+          <div>
+           Questions to be answered. With data.
+          </div>
+         </div>
+         <div>
+          It’s summer, with all sorts of associated distractions, and I slacked this past week. Nevertheless, I want to ensure that the next installments are supported with solid facts rooted in direct measurements. My apologies for being late, and terse, with this one…
+         </div>
+         <div>
+          <span class="embedded-post-cta">
+           Read more
+          </span>
+         </div>
+         <div>
+          3 years ago · 1 like · Jonathan Burbaum
+         </div>
+        </a>
+       </div>
+      </div>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-3" id="footnote-3" target="_self">
+       3
+      </a>
+      <div>
+       <div data-attrs="{&quot;id&quot;:37661718,&quot;url&quot;:&quot;../2021-06-20_005_Leading with Data/index.html the Earth with Technology&quot;,&quot;publication_logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;title&quot;:&quot;5. Leading with Data&quot;,&quot;truncated_body_text&quot;:&quot;I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at least in the beginning) on climate change/global warming/decarbonization. I welcome comments, contributions, and discussions, particularly those that follow&quot;,&quot;date&quot;:&quot;2021-06-20T16:00:56.500Z&quot;,&quot;like_count&quot;:1,&quot;comment_count&quot;:0,&quot;bylines&quot;:[{&quot;id&quot;:23437316,&quot;name&quot;:&quot;Jonathan Burbaum&quot;,&quot;previous_name&quot;:null,&quot;photo_url&quot;:&quot;https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/543d1a93-fd05-4f3f-8feb-41a9c7234896_927x1065.jpeg&quot;,&quot;bio&quot;:&quot;Pragmatic molecular scientist seeking solutions to existential human problems&quot;,&quot;profile_set_up_at&quot;:&quot;2021-05-12T17:04:04.671Z&quot;,&quot;publicationUsers&quot;:[{&quot;id&quot;:281335,&quot;user_id&quot;:23437316,&quot;publication_id&quot;:359195,&quot;role&quot;:&quot;admin&quot;,&quot;public&quot;:true,&quot;is_primary&quot;:false,&quot;publication&quot;:{&quot;id&quot;:359195,&quot;name&quot;:&quot;Healing the Earth with Technology&quot;,&quot;subdomain&quot;:&quot;healingearth&quot;,&quot;custom_domain&quot;:null,&quot;custom_domain_optional&quot;:false,&quot;hero_text&quot;:&quot;Are you skeptical about climate change? Are you convinced that you know all about it? Here's some food for thought. &quot;,&quot;logo_url&quot;:&quot;./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png&quot;,&quot;author_id&quot;:23437316,&quot;theme_var_background_pop&quot;:&quot;#A33ACB&quot;,&quot;created_at&quot;:&quot;2021-05-11T21:29:09.257Z&quot;,&quot;rss_website_url&quot;:null,&quot;email_from_name&quot;:null,&quot;copyright&quot;:&quot;Jonathan Burbaum&quot;,&quot;founding_plan_name&quot;:null,&quot;community_enabled&quot;:true,&quot;invite_only&quot;:false,&quot;payments_state&quot;:&quot;enabled&quot;}}],&quot;twitter_screen_name&quot;:&quot;burbaum&quot;,&quot;is_guest&quot;:false}],&quot;utm_campaign&quot;:null,&quot;belowTheFold&quot;:true,&quot;type&quot;:null,&quot;language&quot;:&quot;en&quot;}">
+        <a class="embedded-post" href="../2021-06-20_005_Leading with Data/index.html" native="true" title="Local archive link">
+         <div>
+          <img src="./images/fbe8596d-d5af-49e4-b1f3-18e78db1cc6e_511x511.png"/>
+          <span class="embedded-post-publication-name">
+           Healing the Earth with Technology
+          </span>
+         </div>
+         <div>
+          <div>
+           5. Leading with Data
+          </div>
+         </div>
+         <div>
+          I’m Jonathan Burbaum, and this is Healing Earth with Technology: a weekly, Science-based, subscriber-supported serial. In this serial, I offer a peek behind the headlines of science, focusing (at least in the beginning) on climate change/global warming/decarbonization. I welcome comments, contributions, and discussions, particularly those that follow…
+         </div>
+         <div>
+          <span class="embedded-post-cta">
+           Read more
+          </span>
+         </div>
+         <div>
+          5 years ago · 1 like · Jonathan Burbaum
+         </div>
+        </a>
+       </div>
+      </div>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-4" id="footnote-4" target="_self">
+       4
+      </a>
+      <p>
+       <a href="http://sites.fluxdata.org/US-NR1/">
+        US-NR1
+       </a>
+       (
+       <a href="http://sites.fluxdata.org/US-NR1/">
+        Niwot Ridge Forest (LTER NWT1)
+       </a>
+       ) and
+       <a href="http://sites.fluxdata.org/US-GLE/">
+        US-GLE
+       </a>
+       (Glacier Lakes Ecosystem Experiments Site)
+      </p>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-5" id="footnote-5" target="_self">
+       5
+      </a>
+      <p>
+       <a href="http://sites.fluxdata.org/US-Ne1/">
+        US-Ne1
+       </a>
+       (
+       <a href="http://sites.fluxdata.org/US-Ne1/">
+        Mead - irrigated continuous maize site
+       </a>
+       )
+      </p>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-6" id="footnote-6" target="_self">
+       6
+      </a>
+      <p>
+       <a href="http://sites.fluxdata.org/US-Ha1/">
+        US-Ha1
+       </a>
+       (
+       <a href="http://sites.fluxdata.org/US-Ha1/">
+        Harvard Forest EMS Tower (HFR1)
+       </a>
+       )
+      </p>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-7" id="footnote-7" target="_self">
+       7
+      </a>
+      <p>
+       <a href="http://sites.fluxdata.org/US-ORv/">
+        US-ORv
+       </a>
+       (
+       <a href="http://sites.fluxdata.org/US-ORv/">
+        Olentangy River Wetland Research Park
+       </a>
+       )
+      </p>
+     </div>
+     <div>
+      <a class="footnote-number" contenteditable="false" href="#footnote-anchor-8" id="footnote-8" target="_self">
+       8
+      </a>
+      <p>
+       Thanks to Will Regan for the following academic reference, entitled “
+       <a href="https://www.frontiersin.org/articles/10.3389/ffgc.2022.930426/full">
+        California’s forest carbon offsets buffer pool is severely undercapitalized.
+       </a>
+       ” This article further describes how Nature laughs at our attempts to manage atmospheric carbon dioxide with economics rather than engineering.
+      </p>
+     </div>
+    </div>
+    <nav class="post-nav">
+     <a href="../2022-08-08_000_Questions to be answered. With data./index.html">
+      ← Questions to be answered. With data....
+     </a>
+     <a href="../2022-08-21_054_Does it matter what we plant (Part 1)/index.html">
+      54. Agriculture and Climate (Part 5)... →
+     </a>
+    </nav>
+   </article>
+   <footer>
+    <p>
+     Healing Earth with Technology Archive
+    </p>
+   </footer>
+  </div>
+ </body>
 </html>

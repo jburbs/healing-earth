@@ -1,39 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light only">
-    <title>Questions to be answered. With data. - Healing Earth with Technology</title>
-    <link rel="stylesheet" href="../../style.css?v=2">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1 class="site-title"><a href="../../index.html">Healing Earth with Technology</a></h1>
-            <nav>
-                <a href="../../index.html">All Posts</a>
-                <a href="../../about.html">About</a>
-            </nav>
-        </header>
-
-        <article>
-            <div class="post-header">
-                <h1 class="post-title">Questions to be answered. With data.</h1>
-                <p class="post-subtitle">[3 min read]</p>
-                <p class="post-meta">2022-08-08</p>
-            </div>
-
-            <div class="post-content">
-                <p>It’s summer, with all sorts of associated distractions, and I slacked this past week. Nevertheless, I want to ensure that the next installments are supported with solid facts rooted in direct measurements. My apologies for being late, and terse, with this one. </p><p>Last time, I ended with two questions:</p><ul><li><p>In any given area, are trees the best use of the land for carbon sequestration?</p></li><li><p>Does it even matter <em>what</em> is planted? </p></li></ul><p>How should these questions be answered? Of course, with data! And the most valuable data is from primary, unbiased measurements that haven’t been massaged, modeled, or manipulated to support publication in an ‘influential’ scientific journal.</p><p>I’m pretty sure that academics and modelers of all sorts could have a field day dissecting these questions from every possible angle! It’s an entire research program supportable by government grants, and it might even be influential if Earth had some form of “central planning committee” governed by Science. But that’s not the world we live in. </p><p>Let’s look at the first question from an experimentalist’s perspective. While it is evident that, per acre, forests will <em>contain</em> more carbon than, say, a corn field (trees are more extensive than corn stalks), that’s not the question. Instead, the question is, “Will forests <em>capture</em> <em>and store</em> more carbon than other land use options?” This measurement is what ecologists call “Net Primary Productivity”, or NPP. For any ecosystem, NPP is a number that is the difference between “Gross Primary Productivity” (GPP), the amount of carbon dioxide absorbed, and respiration, the amount of carbon dioxide released. It is a pretty straightforward concept.</p><p>Can NPP be measured over time and on all land? It turns out that NASA has placed instruments on satellites capable of observing what’s happening at the surface. One, called the Moderate Resolution Imaging Spectrophotometer (MODIS), can capture a two-dimensional surface image and then analyze each pixel’s spectrum. It’s pretty straightforward to measure GPP because it is related to the amount of light (at specific wavelengths). But, it’s hard to measure respiration, so scientists must make many adjustments. </p><p>Here’s the actual process from <a href="https://lpdaac.usgs.gov/documents/95/MOD17_ATBD.pdf">this document</a>.</p><figure><img alt="" src="./images/8397b41f-2631-4741-a689-f2d89eef2933_1520x1505.jpeg" width="100%"/></figure><p>Let’s step through this. What can be measured using MODIS are FPAR, LAI, Tmin, and VPD. FPAR is how much light is available, while Tmin and VPD are reductions that account for temperature changes and water availability. These adjust the maximum capture efficiency, epsilon_max, to provide an energy conversion efficiency per unit area over time, measured in Kg C/MJ/m2/day. These numbers combine to give the GPP. The LAI (Leaf Area Index) is how much (two-dimensional) area is covered by leaves (which varies with the season). This number is then extrapolated empirically (“allometrically”) to calculate how much biomass is present both above and below ground, and the amount of energy needed to maintain that biomass is calculated as the “Maintenance Respiration”. The “Daily NPP” is then calculated based on the difference.</p><p>Then, the Daily NPP numbers are added up over an entire year. But there are two problems: First, plants use more energy (and capture more carbon) when actively growing. And trees use energy even when they’ve lost their leaves, and that’s not accounted for based on measuring leaves from space. So, there are corrections to the sum for these factors, the “live wood maintenance respiration” and the “growth respiration”.</p><p>The bottom line is that there’s a lot of empirical modeling that goes into the estimation of an annual NPP from space.  So it’s pretty far from direct measurement. But what can we learn from the processes (on the ground) that enable the conversions?</p><p>Next time, we will start with the second question, “Does it matter <em>what</em> is planted?” because that will allow us to examine the empirical extrapolations needed for global measurements. An excellent method for measuring NPP directly called “Eddy Flux Covariance”. has been developed to compare carbon exchange over different land areas. This method measures air’s directional flow (flux) and composition simultaneously. When air flows toward a section of living ground, it has a different CO2 level than when it flows away from the ground. The difference gives NPP, not just from empirical models but from direct measurement.</p><p></p>
-            </div>
-
-            <nav class="post-nav"><a href="../2022-08-01_052_A Trillion trees/index.html">← 52. Agriculture and Climate (Part 3)...</a><a href="../2022-08-14_053_Are trees the best use of land/index.html">53. Are trees the best use of land?... →</a></nav>
-        </article>
-
-        <footer>
-            <p>Healing Earth with Technology Archive</p>
-        </footer>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="light only" name="color-scheme"/>
+  <title>
+   Questions to be answered. With data. - Healing Earth with Technology
+  </title>
+  <link href="../../style.css?v=2" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="container">
+   <header>
+    <h1 class="site-title">
+     <a href="../../index.html">
+      Healing Earth with Technology
+     </a>
+    </h1>
+    <nav>
+     <a href="../../index.html">
+      All Posts
+     </a>
+     <a href="../../about.html">
+      About
+     </a>
+    </nav>
+   </header>
+   <article>
+    <div class="post-header">
+     <h1 class="post-title">
+      Questions to be answered. With data.
+     </h1>
+     <p class="post-subtitle">
+      [3 min read]
+     </p>
+     <p class="post-meta">
+      2022-08-08
+     </p>
     </div>
-</body>
+    <div class="post-content">
+     <p>
+      It’s summer, with all sorts of associated distractions, and I slacked this past week. Nevertheless, I want to ensure that the next installments are supported with solid facts rooted in direct measurements. My apologies for being late, and terse, with this one.
+     </p>
+     <p>
+      Last time, I ended with two questions:
+     </p>
+     <ul>
+      <li>
+       <p>
+        In any given area, are trees the best use of the land for carbon sequestration?
+       </p>
+      </li>
+      <li>
+       <p>
+        Does it even matter
+        <em>
+         what
+        </em>
+        is planted?
+       </p>
+      </li>
+     </ul>
+     <p>
+      How should these questions be answered? Of course, with data! And the most valuable data is from primary, unbiased measurements that haven’t been massaged, modeled, or manipulated to support publication in an ‘influential’ scientific journal.
+     </p>
+     <p>
+      I’m pretty sure that academics and modelers of all sorts could have a field day dissecting these questions from every possible angle! It’s an entire research program supportable by government grants, and it might even be influential if Earth had some form of “central planning committee” governed by Science. But that’s not the world we live in.
+     </p>
+     <p>
+      Let’s look at the first question from an experimentalist’s perspective. While it is evident that, per acre, forests will
+      <em>
+       contain
+      </em>
+      more carbon than, say, a corn field (trees are more extensive than corn stalks), that’s not the question. Instead, the question is, “Will forests
+      <em>
+       capture
+      </em>
+      <em>
+       and store
+      </em>
+      more carbon than other land use options?” This measurement is what ecologists call “Net Primary Productivity”, or NPP. For any ecosystem, NPP is a number that is the difference between “Gross Primary Productivity” (GPP), the amount of carbon dioxide absorbed, and respiration, the amount of carbon dioxide released. It is a pretty straightforward concept.
+     </p>
+     <p>
+      Can NPP be measured over time and on all land? It turns out that NASA has placed instruments on satellites capable of observing what’s happening at the surface. One, called the Moderate Resolution Imaging Spectrophotometer (MODIS), can capture a two-dimensional surface image and then analyze each pixel’s spectrum. It’s pretty straightforward to measure GPP because it is related to the amount of light (at specific wavelengths). But, it’s hard to measure respiration, so scientists must make many adjustments.
+     </p>
+     <p>
+      Here’s the actual process from
+      <a href="https://lpdaac.usgs.gov/documents/95/MOD17_ATBD.pdf">
+       this document
+      </a>
+      .
+     </p>
+     <figure>
+      <img alt="" src="./images/8397b41f-2631-4741-a689-f2d89eef2933_1520x1505.jpeg" width="100%"/>
+     </figure>
+     <p>
+      Let’s step through this. What can be measured using MODIS are FPAR, LAI, Tmin, and VPD. FPAR is how much light is available, while Tmin and VPD are reductions that account for temperature changes and water availability. These adjust the maximum capture efficiency, epsilon_max, to provide an energy conversion efficiency per unit area over time, measured in Kg C/MJ/m2/day. These numbers combine to give the GPP. The LAI (Leaf Area Index) is how much (two-dimensional) area is covered by leaves (which varies with the season). This number is then extrapolated empirically (“allometrically”) to calculate how much biomass is present both above and below ground, and the amount of energy needed to maintain that biomass is calculated as the “Maintenance Respiration”. The “Daily NPP” is then calculated based on the difference.
+     </p>
+     <p>
+      Then, the Daily NPP numbers are added up over an entire year. But there are two problems: First, plants use more energy (and capture more carbon) when actively growing. And trees use energy even when they’ve lost their leaves, and that’s not accounted for based on measuring leaves from space. So, there are corrections to the sum for these factors, the “live wood maintenance respiration” and the “growth respiration”.
+     </p>
+     <p>
+      The bottom line is that there’s a lot of empirical modeling that goes into the estimation of an annual NPP from space.  So it’s pretty far from direct measurement. But what can we learn from the processes (on the ground) that enable the conversions?
+     </p>
+     <p>
+      Next time, we will start with the second question, “Does it matter
+      <em>
+       what
+      </em>
+      is planted?” because that will allow us to examine the empirical extrapolations needed for global measurements. An excellent method for measuring NPP directly called “Eddy Flux Covariance”. has been developed to compare carbon exchange over different land areas. This method measures air’s directional flow (flux) and composition simultaneously. When air flows toward a section of living ground, it has a different CO2 level than when it flows away from the ground. The difference gives NPP, not just from empirical models but from direct measurement.
+     </p>
+     <p>
+     </p>
+    </div>
+    <nav class="post-nav">
+     <a href="../2022-08-01_052_A Trillion trees/index.html">
+      ← 52. Agriculture and Climate (Part 3)...
+     </a>
+     <a href="../2022-08-14_053_Are trees the best use of land/index.html">
+      53. Are trees the best use of land?... →
+     </a>
+    </nav>
+   </article>
+   <footer>
+    <p>
+     Healing Earth with Technology Archive
+    </p>
+   </footer>
+  </div>
+ </body>
 </html>

@@ -617,6 +617,60 @@ article {
     font-style: italic;
 }
 
+/* ===== FOOTNOTES ===== */
+.footnote-anchor {
+    font-size: 0.7em;
+    vertical-align: super;
+    line-height: 0;
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: 600;
+    padding: 0 0.15em;
+}
+
+.footnote-anchor:hover {
+    color: var(--link-hover);
+}
+
+.footnote-number {
+    font-size: 0.7em;
+    vertical-align: super;
+    line-height: 0;
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: 600;
+    padding: 0 0.15em;
+    margin-right: 0.25em;
+}
+
+/* Footnote blocks at bottom of post */
+.post-content > div:has(.footnote-number) {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+    padding-top: 0.75rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.post-content > div:has(.footnote-number):first-of-type {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+}
+
+.post-content > div:has(.footnote-number) p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin: 0.25rem 0;
+    display: inline;
+}
+
+.post-content > div:has(.footnote-number) a:not(.footnote-number) {
+    word-break: break-all;
+    font-size: 0.8rem;
+}
+
 /* ===== POST NAVIGATION ===== */
 .post-nav {
     display: flex;
