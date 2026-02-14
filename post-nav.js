@@ -50,10 +50,11 @@ var getNeighbors = function(folder, category) {
     return { prev: null, next: null };
   }
   
-  // Find the current folder in the list
+  // Find the current folder in the list (case-insensitive: Netlify lowercases URLs)
   var currentIndex = -1;
+  var folderLower = folder.toLowerCase();
   for (var i = 0; i < list.length; i++) {
-    if (list[i].folder === folder) {
+    if (list[i].folder.toLowerCase() === folderLower) {
       currentIndex = i;
       break;
     }
@@ -99,6 +100,26 @@ var getCategoryLabel = function(cat) {
     'all': 'All Posts'
   };
   return labels[cat] || cat;
+};
+
+/**
+ * Case-insensitive lookup in postCategories
+ * Netlify lowercases URL paths, so folder from URL won't match
+ * the mixed-case keys in postCategories directly.
+ */
+var lookupCategories = function(folder) {
+  if (!folder || typeof postCategories === 'undefined') return null;
+  // Try direct lookup first (fast path)
+  if (postCategories[folder]) return postCategories[folder];
+  // Fall back to case-insensitive search
+  var folderLower = folder.toLowerCase();
+  var keys = Object.keys(postCategories);
+  for (var i = 0; i < keys.length; i++) {
+    if (keys[i].toLowerCase() === folderLower) {
+      return postCategories[keys[i]];
+    }
+  }
+  return null;
 };
 
 /**
@@ -221,7 +242,7 @@ var renderBottomNav = function() {
   html += '<div class="post-nav-categories">';
   html += '<span class="post-nav-categories-label">Filed under:</span>';
   
-  var postCats = postCategories[folder];
+  var postCats = lookupCategories(folder);
   if (postCats && Array.isArray(postCats)) {
     for (var i = 0; i < postCats.length; i++) {
       var cat = postCats[i];
