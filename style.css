@@ -87,7 +87,7 @@ body {
 }
 
 .hero-bio-text {
-    max-width: 600px;
+    max-width: 720px;
     font-family: var(--font-serif);
     font-size: 1rem;
     line-height: 1.7;
@@ -100,7 +100,7 @@ body {
     border-radius: 0 6px 6px 0;
     padding: 1.5rem;
     margin: 2rem auto;
-    max-width: 600px;
+    max-width: 720px;
     font-style: italic;
     font-size: 1.05rem;
     line-height: 1.7;
@@ -129,7 +129,7 @@ body {
 .site-hero-guide {
     font-size: 0.95rem;
     color: var(--text-secondary);
-    max-width: 600px;
+    max-width: 720px;
     margin: 1.5rem auto 0;
     line-height: 1.6;
 }
@@ -191,7 +191,7 @@ body {
 
 /* ===== TAB NAVIGATION ===== */
 .tab-bar {
-    background: var(--accent-bg);
+    background: var(--bg-color);
     border-bottom: 1px solid var(--border-color);
     padding: 0;
     margin: 0;
@@ -214,10 +214,11 @@ body {
     display: flex;
     gap: 0;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     min-width: min-content;
     list-style: none;
-    width: 100%;
+    max-width: var(--homepage-width);
+    justify-content: center;
 }
 
 .tab-item {
@@ -339,6 +340,11 @@ body {
     font-family: var(--font-sans);
     text-decoration: none;
     transition: opacity 0.15s;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.category-badge:visited {
     color: var(--text-color);
 }
 

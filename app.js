@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const cats = postCategories[folder];
             const badges = cats.map(function(cat) {
                 const label = categoryLabels[cat] || cat;
-                return '<span class="category-badge ' + cat + '">' + label + '</span>';
+                return '<a href="#" class="category-badge ' + cat + '" data-filter-category="' + cat + '">' + label + '</a>';
             });
             badgeContainer.innerHTML = badges.join(' ');
         });
@@ -210,6 +210,16 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         var category = tabItem.getAttribute('data-category');
         filterByCategory(category);
+    });
+
+    // --- Badge click handlers (delegate from postList) ---
+    postList.addEventListener('click', function(e) {
+        var badge = e.target.closest('[data-filter-category]');
+        if (!badge) return;
+        e.preventDefault();
+        var category = badge.getAttribute('data-filter-category');
+        filterByCategory(category);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     // --- Initialize ---
