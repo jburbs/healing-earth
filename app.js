@@ -15,6 +15,26 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentCategory = 'all';
     let isSearching = false;
 
+    // --- Add popularity data to posts ---
+    function addPopularityData() {
+        if (typeof postPopularity === 'undefined') return;
+
+        allPosts.forEach(function(li) {
+            const folder = li.getAttribute('data-folder');
+            const rank = postPopularity[folder] || 999;
+            li.setAttribute('data-popularity', rank);
+        });
+    }
+
+    // --- Sort posts by popularity ---
+    function sortByPopularity(postsToSort) {
+        return postsToSort.sort(function(a, b) {
+            const rankA = parseInt(a.getAttribute('data-popularity') || 999);
+            const rankB = parseInt(b.getAttribute('data-popularity') || 999);
+            return rankA - rankB;
+        });
+    }
+
     // --- Category Badges ---
     function renderBadges() {
         if (typeof postCategories === 'undefined') return;
@@ -71,17 +91,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Filter posts and update links with category context
+        var visiblePosts;
         if (category === 'all') {
-            allPosts.forEach(function(li) {
+            visiblePosts = allPosts.filter(function(li) {
                 li.style.display = '';
                 // Remove category param from links
                 var link = li.querySelector('.post-list-title a');
                 if (link) {
                     link.href = link.href.split('?')[0];
                 }
+                return true;
             });
         } else {
-            allPosts.forEach(function(li) {
+            visiblePosts = allPosts.filter(function(li) {
                 var folder = li.getAttribute('data-folder');
                 var cats = (typeof postCategories !== 'undefined' && postCategories[folder]) || [];
                 var visible = cats.indexOf(category) !== -1;
@@ -91,8 +113,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (link && visible) {
                     link.href = link.href.split('?')[0] + '?cat=' + encodeURIComponent(category);
                 }
+                return visible;
             });
         }
+
+        // Sort visible posts by popularity and re-render
+        var sortedPosts = sortByPopularity(visiblePosts);
+        sortedPosts.forEach(function(li) {
+            postList.appendChild(li);
+        });
 
         updatePostCount();
     }
@@ -249,8 +278,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // --- Initialize ---
+    addPopularityData();
     renderBadges();
-    updatePostCount();
+    filterByCategory('all');  // Load with default 'all' category, sorted by popularity
 
     // Handle URL hash for direct category links
     if (window.location.hash) {
