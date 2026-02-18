@@ -235,7 +235,28 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    // --- Topic card click handlers ---
+    document.querySelectorAll('.topic-card[data-topic]').forEach(function(card) {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            var topic = card.getAttribute('data-topic');
+            filterByCategory(topic);
+            var archive = document.getElementById('archive');
+            if (archive) {
+                archive.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
     // --- Initialize ---
     renderBadges();
     updatePostCount();
+
+    // Handle URL hash for direct category links
+    if (window.location.hash) {
+        var hashCat = new URLSearchParams(window.location.hash.replace('#', '?')).get('cat');
+        if (hashCat) {
+            filterByCategory(hashCat);
+        }
+    }
 });

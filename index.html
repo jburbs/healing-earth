@@ -5,61 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light only">
     <title>Healing Earth with Technology</title>
+    <meta name="description" content="A four-year investigation into climate science, engineering solutions, and the policy failures connecting them — grounded in data, not dogma. By Jonathan Burbaum, PhD.">
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
-    <nav class="site-nav">
-        <div class="site-nav-inner">
-            <a href="index.html" class="site-nav-title"><img src="images/wordmark.png" alt="Healing Earth with Technology" class="nav-wordmark"></a>
-            <div class="site-nav-links">
-                <a href="about.html" class="site-nav-link">About</a>
-            </div>
-            <input type="text" class="nav-search-box" id="navSearchBox" placeholder="Search...">
-        </div>
-    </nav>
 
-    <div class="tab-bar" id="tabBar">
-        <ul class="tab-bar-inner">
-            <li class="tab-item active" data-category="all"><a href="#" onclick="return false;">All</a></li>
-            <li class="tab-item" data-category="series"><a href="#" onclick="return false;">Series</a></li>
-            <li class="tab-item" data-category="climate"><a href="#" onclick="return false;">Climate Science</a></li>
-            <li class="tab-item" data-category="solutions"><a href="#" onclick="return false;">Solutions &amp; Technology</a></li>
-            <li class="tab-item" data-category="policy"><a href="#" onclick="return false;">Policy &amp; Economics</a></li>
-            <li class="tab-item" data-category="ai"><a href="#" onclick="return false;">AI &amp; Technology</a></li>
-            <li class="tab-item" data-category="science"><a href="#" onclick="return false;">Science &amp; Methods</a></li>
-            <li class="tab-item" data-category="notes"><a href="#" onclick="return false;">Notes &amp; Asides</a></li>
-        </ul>
-    </div>
-
-    <div class="site-hero-banner"></div>
-    <div class="site-hero">
-        <div class="hero-content">
-            <h1 class="site-hero-title">Healing Earth with Technology</h1>
-            <p class="site-hero-tagline">A Science-Based Serial on Climate Change and Solutions</p>
-
-            <div class="site-hero-bio">
-                <div class="hero-bio-text-wrapper">
-                    <p class="hero-author-name">By Jonathan Burbaum</p>
-                    <p class="hero-bio-text">A pragmatic molecular scientist trained in organic chemistry and molecular biology, with a long career devoted to developing solutions to existential human problems&mdash;from human health to alternative energy. Former Program Director at the Advanced Research Projects Agency&mdash;Energy (ARPA-E).</p>
-                </div>
-            </div>
-
-            <blockquote class="site-hero-mission">
-                Science is a sport that wrestles truth from conjecture.
-            </blockquote>
-
-            <p class="site-hero-guide">This archive contains over 180 issues exploring climate science, engineering solutions, policy analysis, and the role of technology in addressing global warming. Use the categories below to explore by topic, or search across all posts.</p>
-            <p class="site-hero-stats">182 posts &middot; May 2021 &ndash; July 2025</p>
+<!-- ===== STICKY HEADER ===== -->
+<nav class="site-nav">
+    <div class="site-nav-inner">
+        <a href="index.html" class="site-nav-title">
+            <img src="images/wordmark.png" alt="Healing Earth with Technology" class="nav-wordmark">
+        </a>
+        <div class="site-nav-links">
+            <a href="about.html" class="site-nav-link">About</a>
+            <a href="https://healingearth.substack.com" class="site-nav-link site-nav-subscribe" target="_blank" rel="noopener">Subscribe</a>
         </div>
     </div>
+</nav>
 
-    <div class="homepage-container">
-        <main>
-            <input type="text" class="search-box" id="searchBox" placeholder="Search all posts...">
+<!-- ===== HERO SECTION ===== -->
+<section class="hero">
+    <div class="hero-inner">
+        <h1 class="hero-title">Healing Earth<br>with Technology</h1>
+        <p class="hero-tagline">A four-year investigation into climate science, engineering solutions, and the policy failures connecting them &mdash; grounded in data, not dogma.</p>
+        <p class="hero-author">By Jonathan Burbaum, PhD &middot; Former ARPA-E Program Director &middot; Organic chemist turned energy pragmatist</p>
+        <p class="hero-stats">182 issues &middot; May 2021 &ndash; July 2025 &middot; Now on hiatus</p>
+    </div>
+</section>
 
-            <div id="seriesView" class="series-view" style="display:none;">
+<!-- ===== WHAT YOU'LL FIND HERE ===== -->
+<section class="topics-section">
+    <div class="section-inner">
+        <h2 class="section-heading">What You&rsquo;ll Find Here</h2>
+        <div class="topic-grid">
+            <a href="#archive" class="topic-card" data-topic="climate">
+                <h3>Climate Science</h3>
+                <p>The physical evidence: what temperature records, carbon cycles, ocean chemistry, and atmospheric models actually tell us &mdash; and where the models fall short.</p>
+            </a>
+            <a href="#archive" class="topic-card" data-topic="solutions">
+                <h3>Solutions &amp; Technology</h3>
+                <p>Engineering approaches to water, energy, and carbon &mdash; from desalination and agrivoltaics to hydrogen economics and the math behind &ldquo;net zero.&rdquo;</p>
+            </a>
+            <a href="#archive" class="topic-card" data-topic="policy">
+                <h3>Policy &amp; Economics</h3>
+                <p>Where policy meets (or ignores) engineering reality: COPs, carbon markets, subsidies, venture capital, and the political economy of energy transitions.</p>
+            </a>
+            <a href="#archive" class="topic-card" data-topic="ai">
+                <h3>AI &amp; Technology</h3>
+                <p>How artificial intelligence, large language models, and platform monopolies intersect with scientific integrity and public understanding.</p>
+            </a>
+            <a href="#archive" class="topic-card" data-topic="science">
+                <h3>Science &amp; Methods</h3>
+                <p>The crisis in scientific publishing, academic integrity, peer review, and what it means to do rigorous analysis in a post-trust era.</p>
+            </a>
+            <a href="#archive" class="topic-card" data-topic="notes">
+                <h3>Notes &amp; Asides</h3>
+                <p>Personal reflections, recommended reading, holiday messages, and the occasional provocation that didn&rsquo;t fit neatly into a category.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== READING PATHS ===== -->
+<section class="paths-section">
+    <div class="section-inner">
+        <h2 class="section-heading">Not Sure Where to Start?</h2>
+        <div class="path-grid">
+            <div class="path-card">
+                <h3>The Core Argument</h3>
+                <ol class="path-list">
+                    <li><a href="posts/2021-05-23_001_Is Global Warming Real/index.html">Is Global Warming Real?</a> <span class="path-issue">#1</span></li>
+                    <li><a href="posts/2021-07-18_009_Healing (Part 1). What can we do/index.html">What Can We Do?</a> <span class="path-issue">#9</span></li>
+                    <li><a href="posts/2021-10-10_021_Healing (Part 11). The Only Solution./index.html">The Only Solution</a> <span class="path-issue">#21</span></li>
+                    <li><a href="posts/2023-03-12_079_Climate Control/index.html">Climate Control</a> <span class="path-issue">#79</span></li>
+                </ol>
             </div>
+            <div class="path-card">
+                <h3>The Engineering Deep-Dives</h3>
+                <ol class="path-list">
+                    <li><a href="posts/2023-04-02_082_Developing a third solution (Part 1)/index.html?cat=series">Developing a Third Solution</a> <span class="path-issue">11 parts</span></li>
+                    <li><a href="posts/2024-07-14_000_Engineering vs. Economic Net Zero (Part 1)/index.html?cat=series">Engineering vs. Economic Net Zero</a> <span class="path-issue">3 parts</span></li>
+                    <li><a href="posts/2025-04-12_000_Rethinking the Energy-Agriculture Nexus/index.html">Rethinking the Energy-Agriculture Nexus</a></li>
+                </ol>
+            </div>
+            <div class="path-card">
+                <h3>Science &amp; Society</h3>
+                <ol class="path-list">
+                    <li><a href="posts/2024-09-01_000_Science has devolved/index.html">Science Has Devolved</a></li>
+                    <li><a href="posts/2025-01-18_000_The Scientific Literature is Dead. Now What/index.html">The Scientific Literature is Dead. Now What?</a></li>
+                    <li><a href="posts/2025-02-08_000_Beyond DeSci A Modern Architecture for Scientific Trust/index.html">Beyond DeSci: A Modern Architecture for Scientific Trust</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ARCHIVE ===== -->
+<section class="archive-section" id="archive">
+    <div class="section-inner">
+        <h2 class="section-heading">Full Archive</h2>
+
+        <div class="tab-bar" id="tabBar">
+            <ul class="tab-bar-inner">
+                <li class="tab-item active" data-category="all"><a href="#" onclick="return false;">All</a></li>
+                <li class="tab-item" data-category="series"><a href="#" onclick="return false;">Series</a></li>
+                <li class="tab-item" data-category="climate"><a href="#" onclick="return false;">Climate Science</a></li>
+                <li class="tab-item" data-category="solutions"><a href="#" onclick="return false;">Solutions &amp; Technology</a></li>
+                <li class="tab-item" data-category="policy"><a href="#" onclick="return false;">Policy &amp; Economics</a></li>
+                <li class="tab-item" data-category="ai"><a href="#" onclick="return false;">AI &amp; Technology</a></li>
+                <li class="tab-item" data-category="science"><a href="#" onclick="return false;">Science &amp; Methods</a></li>
+                <li class="tab-item" data-category="notes"><a href="#" onclick="return false;">Notes &amp; Asides</a></li>
+            </ul>
+        </div>
+
+        <input type="text" class="search-box" id="searchBox" placeholder="Search all posts...">
+
+        <div id="seriesView" class="series-view" style="display:none;"></div>
 
             <ul class="post-list" id="postList">
 
@@ -1700,16 +1765,25 @@
         </li>
 
             </ul>
-        </main>
 
-        <footer>
-            <p>Archive of Healing Earth with Technology &middot; 182 posts &middot; May 2021 &ndash; July 2025</p>
-            <p>Originally published on <a href="https://healingearth.substack.com">Substack</a></p>
-        </footer>
+
     </div>
-    <script src="categories.js"></script>
-    <script src="search.js"></script>
-    <script src="search-universal.js"></script>
-    <script src="app.js"></script>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <blockquote class="footer-epigraph">
+            <em>Science is a sport that wrestles truth from conjecture.</em>
+        </blockquote>
+        <p class="footer-meta">Archive of Healing Earth with Technology &middot; 182 posts &middot; May 2021 &ndash; July 2025</p>
+        <p class="footer-meta">Originally published on <a href="https://healingearth.substack.com">Substack</a></p>
+    </div>
+</footer>
+
+<script src="categories.js"></script>
+<script src="search.js"></script>
+<script src="search-universal.js" defer></script>
+<script src="app.js"></script>
 </body>
 </html>
