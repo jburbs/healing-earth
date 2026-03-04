@@ -17,7 +17,8 @@ PROVENANCE_REPORT.txt
 
 # macOS
 .DS_Store
-Icon?
+Icon*
+.local/**
 
 # Netlify (will be auto-generated)
 .netlify/
