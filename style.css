@@ -291,6 +291,71 @@ body {
     flex-shrink: 0;
 }
 
+/* ===== AHA MOMENTS ===== */
+.aha-section {
+    padding: 3.5rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.aha-intro {
+    font-family: var(--font-sans);
+    color: var(--text-secondary);
+    font-size: 1rem;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.aha-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-sans);
+}
+
+.aha-table tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.aha-table tr:last-child {
+    border-bottom: none;
+}
+
+.aha-table td {
+    padding: 1rem 0.75rem;
+    vertical-align: top;
+    line-height: 1.5;
+}
+
+.aha-link {
+    width: 30%;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.aha-link a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.aha-link a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+.aha-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+    .aha-link { width: auto; white-space: normal; }
+    .aha-table td { display: block; padding: 0.5rem 0; }
+    .aha-table tr { display: block; padding: 1rem 0; }
+    .aha-desc { padding-top: 0.25rem; }
+}
+
 /* ===== ARCHIVE SECTION ===== */
 .archive-section {
     padding: 3.5rem 0 4rem;
