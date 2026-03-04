@@ -150,6 +150,30 @@ body {
     letter-spacing: 0.08em;
     margin: 0;
 }
+.hero-featured {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 0.5rem 1.5rem;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+.hero-featured-label {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: #7a9a72;
+    font-weight: 600;
+}
+.hero-featured a {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    padding-bottom: 1px;
+}
+.hero-featured a:hover {
+    border-bottom-color: #fff;
+}
 
 /* ===== SECTIONS ===== */
 .section-inner {

@@ -26,12 +26,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- Sort posts by popularity ---
-    function sortByPopularity(postsToSort) {
+    // --- Sort posts chronologically (oldest first) ---
+    function sortByDate(postsToSort) {
         return postsToSort.sort(function(a, b) {
-            const rankA = parseInt(a.getAttribute('data-popularity') || 999);
-            const rankB = parseInt(b.getAttribute('data-popularity') || 999);
-            return rankA - rankB;
+            const folderA = a.getAttribute('data-folder') || '';
+            const folderB = b.getAttribute('data-folder') || '';
+            return folderA.localeCompare(folderB);
         });
     }
 
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Sort visible posts by popularity and re-render
-        var sortedPosts = sortByPopularity(visiblePosts);
+        var sortedPosts = sortByDate(visiblePosts);
         sortedPosts.forEach(function(li) {
             postList.appendChild(li);
         });
@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- Initialize ---
     addPopularityData();
     renderBadges();
-    filterByCategory('all');  // Load with default 'all' category, sorted by popularity
+    filterByCategory('all');  // Load with default 'all' category, sorted chronologically
 
     // Handle URL hash for direct category links
     if (window.location.hash) {
