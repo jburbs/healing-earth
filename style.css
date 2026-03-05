@@ -1009,6 +1009,33 @@ article { margin-bottom: 3rem; }
     text-decoration: underline;
 }
 
+/* ===== POST CONTACT FOOTER ===== */
+.post-contact {
+    margin: 3rem 0 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--bg-warm);
+    border-radius: 6px;
+    text-align: center;
+    font-family: var(--font-sans);
+}
+
+.post-contact p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.post-contact a {
+    color: var(--link-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.post-contact a:hover {
+    text-decoration: underline;
+    color: var(--link-hover);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .hero { padding: 3.5rem 1.25rem 3rem; }
