@@ -90,6 +90,13 @@ document.addEventListener('DOMContentLoaded', function() {
             isSearching = false;
         }
 
+        // Hide search results container when switching tabs
+        var searchResultsDiv = document.getElementById('searchResults');
+        if (searchResultsDiv) {
+            searchResultsDiv.style.display = 'none';
+            searchResultsDiv.innerHTML = '';
+        }
+
         // Filter posts and update links with category context
         var visiblePosts;
         if (category === 'all') {
@@ -178,24 +185,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Search ---
+    // Create a persistent results container OUTSIDE postList so we never
+    // destroy the search input's DOM ancestry during rendering.
+    // This fixes the iOS mobile bug where keystrokes get cleared.
+    var searchResultsDiv = document.createElement('div');
+    searchResultsDiv.id = 'searchResults';
+    searchResultsDiv.style.display = 'none';
+    postList.parentNode.insertBefore(searchResultsDiv, postList.nextSibling);
+
     if (searchBox && typeof searchPosts === 'function') {
         var debounceTimer;
 
-        searchBox.addEventListener('input', function(e) {
+        searchBox.addEventListener('input', function() {
+            var self = this;
             clearTimeout(debounceTimer);
             debounceTimer = setTimeout(function() {
-                var query = e.target.value.trim();
+                var query = self.value.trim();
 
                 if (!query || query.length < 2) {
                     isSearching = false;
-                    // Restore filtered view - re-append all posts
+                    // Hide search results, restore post list
+                    searchResultsDiv.style.display = 'none';
+                    searchResultsDiv.innerHTML = '';
+                    postList.style.display = '';
+                    // Re-append all original posts (they were never destroyed)
                     allPosts.forEach(function(li) {
                         li.style.display = '';
                         postList.appendChild(li);
                     });
-                    // Remove any search artifacts
-                    var artifacts = postList.querySelectorAll('.search-results-header, .search-no-results');
-                    artifacts.forEach(function(el) { el.remove(); });
                     renderBadges();
                     filterByCategory(currentCategory);
                     return;
@@ -204,23 +221,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 isSearching = true;
                 var results = searchPosts(query);
 
+                // Hide original post list, show results in separate container
+                postList.style.display = 'none';
+                searchResultsDiv.style.display = 'block';
+
                 if (!results || results.length === 0) {
-                    allPosts.forEach(function(li) { li.style.display = 'none'; });
-                    // Remove old artifacts
-                    var old = postList.querySelectorAll('.search-results-header, .search-no-results, .filter-count');
-                    old.forEach(function(el) { el.remove(); });
-                    var noResults = document.createElement('li');
-                    noResults.className = 'search-no-results';
-                    noResults.style.cssText = 'padding: 2rem 0; color: var(--text-secondary); list-style: none;';
-                    noResults.textContent = 'No posts found matching \u201c' + query + '\u201d';
-                    postList.insertBefore(noResults, postList.firstChild);
+                    searchResultsDiv.innerHTML = '<ul class="post-list"><li class="search-no-results" style="padding: 2rem 0; color: var(--text-secondary); list-style: none;">No posts found matching \u201c' + escapeHtml(query) + '\u201d</li></ul>';
                     return;
                 }
 
                 // Build search results HTML
                 var totalMatches = results.reduce(function(sum, p) { return sum + p.matchCount; }, 0);
 
-                var html = '<li class="search-results-header" style="padding: 0.75rem 0; border-bottom: 1px solid var(--border-color); font-family: var(--font-sans); font-size: 0.85rem; color: var(--text-secondary); list-style: none;">';
+                var html = '<ul class="post-list">';
+                html += '<li class="search-results-header" style="padding: 0.75rem 0; border-bottom: 1px solid var(--border-color); font-family: var(--font-sans); font-size: 0.85rem; color: var(--text-secondary); list-style: none;">';
                 html += '<strong>' + results.length + '</strong> post' + (results.length === 1 ? '' : 's');
                 html += ' with <strong>' + totalMatches + '</strong> match' + (totalMatches === 1 ? '' : 'es');
                 html += ' for \u201c' + escapeHtml(query) + '\u201d</li>';
@@ -235,9 +249,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     html += '</li>';
                 });
 
-                postList.innerHTML = html;
+                html += '</ul>';
+                searchResultsDiv.innerHTML = html;
 
-            }, 150);
+            }, 250);
         });
     }
 
@@ -280,7 +295,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- Initialize ---
     addPopularityData();
     renderBadges();
-    filterByCategory('all');  // Load with default 'all' category, sorted chronologically
+    filterByCategory('all'); // Load with default 'all' category, sorted chronologically
 
     // Handle URL hash for direct category links
     if (window.location.hash) {
