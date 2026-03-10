@@ -15,6 +15,26 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentCategory = 'all';
     let isSearching = false;
 
+    // --- Add popularity data to posts ---
+    function addPopularityData() {
+        if (typeof postPopularity === 'undefined') return;
+
+        allPosts.forEach(function(li) {
+            const folder = li.getAttribute('data-folder');
+            const rank = postPopularity[folder] || 999;
+            li.setAttribute('data-popularity', rank);
+        });
+    }
+
+    // --- Sort posts chronologically (oldest first) ---
+    function sortByDate(postsToSort) {
+        return postsToSort.sort(function(a, b) {
+            const folderA = a.getAttribute('data-folder') || '';
+            const folderB = b.getAttribute('data-folder') || '';
+            return folderA.localeCompare(folderB);
+        });
+    }
+
     // --- Category Badges ---
     function renderBadges() {
         if (typeof postCategories === 'undefined') return;
@@ -70,25 +90,20 @@ document.addEventListener('DOMContentLoaded', function() {
             isSearching = false;
         }
 
-        // Hide search results container when switching tabs
-        var searchResultsDiv = document.getElementById('searchResults');
-        if (searchResultsDiv) {
-            searchResultsDiv.style.display = 'none';
-            searchResultsDiv.innerHTML = '';
-        }
-
         // Filter posts and update links with category context
+        var visiblePosts;
         if (category === 'all') {
-            allPosts.forEach(function(li) {
+            visiblePosts = allPosts.filter(function(li) {
                 li.style.display = '';
                 // Remove category param from links
                 var link = li.querySelector('.post-list-title a');
                 if (link) {
                     link.href = link.href.split('?')[0];
                 }
+                return true;
             });
         } else {
-            allPosts.forEach(function(li) {
+            visiblePosts = allPosts.filter(function(li) {
                 var folder = li.getAttribute('data-folder');
                 var cats = (typeof postCategories !== 'undefined' && postCategories[folder]) || [];
                 var visible = cats.indexOf(category) !== -1;
@@ -98,8 +113,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (link && visible) {
                     link.href = link.href.split('?')[0] + '?cat=' + encodeURIComponent(category);
                 }
+                return visible;
             });
         }
+
+        // Sort visible posts by popularity and re-render
+        var sortedPosts = sortByDate(visiblePosts);
+        sortedPosts.forEach(function(li) {
+            postList.appendChild(li);
+        });
 
         updatePostCount();
     }
@@ -156,34 +178,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Search ---
-    // Create a persistent results container OUTSIDE postList so we never
-    // destroy the search input's DOM ancestry during rendering.
-    // This fixes the iOS mobile bug where keystrokes get cleared.
-    var searchResultsDiv = document.createElement('div');
-    searchResultsDiv.id = 'searchResults';
-    searchResultsDiv.style.display = 'none';
-    postList.parentNode.insertBefore(searchResultsDiv, postList.nextSibling);
-
     if (searchBox && typeof searchPosts === 'function') {
         var debounceTimer;
 
-        searchBox.addEventListener('input', function() {
-            var self = this;
+        searchBox.addEventListener('input', function(e) {
             clearTimeout(debounceTimer);
             debounceTimer = setTimeout(function() {
-                var query = self.value.trim();
+                var query = e.target.value.trim();
 
                 if (!query || query.length < 2) {
                     isSearching = false;
-                    // Hide search results, restore post list
-                    searchResultsDiv.style.display = 'none';
-                    searchResultsDiv.innerHTML = '';
-                    postList.style.display = '';
-                    // Re-append all original posts (they were never destroyed)
+                    // Restore filtered view - re-append all posts
                     allPosts.forEach(function(li) {
                         li.style.display = '';
                         postList.appendChild(li);
                     });
+                    // Remove any search artifacts
+                    var artifacts = postList.querySelectorAll('.search-results-header, .search-no-results');
+                    artifacts.forEach(function(el) { el.remove(); });
                     renderBadges();
                     filterByCategory(currentCategory);
                     return;
@@ -192,20 +204,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 isSearching = true;
                 var results = searchPosts(query);
 
-                // Hide original post list, show results in separate container
-                postList.style.display = 'none';
-                searchResultsDiv.style.display = 'block';
-
                 if (!results || results.length === 0) {
-                    searchResultsDiv.innerHTML = '<ul class="post-list"><li class="search-no-results" style="padding: 2rem 0; color: var(--text-secondary); list-style: none;">No posts found matching \u201c' + escapeHtml(query) + '\u201d</li></ul>';
+                    allPosts.forEach(function(li) { li.style.display = 'none'; });
+                    // Remove old artifacts
+                    var old = postList.querySelectorAll('.search-results-header, .search-no-results, .filter-count');
+                    old.forEach(function(el) { el.remove(); });
+                    var noResults = document.createElement('li');
+                    noResults.className = 'search-no-results';
+                    noResults.style.cssText = 'padding: 2rem 0; color: var(--text-secondary); list-style: none;';
+                    noResults.textContent = 'No posts found matching \u201c' + query + '\u201d';
+                    postList.insertBefore(noResults, postList.firstChild);
                     return;
                 }
 
                 // Build search results HTML
                 var totalMatches = results.reduce(function(sum, p) { return sum + p.matchCount; }, 0);
 
-                var html = '<ul class="post-list">';
-                html += '<li class="search-results-header" style="padding: 0.75rem 0; border-bottom: 1px solid var(--border-color); font-family: var(--font-sans); font-size: 0.85rem; color: var(--text-secondary); list-style: none;">';
+                var html = '<li class="search-results-header" style="padding: 0.75rem 0; border-bottom: 1px solid var(--border-color); font-family: var(--font-sans); font-size: 0.85rem; color: var(--text-secondary); list-style: none;">';
                 html += '<strong>' + results.length + '</strong> post' + (results.length === 1 ? '' : 's');
                 html += ' with <strong>' + totalMatches + '</strong> match' + (totalMatches === 1 ? '' : 'es');
                 html += ' for \u201c' + escapeHtml(query) + '\u201d</li>';
@@ -220,10 +235,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     html += '</li>';
                 });
 
-                html += '</ul>';
-                searchResultsDiv.innerHTML = html;
+                postList.innerHTML = html;
 
-            }, 250);
+            }, 150);
         });
     }
 
@@ -250,7 +264,29 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    // --- Topic card click handlers ---
+    document.querySelectorAll('.topic-card[data-topic]').forEach(function(card) {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            var topic = card.getAttribute('data-topic');
+            filterByCategory(topic);
+            var archive = document.getElementById('archive');
+            if (archive) {
+                archive.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
     // --- Initialize ---
+    addPopularityData();
     renderBadges();
-    updatePostCount();
+    filterByCategory('all');  // Load with default 'all' category, sorted chronologically
+
+    // Handle URL hash for direct category links
+    if (window.location.hash) {
+        var hashCat = new URLSearchParams(window.location.hash.replace('#', '?')).get('cat');
+        if (hashCat) {
+            filterByCategory(hashCat);
+        }
+    }
 });
