@@ -5,61 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light only">
     <title>Healing Earth with Technology</title>
+    <meta name="description" content="A four-year investigation into climate science, engineering solutions, and the policy failures connecting them — grounded in data, not dogma. By Jonathan Burbaum, PhD.">
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="style.css?v=5">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=6">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E5CCKYBTZD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E5CCKYBTZD');
+</script></head>
 <body>
-    <nav class="site-nav">
-        <div class="site-nav-inner">
-            <a href="index.html" class="site-nav-title"><img src="images/wordmark.png" alt="Healing Earth with Technology" class="nav-wordmark"></a>
-            <div class="site-nav-links">
-                <a href="about.html" class="site-nav-link">About</a>
-            </div>
-            <input type="text" class="nav-search-box" id="navSearchBox" placeholder="Search...">
-        </div>
-    </nav>
 
-    <div class="tab-bar" id="tabBar">
-        <ul class="tab-bar-inner">
-            <li class="tab-item active" data-category="all"><a href="#" onclick="return false;">All</a></li>
-            <li class="tab-item" data-category="series"><a href="#" onclick="return false;">Series</a></li>
-            <li class="tab-item" data-category="climate"><a href="#" onclick="return false;">Climate Science</a></li>
-            <li class="tab-item" data-category="solutions"><a href="#" onclick="return false;">Solutions &amp; Technology</a></li>
-            <li class="tab-item" data-category="policy"><a href="#" onclick="return false;">Policy &amp; Economics</a></li>
-            <li class="tab-item" data-category="ai"><a href="#" onclick="return false;">AI &amp; Technology</a></li>
-            <li class="tab-item" data-category="science"><a href="#" onclick="return false;">Science &amp; Methods</a></li>
-            <li class="tab-item" data-category="notes"><a href="#" onclick="return false;">Notes &amp; Asides</a></li>
-        </ul>
-    </div>
-
-    <div class="site-hero-banner"></div>
-    <div class="site-hero">
-        <div class="hero-content">
-            <h1 class="site-hero-title">Healing Earth with Technology</h1>
-            <p class="site-hero-tagline">A Science-Based Serial on Climate Change and Solutions</p>
-
-            <div class="site-hero-bio">
-                <div class="hero-bio-text-wrapper">
-                    <p class="hero-author-name">By Jonathan Burbaum</p>
-                    <p class="hero-bio-text">A pragmatic molecular scientist trained in organic chemistry and molecular biology, with a long career devoted to developing solutions to existential human problems&mdash;from human health to alternative energy. Former Program Director at the Advanced Research Projects Agency&mdash;Energy (ARPA-E).</p>
-                </div>
-            </div>
-
-            <blockquote class="site-hero-mission">
-                Science is a sport that wrestles truth from conjecture.
-            </blockquote>
-
-            <p class="site-hero-guide">This archive contains over 180 issues exploring climate science, engineering solutions, policy analysis, and the role of technology in addressing global warming. Use the categories below to explore by topic, or search across all posts.</p>
-            <p class="site-hero-stats">182 posts &middot; May 2021 &ndash; July 2025</p>
+<!-- ===== STICKY HEADER ===== -->
+<nav class="site-nav">
+    <div class="site-nav-inner">
+        <a class='site-nav-title' href='/'>
+            <img src="images/wordmark.png" alt="Healing Earth with Technology" class="nav-wordmark">
+        </a>
+        <div class="site-nav-links">
+            <a class='site-nav-link' href='/'>Archive</a>
+            <a class='site-nav-link' href='/topics'>Topics</a>
+            <a class='site-nav-link' href='/paths'>Paths</a>
+            <a class='site-nav-link' href='/aha'>Aha Moments</a>
+            <a class='site-nav-link' href='/about'>About</a>
         </div>
     </div>
+</nav>
 
-    <div class="homepage-container">
-        <main>
-            <input type="text" class="search-box" id="searchBox" placeholder="Search all posts...">
+<!-- ===== HERO SECTION ===== -->
+<section class="hero">
+    <div class="hero-inner">
+        <h1 class="hero-title">Healing Earth<br>with Technology</h1>
+        <p class="hero-tagline">A four-year investigation into climate science, engineering solutions, and the policy failures connecting them &mdash; grounded in data, not dogma.</p>
+        <p class="hero-author">By Jonathan Burbaum, PhD &middot; Former ARPA-E Program Director &middot; Organic chemist turned energy pragmatist</p>
+        <p class="hero-stats">182 issues &middot; May 2021 &ndash; July 2025 &middot; Now working on Modulus Water</p>
+        <div class="hero-featured">
+            <span class="hero-featured-label">Start here:</span>
+            <a href="posts/2022-06-05_046_Low-cost Desalination and the ARPA-E Summit/index.html">Low-cost Desalination and the ARPA-E Summit</a>
+            <a href="posts/2023-05-11_088_Why deforestation has no climate effect/index.html">Why Deforestation Has No Climate Effect</a>
+            <a href="posts/2024-09-01_000_Science has devolved/index.html">Science Has Devolved</a>
+        </div>
+    </div>
+</section>
 
-            <div id="seriesView" class="series-view" style="display:none;">
-            </div>
+<!-- ===== ARCHIVE ===== -->
+<section class="archive-section" id="archive">
+    <div class="section-inner">
+        <div class="tab-bar" id="tabBar">
+            <ul class="tab-bar-inner">
+                <li class="tab-item active" data-category="all"><a href="#" onclick="return false;">All</a></li>
+                <li class="tab-item" data-category="series"><a href="#" onclick="return false;">Series</a></li>
+                <li class="tab-item" data-category="climate"><a href="#" onclick="return false;">Climate Science</a></li>
+                <li class="tab-item" data-category="solutions"><a href="#" onclick="return false;">Solutions &amp; Technology</a></li>
+                <li class="tab-item" data-category="policy"><a href="#" onclick="return false;">Policy &amp; Economics</a></li>
+                <li class="tab-item" data-category="ai"><a href="#" onclick="return false;">AI &amp; Technology</a></li>
+                <li class="tab-item" data-category="science"><a href="#" onclick="return false;">Science &amp; Methods</a></li>
+                <li class="tab-item" data-category="notes"><a href="#" onclick="return false;">Notes &amp; Asides</a></li>
+            </ul>
+        </div>
+
+        <input type="text" class="search-box" id="searchBox" placeholder="Search all posts...">
+
+        <div id="seriesView" class="series-view" style="display:none;"></div>
 
             <ul class="post-list" id="postList">
 
@@ -288,7 +300,7 @@
         </li>
 
         <li data-folder="2024-10-05_000_Bellwethers">
-            <h3 class="post-list-title"><a href="posts/2024-10-05_000_Bellwethers/index.html">Bellwethers</a></h3>
+            <h3 class="post-list-title"><a href='/posts/2024-10-05_000_bellwethers/'>Bellwethers</a></h3>
             <div class="post-list-info">
                 <span class="post-list-meta">2024-10-05</span>
                 <span class="category-badges" id="badges-2024-10-05_000_Bellwethers"></span>
@@ -612,7 +624,7 @@
         </li>
 
         <li data-folder="2023-09-21_105_Eco-Anxiety">
-            <h3 class="post-list-title"><a href="posts/2023-09-21_105_Eco-Anxiety/index.html">105. Eco-Anxiety</a></h3>
+            <h3 class="post-list-title"><a href='/posts/2023-09-21_105_eco-anxiety/'>105. Eco-Anxiety</a></h3>
             <div class="post-list-info">
                 <span class="post-list-meta">2023-09-21</span>
                 <span class="category-badges" id="badges-2023-09-21_105_Eco-Anxiety"></span>
@@ -629,7 +641,7 @@
         </li>
 
         <li data-folder="2023-09-08_103_COPout...again">
-            <h3 class="post-list-title"><a href="posts/2023-09-08_103_COPout...again/index.html">103. COPout...again</a></h3>
+            <h3 class="post-list-title"><a href='/posts/2023-09-08_103_copout...again/'>103. COPout...again</a></h3>
             <div class="post-list-info">
                 <span class="post-list-meta">2023-09-08</span>
                 <span class="category-badges" id="badges-2023-09-08_103_COPout...again"></span>
@@ -656,7 +668,7 @@
         </li>
 
         <li data-folder="2023-08-18_100_Reflections">
-            <h3 class="post-list-title"><a href="posts/2023-08-18_100_Reflections/index.html">100. Reflections</a></h3>
+            <h3 class="post-list-title"><a href='/posts/2023-08-18_100_reflections/'>100. Reflections</a></h3>
             <div class="post-list-info">
                 <span class="post-list-meta">2023-08-18</span>
                 <span class="category-badges" id="badges-2023-08-18_100_Reflections"></span>
@@ -872,7 +884,7 @@
         </li>
 
         <li data-folder="2023-03-05_078_Recap">
-            <h3 class="post-list-title"><a href="posts/2023-03-05_078_Recap/index.html">78. Recap</a></h3>
+            <h3 class="post-list-title"><a href='/posts/2023-03-05_078_recap/'>78. Recap</a></h3>
             <div class="post-list-info">
                 <span class="post-list-meta">2023-03-05</span>
                 <span class="category-badges" id="badges-2023-03-05_078_Recap"></span>
@@ -1295,7 +1307,7 @@
         </li>
 
         <li data-folder="2022-03-20_039_Transitions">
-            <h3 class="post-list-title"><a href="posts/2022-03-20_039_Transitions/index.html">39. Transitions</a></h3>
+            <h3 class="post-list-title"><a href='/posts/2022-03-20_039_transitions/'>39. Transitions</a></h3>
             <div class="post-list-info">
                 <span class="post-list-meta">2022-03-20</span>
                 <span class="category-badges" id="badges-2022-03-20_039_Transitions"></span>
@@ -1700,16 +1712,26 @@
         </li>
 
             </ul>
-        </main>
 
-        <footer>
-            <p>Archive of Healing Earth with Technology &middot; 182 posts &middot; May 2021 &ndash; July 2025</p>
-            <p>Originally published on <a href="https://healingearth.substack.com">Substack</a></p>
-        </footer>
+
     </div>
-    <script src="categories.js"></script>
-    <script src="search.js"></script>
-    <script src="search-universal.js"></script>
-    <script src="app.js"></script>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <blockquote class="footer-epigraph">
+            <em>Science is a sport that wrestles truth from conjecture.</em>
+        </blockquote>
+        <p class="footer-meta">Archive of Healing Earth with Technology &middot; 182 posts &middot; May 2021 &ndash; July 2025</p>
+        <p class="footer-meta">Originally published on <a href="https://healingearth.substack.com">Substack</a></p>
+    </div>
+</footer>
+
+<script src="categories.js"></script>
+<script src="search.js"></script>
+<script src="search-universal.js" defer></script>
+<script src="popularity-data.js" defer></script>
+<script src="app.js"></script>
 </body>
 </html>
