@@ -84,9 +84,7 @@ def is_boilerplate_excerpt(text: str) -> bool:
         t.startswith("I'm Jonathan Burbaum") or
         "Healing Earth with Technology: a weekly, Science-based" in t or
         t.startswith("You can read Healing for free") or
-        t.startswith("Estimated reading time") or
-        t.startswith("In previous installments") or
-        t.startswith("In this serial")
+        t.startswith("Estimated reading time")
     )
 
 # ── Manual covers ─────────────────────────────────────────────────────────────
@@ -182,18 +180,18 @@ def find_cover_image_in_folder(folder_name: str, cover_uuid: str) -> str | None:
     """
     images_dir = POSTS_DIR / folder_name / "images"
 
-    # Primary: UUID-based match
-    if cover_uuid and images_dir.is_dir():
-        for f in images_dir.iterdir():
-            if f.name.startswith(cover_uuid):
-                return f"posts/{folder_name}/images/{f.name}"
-
-    # Fallback: manual_covers.json
+    # Primary: manual_covers.json overrides everything (incl. globe replacements)
     if folder_name in MANUAL_COVERS:
         filename = MANUAL_COVERS[folder_name]
         candidate = images_dir / filename
         if candidate.exists():
             return f"posts/{folder_name}/images/{filename}"
+
+    # Secondary: UUID-based match
+    if cover_uuid and images_dir.is_dir():
+        for f in images_dir.iterdir():
+            if f.name.startswith(cover_uuid):
+                return f"posts/{folder_name}/images/{f.name}"
 
     return None
 
@@ -459,10 +457,11 @@ def update_index_html(
 
         # ── Thumbnail ─────────────────────────────────────────────────────
         if do_thumbnails:
-            if 'class="post-thumb"' not in new_block:
-                cover_uuid = best.get("cover_uuid", "")
-                local_path = find_cover_image_in_folder(folder, cover_uuid)
+            cover_uuid = best.get("cover_uuid", "")
+            local_path = find_cover_image_in_folder(folder, cover_uuid)
 
+            if 'class="post-thumb"' not in new_block:
+                # No thumbnail yet -- inject one
                 if local_path:
                     href = get_href_from_block(block_html)
                     thumb_html = (
@@ -473,7 +472,6 @@ def update_index_html(
                         f'style="object-fit:cover;width:120px;height:80px;'
                         f'border-radius:4px;float:right;margin:0 0 0.5rem 1rem;"></a>'
                     )
-                    # Insert thumb right after the opening <li ...> tag
                     new_block = re.sub(
                         r'(<li\s+data-folder="[^"]*"[^>]*>)',
                         r'\1' + thumb_html,
@@ -486,6 +484,19 @@ def update_index_html(
                     report["thumbnail_missing"].append(folder)
                     if cover_uuid:
                         print(f"  ✗ No local cover: [{folder[:45]}] UUID={cover_uuid[:8]}...")
+
+            else:
+                # Thumbnail already exists -- replace src if manual_covers has a better image
+                if local_path and folder in MANUAL_COVERS:
+                    new_block = re.sub(
+                        r'(class="post-thumb"[^>]*>\s*<img\s+src=")[^"]*(")',
+                        r'\g<1>' + local_path + r'\g<2>',
+                        new_block,
+                        count=1
+                    )
+                    if new_block != block_html:
+                        report["thumbnail_added"].append((folder, local_path))
+                        print(f"  🔄 Thumbnail replaced: [{folder[:50]}]")
 
         if new_block != block_html:
             changes.append((start, end, new_block))
