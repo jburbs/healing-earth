@@ -1,0 +1,11 @@
+{
+  "_comment": "Manual cover image mappings for posts whose covers cannot be auto-downloaded (YouTube embeds, Unsplash, HEIC, etc). Key is the data-folder name, value is the filename inside that post's images/ directory.",
+  "2023-07-21_097_Developing a Third Solution (Part 9)": "cover_976x511.png",
+  "2023-04-23_085_Developing a third solution (Part 4)": "cover_976x511.png",
+  "2022-04-03_041_How to Heal Earth for the Visual Learner": "cover_976x511.png",
+  "2023-08-18_100_Reflections": "cover_976x511.png",
+  "2023-11-22_113_A Thanksgiving Wish": "cover_976x511.png",
+  "2021-11-28_000_Thanksgiving break": "cover_976x511.png",
+  "2021-05-17_000_0. About this Newsletter": "cover_976x511.png",
+  "2022-05-22_045_First Anniversary Edition": "cover_976x511.png"  
+}
