@@ -1,0 +1,14 @@
+[
+  {
+    "severity": "WARNING",
+    "code": "I3",
+    "context": "index > 2024-11-24_000_November 17, 2024",
+    "detail": "No thumbnail <img> in post list item"
+  },
+  {
+    "severity": "INFO",
+    "code": "I5",
+    "context": "index > 2024-11-24_000_November 17, 2024",
+    "detail": "No excerpt text in post list item"
+  }
+]
