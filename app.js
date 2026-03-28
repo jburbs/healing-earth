@@ -63,7 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Tab Filtering ---
-    function filterByCategory(category) {
+    function filterByCategory(category, options) {
+        var opts = options || {};
         currentCategory = category;
 
         // Update active tab - use .tab-item class
@@ -84,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (searchBox) searchBox.style.display = '';
         }
 
-        // Clear search when switching tabs
-        if (searchBox) {
+        // Clear search when switching tabs (but NOT when restoring from short query)
+        if (searchBox && !opts.preserveSearch) {
             searchBox.value = '';
             isSearching = false;
         }
@@ -213,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         postList.appendChild(li);
                     });
                     renderBadges();
-                    filterByCategory(currentCategory);
+                    filterByCategory(currentCategory, { preserveSearch: true });
                     return;
                 }
 
