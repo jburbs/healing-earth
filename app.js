@@ -197,10 +197,9 @@ document.addEventListener('DOMContentLoaded', function() {
         var debounceTimer;
 
         searchBox.addEventListener('input', function() {
-            var self = this;
+            var query = this.value.trim();  // capture immediately — not inside setTimeout (fixes stale-value race)
             clearTimeout(debounceTimer);
             debounceTimer = setTimeout(function() {
-                var query = self.value.trim();
 
                 if (!query || query.length < 2) {
                     isSearching = false;
